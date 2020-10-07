@@ -61,6 +61,41 @@ public class Cardapio {
         bebidas.add(valor);
     }
 
+    public void addAcompanhamento(String acompanhamento, double valor){
+        acompanhamentos.add(acompanhamento);
+        acompanhamentos.add(valor);
+    }
+
+    public Double getValorSanduiche(String sanduiche){
+        Double valor = 0.0;
+        for(int i = 0; i < sanduiches.size(); i++){
+            if(sanduiches.get(i).equals(sanduiche)){
+               valor = (Double) sanduiches.get(i+1);
+            }
+        }
+        return valor;
+    }
+
+    public Double getValorBebida(String bebida){
+        Double valor = 0.0;
+        for(int i = 0; i < bebidas.size(); i++){
+            if(bebidas.get(i).equals(bebida)){
+                valor = (Double) bebidas.get(i+1);
+            }
+        }
+        return valor;
+    }
+
+    public Double getValorAcompanhamento(String acompanhamento){
+        Double valor = 0.0;
+        for(int i = 0; i < acompanhamentos.size(); i++){
+            if(acompanhamentos.get(i).equals(acompanhamento)){
+                valor = (Double) acompanhamentos.get(i+1);
+            }
+        }
+        return valor;
+    }
+
 
 
 }
