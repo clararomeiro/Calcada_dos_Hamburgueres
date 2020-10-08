@@ -4,6 +4,8 @@ public class Cardapio {
     private ArrayList sanduiches = new ArrayList();
     private ArrayList bebidas = new ArrayList();
     private ArrayList acompanhamentos = new ArrayList();
+    private ArrayList descricaoSanduiches = new ArrayList();
+
 
     public Cardapio() {
         sanduiches.add("BBH");
@@ -30,13 +32,23 @@ public class Cardapio {
         acompanhamentos.add(7.50);
         acompanhamentos.add("Onion Rings");
         acompanhamentos.add(6.00);
+        descricaoSanduiches.add(0, "(pão italiano, frango empanado, cheddar, cebola)");
+        descricaoSanduiches.add(" ");
+        descricaoSanduiches.add(2, "(pão verde, carne vegetal, tomate, alface, cebola empanada e molho especial)");
+        descricaoSanduiches.add(" ");
+        descricaoSanduiches.add(4, "(pão com gergelim, 2 veggie burgers, queijo, alface, cebola e molho especial)");
+        descricaoSanduiches.add(" ");
+        descricaoSanduiches.add(6, "(pão de leite, duas carnes bovinas, queijo cheddar, cebola, molho especial)");
+        descricaoSanduiches.add(" ");
+        descricaoSanduiches.add(8,"(pão com gergelim, queijo parmesão, alface, tomate, cebola caramelizada, molho especial)");
+
     }
 
     public void print() {
         System.out.println("\nCARDAPIO:");
         System.out.println("\nSanduiches:");
         for (int i = 0; i < sanduiches.size(); i++) {
-            System.out.println(sanduiches.get(i) + " ----- R$" + sanduiches.get(i + 1));
+            System.out.println(sanduiches.get(i) + " ----- R$" + sanduiches.get(i + 1) + "   " + descricaoSanduiches.get(i));
             i++;
         }
         System.out.println("\nBebidas:");
