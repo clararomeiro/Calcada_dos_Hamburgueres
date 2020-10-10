@@ -1,6 +1,6 @@
-package projeto;
+package CalcadadosHamburgueres;
 import java.util.ArrayList;
-import java.util.Random;
+
 
 
 public class ItemPedido {
