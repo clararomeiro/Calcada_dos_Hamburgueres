@@ -1,11 +1,13 @@
 package CalcadadosHamburgueres;
 
-public class Cliente {
+import java.util.Scanner;
+
+public class Cliente extends Funcionario {
 	
 	private String nome;
-	private Long cpf;
+	private long cpf;
 	
-	public Cliente(String nome, Long cpf)
+	public Cliente(String nome, long cpf)
 	{
 		this.nome = nome;
 		this.cpf = cpf;
@@ -21,12 +23,12 @@ public class Cliente {
 		this.nome = nome;
 	}
 
-	public Long getCpf() 
+	public long getCpf() 
 	{
 		return cpf;
 	}
 
-	public void setCpf(Long cpf) 
+	public void setCpf(long cpf) 
 	{
 		this.cpf = cpf;
 	}
@@ -43,9 +45,25 @@ public class Cliente {
 		
 	}
 	
+	public void formaDePagamento()
+	{	
+	
+	}
+	
+	public void verCarrinho()
+	{
+		//if e else perguntando se ele quer adicionar mais alguma coisa
+	}
+	
+	public void finalizarPedido()
+	{
+		
+	}
+	
 	public void monitorarPedido()
 	{
 		
 	}
+	
 
 }

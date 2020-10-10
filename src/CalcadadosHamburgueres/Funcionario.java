@@ -15,10 +15,32 @@ public class Funcionario {
 		 senha = new ArrayList<Integer>();
 	 }
 	 
+	 
+	 public ArrayList<Integer> getSenha() {
+		 return senha;
+	 }
+	 
+	 public void setSenha(ArrayList<Integer> senha) {
+		 this.senha = senha;
+	 }
+	 
+	 public ArrayList<String> getFuncionario() {
+		 return funcionario;
+	 }
+	 
+	 public void setFuncionario(ArrayList<String> funcionario) {
+		 this.funcionario = funcionario;
+	 }
+	 
+	 public void login() {
+		 
+	 }
+	 
 	 public void entradaAutorizada()
 	 {
 		 int entrada = 0;
-		 if()
+		 boolean autorizacao;
+		 if(autorizacao = true)
 		 {
 			 entrada = 1;
 			 
@@ -55,16 +77,16 @@ public class Funcionario {
 				
 				else 
 				{
+					autorizacao = false;
+					System.out.println("Não foi possível realizar a operação.");
 					
 				}
 			 }
 		 }
-	 }
 	 
-	public void entradaNegada()
-	{
+	 public void entradaNegada() {
 		 
-	}
+	 }
 	 
 	public void adcSanduiches()
 	{
@@ -84,5 +106,4 @@ public class Funcionario {
 		funcionario.addBebidas(bebida, valor);(sanduiche, valor);
 	}
 		  
-
 }
