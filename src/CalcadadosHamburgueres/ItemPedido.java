@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class ItemPedido {
 	ArrayList<Cardapio> itemPedido;
+	Private int numeroCliente=0;
 	
 	public ItemPedido(Cardapio sanduiche, Cardapio bebida, Cardapio acompanhamento) {
 		itemPedido = new ArrayList();
@@ -25,11 +26,11 @@ public class ItemPedido {
 		itemPedido.remove(acompanhamento);
 		itemPedido.remove(valor);
 	}
-	public int gerarNumeroCliente(int num){
-		num=0;
-		num++;
-		return num;		
+	public int gerarNumeroCliente(){
+			numeroCliente=numeroCliente+1;
+			return numeroCliente;
 	}
+		
 		
 	public ArrayList<Cardapio> getItemPedido(){
 		return itemPedido;
