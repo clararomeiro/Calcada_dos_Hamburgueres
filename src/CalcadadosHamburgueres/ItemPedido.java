@@ -32,7 +32,7 @@ public class ItemPedido {
 		return numeroCliente;
 	}
 	//adicionar alguma informação do hamburguer
-	public String observaçãoPedido() {
+	public String observaçaoPedido() {
 		interagir = new Scanner(System.in);
 		String observaçaoPedido;
 		System.out.println("Adicionar alguma observação no pedido?");
