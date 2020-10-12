@@ -43,7 +43,7 @@ public class ItemPedido {
 				return observaçaoPedido;
 			}
 			else {
-				System.out.println("");
+				return System.out.println("Sem observação");
 			}
 			
 	}
