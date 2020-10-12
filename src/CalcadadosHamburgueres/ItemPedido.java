@@ -35,10 +35,17 @@ public class ItemPedido {
 	public String observaçaoPedido() {
 		interagir = new Scanner(System.in);
 		String observaçaoPedido;
-		System.out.println("Adicionar alguma observação no pedido?");
-		observaçaoPedido=interagir.nextLine();
-		
-		return observaçaoPedido;
+		System.out.println("Adicionar alguma observação no pedido? SIM-1 NÃO-2");
+		observaçaoPedido=interagir.nextInt();
+			if(observaçaoPedido==1) {
+				System.out.println("Insira a observação")
+				observaçaoPedido=interagir.nextLine();
+				return observaçaoPedido;
+			}
+			else {
+				System.out.println("");
+			}
+			
 	}
 		
 		
