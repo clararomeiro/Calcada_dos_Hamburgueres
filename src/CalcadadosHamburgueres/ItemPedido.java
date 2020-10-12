@@ -1,5 +1,6 @@
 package CalcadadosHamburgueres;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 
@@ -27,8 +28,17 @@ public class ItemPedido {
 		itemPedido.remove(valor);
 	}
 	public int gerarNumeroCliente(){
-			numeroCliente=numeroCliente+1;
-			return numeroCliente;
+		numeroCliente=numeroCliente+1;
+		return numeroCliente;
+	}
+	//adicionar alguma informação do hamburguer
+	public String observaçãoPedido() {
+		interagir = new Scanner(System.in);
+		String observaçaoPedido;
+		System.out.println("Adicionar alguma observação no pedido?");
+		observaçaoPedido=interagir.nextLine();
+		
+		return observaçaoPedido;
 	}
 		
 		
