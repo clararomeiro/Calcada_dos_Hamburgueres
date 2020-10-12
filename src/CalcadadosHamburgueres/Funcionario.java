@@ -32,10 +32,12 @@ public class Funcionario {
 		 this.funcionario = funcionario;
 	 }
 	 
-	 public void login() {
+	 public void login() 
+	 {
 		 
 	 }
 	 
+	 //checa se o funcionario tem uma conta e entra
 	 public void entradaAutorizada()
 	 {
 		 int entrada = 0;
@@ -53,12 +55,13 @@ public class Funcionario {
 				{
 					System.out.println("1- Sanduiches/n 2-Acompanhamentos/n 3- Bebidas");
 					int num = resposta.nextInt();
-					
+					Funcionario funcionario = new Funcionario();
+					 
 					 switch (num) 
 					 {
 				     case 1:
 				       System.out.println("Você escolheu 1");
-				       Funcionario funcionario = new Funcionario();
+				      
 				       funcionario.adcSanduiches();
 				       break;
 				     case 2:
@@ -84,22 +87,27 @@ public class Funcionario {
 			 }
 		 }
 	 
-	 public void entradaNegada() {
+	 public void entradaNegada() 
+	 {
 		 
 	 }
 	 
+	 
+	//funcionario pode adicionar sanduiches ao cardapio
 	public void adcSanduiches()
 	{
 		Cardapio funcionario = new Cardapio();
 		funcionario.addSanduiches(sanduiche, valor);
 	}
-		 
+	
+	//funcionario pode adicionar acompanhamentos ao cardapio
 	public void adcAcompanhamentos()
 	{
 		Cardapio funcionario = new Cardapio();
 		funcionario.addAcompanhamento(acompanhamento, valor);(sanduiche, valor);
 	}
 		 
+	//funcionario pode adicionar bebidas ao cardapio
 	public void adcBebidas()
 	{
 		Cardapio funcionario = new Cardapio();

@@ -33,13 +33,14 @@ public class Cliente extends Funcionario {
 		this.cpf = cpf;
 	}
 	
-
+	//cliente pode ver o cardapio
 	public void verCardapio()
 	{
 		Cardapio cliente = new Cardapio();
 		cliente.print();
 	}
 	
+	//cliente pode fazer pedido
 	public void fazerPedido()
 	{
 		
@@ -55,11 +56,13 @@ public class Cliente extends Funcionario {
 		//if e else perguntando se ele quer adicionar mais alguma coisa
 	}
 	
+	//cliente pode finalizar pedido
 	public void finalizarPedido()
 	{
 		
 	}
 	
+	//cliente pode saber o andamento do pedido
 	public void monitorarPedido()
 	{
 		
