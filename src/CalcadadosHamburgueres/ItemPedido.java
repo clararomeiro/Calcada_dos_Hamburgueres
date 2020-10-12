@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class ItemPedido {
 	ArrayList<Cardapio> itemPedido;
-	Private int numeroCliente=0;
+	private int numeroCliente=0;
 	
 	public ItemPedido(Cardapio sanduiche, Cardapio bebida, Cardapio acompanhamento) {
 		itemPedido = new ArrayList();

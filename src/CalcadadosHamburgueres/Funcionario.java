@@ -32,6 +32,7 @@ public class Funcionario {
 		 this.funcionario = funcionario;
 	 }
 	 
+	 //login do funcionario
 	 public void login() 
 	 {
 		 
@@ -86,11 +87,6 @@ public class Funcionario {
 				}
 			 }
 		 }
-	 
-	 public void entradaNegada() 
-	 {
-		 
-	 }
 	 
 	 
 	//funcionario pode adicionar sanduiches ao cardapio
