@@ -53,7 +53,7 @@ public class Cardapio {
 
     }
 
-    public void print() {
+    public void mostrarCardapio() {
         //MOSTRA O CARDAPIO NA TELA
         System.out.println("\nCARDAPIO:");
         System.out.println("\nSanduiches:");
