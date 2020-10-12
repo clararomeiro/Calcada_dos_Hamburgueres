@@ -1,4 +1,4 @@
-package projeto;
+package CalcadadosHamburgueres;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -6,9 +6,8 @@ import java.time.LocalTime;
 public class Pedido {
 	Cliente cliente;
 	ItemPedido itempedido;
-	Pedido pedido;
 	
-	public Pedido(Cliente cliente, Pedido pedido) {
+	public Pedido(Cliente cliente, ItemPedido itempedido) {
 		this.cliente = cliente;
 		this.pedido = pedido;
 	}
