@@ -46,9 +46,11 @@ public class Cliente extends Funcionario {
 		
 	}
 	
-	public void formaDePagamento()
+	public String formaDePagamento()
 	{	
-	
+		String formaDePagamento;
+		//formaDePagamento ainda precisa ser definida
+		return formaDePagamento;
 	}
 	
 	public void verCarrinho()
