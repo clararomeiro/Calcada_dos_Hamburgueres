@@ -1,4 +1,4 @@
-package projeto;
+package CalcadadosHamburgueres;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -22,7 +22,7 @@ public class ControladorPedidos {
 		int opcao = ler.nextInt();
 		
 		if(opcao == 1) {
-			statusPedido = "Seu pedido foi aprovado e logo estar· pronto!";
+			statusPedido = "Seu pedido foi aprovado e logo estar√° pronto!";
 		} else {
 			System.out.println("Digite o motivo do pedido ser negado: ");
 			String motivo = ler.next();
