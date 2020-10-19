@@ -1,6 +1,6 @@
 package CalcadadosHamburgueres;
 
-	public enum produto{
+	public enum ProdutoEnum{
 		HAMBURGUER,
 		BEBIDA,
 		ACOMPANHAMENTO;	
