@@ -1,31 +1,41 @@
 package CalcadadosHamburgueres;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 
 
 public class ItemPedido {
-	ArrayList<Cardapio> itemPedido;
+	private EnumHamburguer hamburguer;
+	private EnumBebida bebida;
+	private EnumAcompanhamento acompanhamento;
+	private int quantidade;
 	private int numeroCliente=0;
 	
-	public ItemPedido(Cardapio sanduiche, Cardapio bebida, Cardapio acompanhamento) {
-		itemPedido = new ArrayList();
-		itemPedido.add(sanduiche);
-		itemPedido.add(bebida);
-		itemPedido.add(acompanhamento);
+	public ItemPedido(EnumHamburguer hamburguer, EnumBebida bebida, EnumAcompanhamento acompanhamento, int quantidade) {
+		if (hamburguer == null) {
+			this.hamburguer = NumHamburguer.SEMHAMBURGUER; 
+		}
 		
-	}
-	public void removeSanduiche(String sanduiche, double valor) {
-		itemPedido.remove(sanduiche);
-		itemPedido.remove(valor);
-	}
-	public void removeBebida(String bebida, double valor) {
-		itemPedido.remove(bebida);
-		itemPedido.remove(valor);
-	}
-	public void removeAcompanhamento(String acompanhamento, double valor) {
-		itemPedido.remove(acompanhamento);
-		itemPedido.remove(valor);
+		else {
+			this.hamburguer = hamburguer;
+		}
+		
+        if (bebida == null) {
+        	this.bebida = NumBebida.SEMBEBIDA;
+        }
+        
+        else{
+        	this.bebida = bebida;
+        }
+        
+        if (acompanhamento == null) {
+        	this.acompanhamento = NumAcompanhamento.SEMACOMPANHAMENTO;
+        }
+        
+        else{
+          this.acompanhamento = acompanhamento;
+        }
+        
+        this.quantidade = quantidade;
 	}
 	public int gerarNumeroCliente(){
 		numeroCliente=numeroCliente+1;
@@ -49,10 +59,36 @@ public class ItemPedido {
 			}
 			
 	}
-		
-		
-	public ArrayList<Cardapio> getItemPedido(){
-		return itemPedido;
+	public NumHamburguer getHamburguer() {
+		return hamburguer;
+	}
+
+	public void setHamburguer(NumHamburguer hamburguer) {
+		this.hamburguer=hamburguer;
+	}
+
+	public NumBebida getBebida() {
+		return bebida;
+	}
+
+	public void setBebida(NumBebida bebida) {
+		this.bebida = bebida;
+	}
+
+	public NumAcompanhamento getAcompanhamento() {
+		return acompanhamento;
+	}
+
+	public void setAcompanhamento(NumAcompanhamento acompanhamento) {
+		this.acompanhamento = acompanhamento;
+	}
+
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
 	}
 	
 	

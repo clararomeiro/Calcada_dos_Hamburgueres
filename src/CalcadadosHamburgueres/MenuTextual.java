@@ -3,7 +3,7 @@ package CalcadadosHamburgueres;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ControladorPedidos {
+public class MenuTextual {
 	ItemPedido itemPedido;
 	Funcionario funcionario;
 	Cliente cliente;
