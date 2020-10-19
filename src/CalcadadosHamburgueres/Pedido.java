@@ -9,7 +9,7 @@ public class Pedido {
 	
 	public Pedido(Cliente cliente, ItemPedido itempedido) {
 		this.cliente = cliente;
-		this.pedido = pedido;
+		this.itempedido = itempedido;
 	}
 	
 	//obtem a hora local
