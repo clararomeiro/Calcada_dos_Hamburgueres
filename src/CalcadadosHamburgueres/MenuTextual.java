@@ -9,7 +9,7 @@ public class MenuTextual {
 	Cliente cliente;
     Scanner ler = new Scanner(System.in);
     
-	public ControladorPedidos(Funcionario funcionario) {
+	public MenuTextual(Funcionario funcionario) {
 		this.funcionario = funcionario;
 	}
 	
