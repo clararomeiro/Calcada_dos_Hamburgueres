@@ -74,7 +74,7 @@ public class Funcionario {
 				       funcionario.adcBebidas();
 				       break;
 				     default:
-				       System.out.println("Opção inválida");
+				       System.out.println("Opção invalida");
 				     }
 				 }
 			 }
@@ -82,7 +82,7 @@ public class Funcionario {
 				else 
 				{
 					autorizacao = false;
-					System.out.println("Não foi possível realizar a operação.");
+					System.out.println("Nao foi possivel realizar a operaçao.");
 					
 				}
 			 }

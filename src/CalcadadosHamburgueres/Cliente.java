@@ -48,7 +48,7 @@ public class Cliente extends Funcionario {
 	
 	public String formaDePagamento()
 	{	
-		String formaDePagamento;
+		String formaDePagamento = null;
 		//formaDePagamento ainda precisa ser definida
 		return formaDePagamento;
 	}
