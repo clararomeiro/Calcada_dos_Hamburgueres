@@ -7,10 +7,14 @@ import CalcadadosHamburgueres.basics.Funcionario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class TelaInicialController implements Initializable {
 
+	@FXML
+	private Button btnFuncionario;
+	
 	@FXML 
 	private void botaoFuncionario (ActionEvent event)
 	{

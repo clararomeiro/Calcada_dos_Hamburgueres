@@ -14,7 +14,7 @@
          <children>
             <ButtonBar layoutX="99.0" layoutY="192.0" prefHeight="15.0" prefWidth="55.0" />
             <Button layoutX="57.0" layoutY="128.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="120.0" text="Cliente" />
-            <Button layoutX="257.0" layoutY="128.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="120.0" text="Funcionário" />
+            <Button fx:id="btnFuncionario" layoutX="257.0" layoutY="128.0" mnemonicParsing="false" onAction="#botaoFuncionario" prefHeight="43.0" prefWidth="120.0" text="Funcionário" />
             <Label layoutX="171.0" layoutY="87.0" text="Entrar como">
                <font>
                   <Font size="16.0" />

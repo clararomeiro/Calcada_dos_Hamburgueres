@@ -10,7 +10,7 @@ public class Main extends Application {
 	
 	 public void start (Stage stage) throws Exception
 	 {
-		 FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/gui/TelaInicial.fxml"));
+		 FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/CalcadadosHamburgueres/gui/TelaInicial.fxml"));
 	     Parent root = loader.load();
 	     stage.setScene(new Scene(root));
 	     stage.show();

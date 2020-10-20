@@ -22,7 +22,7 @@ public class Funcionario {
 	 
 	 public void start (Stage stage) throws Exception
 	 {
-		 FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/gui/LoginFuncionario.fxml"));
+		 FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/CalcadadosHamburgueres/gui/LoginFuncionario.fxml"));
 	     Parent root = loader.load();
 	     stage.setScene(new Scene(root));
 	     stage.show();
