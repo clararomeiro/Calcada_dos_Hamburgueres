@@ -6,11 +6,13 @@ public class Produto {
     private String descricao;
     private Tipo tipo;
 
+
     public Produto(){
         nome = "none";
         preco = 0.0;
         descricao = " ";
         tipo = Tipo.NONE;
+
 
     }
     public Produto(String nome, double preco, String descricao, Tipo tipo){
@@ -47,3 +49,5 @@ public class Produto {
     }
 
 }
+
+

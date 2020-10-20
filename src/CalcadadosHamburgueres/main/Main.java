@@ -1,4 +1,4 @@
-package main;
+package CalcadadosHamburgueres.main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
