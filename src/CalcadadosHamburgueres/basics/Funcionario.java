@@ -22,10 +22,10 @@ public class Funcionario {
 	 
 	 public void start (Stage stage) throws Exception
 	 {
-		 Parent root = FXMLLoader.load(getClass().getResource("/gui/LoginFuncionario.fxml")); //carrega FXML
-		 Scene scene = new Scene(root);
-		 stage.setScene(scene);
-		 stage.show();
+		 FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/gui/LoginFuncionario.fxml"));
+	     Parent root = loader.load();
+	     stage.setScene(new Scene(root));
+	     stage.show();
 	 }
 	 
 	 public ArrayList<Integer> getSenha() {
