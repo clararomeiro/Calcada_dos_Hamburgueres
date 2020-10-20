@@ -3,6 +3,11 @@ package CalcadadosHamburgueres.basics;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
 
 public class Funcionario {
 	
@@ -15,6 +20,13 @@ public class Funcionario {
 		 senha = new ArrayList<Integer>();
 	 }
 	 
+	 public void start (Stage stage) throws Exception
+	 {
+		 Parent root = FXMLLoader.load(getClass().getResource("/gui/LoginFuncionario.fxml")); //carrega FXML
+		 Scene scene = new Scene(root);
+		 stage.setScene(scene);
+		 stage.show();
+	 }
 	 
 	 public ArrayList<Integer> getSenha() {
 		 return senha;
