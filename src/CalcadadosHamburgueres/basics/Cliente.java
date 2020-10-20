@@ -1,6 +1,4 @@
-package CalcadadosHamburgueres;
-
-import java.util.Scanner;
+package CalcadadosHamburgueres.basics;
 
 public class Cliente extends Funcionario {
 	

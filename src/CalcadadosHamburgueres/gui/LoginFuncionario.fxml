@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="365.0" prefWidth="482.0">
+         <children>
+            <PasswordField layoutX="167.0" layoutY="158.0" promptText="senha" />
+            <TextField layoutX="167.0" layoutY="110.0" promptText="cpf" />
+            <Label layoutX="205.0" layoutY="44.0" prefHeight="25.0" prefWidth="68.0" text="Entrar">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="215.0" layoutY="207.0" mnemonicParsing="false" text="entrar" />
+            <Hyperlink layoutX="185.0" layoutY="258.0" text="esqueceu a senha?" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
