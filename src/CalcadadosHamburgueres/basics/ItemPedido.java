@@ -41,21 +41,21 @@ public class ItemPedido {
 		numeroCliente=numeroCliente+1;
 		return numeroCliente;
 	}
-	//adicionar alguma informação do hamburguer
+	//adicionar alguma informacao do hamburguer
 	public String observacaoPedido() {
-		Sacnner interagir = new Scanner(System.in);
+		Scanner interagir = new Scanner(System.in);
 		String observacaoPedido;
-		observacaoPedido="Sem observações";
-		System.out.println("Adicionar alguma observação no pedido? SIM-1 NÃO-2");
+		observacaoPedido="Sem observacoes";
+		System.out.println("Adicionar alguma observacao no pedido? SIM-1 NAO-2");
 		int escolha;
 		escolha=interagir.nextInt();
 			if(escolha==1) {
-				System.out.println("Insira a observação")
+				System.out.println("Insira a observacao");
 				observacaoPedido=interagir.nextLine();
 				return observacaoPedido;
 			}
 			else {
-				return observacao;
+				return observacaoPedido;
 			}
 			
 	}

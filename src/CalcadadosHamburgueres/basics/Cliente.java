@@ -1,6 +1,6 @@
 package CalcadadosHamburgueres.basics;
 
-public class Cliente extends Funcionario {
+public class Cliente {
 	
 	private String nome;
 	private long cpf;
@@ -35,7 +35,6 @@ public class Cliente extends Funcionario {
 	public void verCardapio()
 	{
 		Cardapio cliente = new Cardapio();
-		cliente.print();
 	}
 	
 	//cliente pode fazer pedido
@@ -53,7 +52,13 @@ public class Cliente extends Funcionario {
 	
 	public void verCarrinho()
 	{
-		//if e else perguntando se ele quer adicionar mais alguma coisa
+		boolean verCarrinho = false;
+		if(verCarrinho = true) {
+			ItemPedido observacaoPedido;
+		}
+		else {
+			//seguir para finalização do pedido
+		}
 	}
 	
 	//cliente pode finalizar pedido
