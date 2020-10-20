@@ -61,16 +61,16 @@ public class Funcionario {
 					 switch (num) 
 					 {
 				     case 1:
-				       System.out.println("Voce escolheu 1");
+				       System.out.println("Voce escolheu 01");
 				      
 				       funcionario.adcSanduiches();
 				       break;
 				     case 2:
-				       System.out.println("Voce escolheu 2");
+				       System.out.println("Voce escolheu 02");
 				       funcionario.adcAcompanhamentos();
 				       break;
 				     case 3:
-				       System.out.println("Voce escolheu 3");
+				       System.out.println("Voce escolheu 03");
 				       funcionario.adcBebidas();
 				       break;
 				     default:
