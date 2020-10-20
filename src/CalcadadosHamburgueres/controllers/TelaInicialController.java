@@ -18,6 +18,7 @@ public class TelaInicialController implements Initializable {
 	@FXML 
 	private void botaoFuncionario (ActionEvent event)
 	{
+		
 		Funcionario f = new Funcionario();
 		try {
 			f.start(new Stage());
@@ -27,9 +28,11 @@ public class TelaInicialController implements Initializable {
 		}
 	}
 	
+	
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	

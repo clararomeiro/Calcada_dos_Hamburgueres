@@ -3,9 +3,11 @@ package CalcadadosHamburgueres.basics;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 
@@ -26,6 +28,7 @@ public class Funcionario {
 	     Parent root = loader.load();
 	     stage.setScene(new Scene(root));
 	     stage.show();
+	     
 	 }
 	 
 	 public ArrayList<Integer> getSenha() {
