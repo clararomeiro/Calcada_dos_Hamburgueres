@@ -1,9 +1,9 @@
-package gui;
+package CalcadadosHamburgueres.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import CalcadadosHamburgueres.Funcionario;
+import CalcadadosHamburgueres.basics.Funcionario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
