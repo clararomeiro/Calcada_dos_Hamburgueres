@@ -3,8 +3,14 @@ package CalcadadosHamburgueres;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class Funcionario {
+
+public class Funcionario extends Application {
 	
 	 private ArrayList<String> funcionario;
 	 private ArrayList<Integer> senha;
@@ -13,6 +19,15 @@ public class Funcionario {
 	 {
 		 funcionario = new ArrayList<String>();
 		 senha = new ArrayList<Integer>();
+	 }
+	 
+	 @Override
+	 public void start (Stage stage) throws Exception
+	 {
+		 Parent root = FXMLLoader.load(getClass().getResource("/gui/LoginFuncionario.fxml")); //carrega FXML
+		 Scene scene = new Scene(root);
+		 stage.setScene(scene);
+		 stage.show();
 	 }
 	 
 	 
@@ -109,5 +124,6 @@ public class Funcionario {
 		Cardapio funcionario = new Cardapio();
 		funcionario.addBebidas(bebida, valor);(sanduiche, valor);
 	}
+
 		  
 }
