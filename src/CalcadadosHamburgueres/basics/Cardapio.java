@@ -1,4 +1,4 @@
-package CalcadadosHamburgueres;
+package CalcadadosHamburgueres.basics;
 import java.util.ArrayList;
 
 public class Cardapio {

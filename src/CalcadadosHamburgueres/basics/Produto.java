@@ -1,6 +1,4 @@
-package CalcadadosHamburgueres;
-
-import javafx.scene.image.Image;
+package CalcadadosHamburgueres.basics;
 
 public class Produto {
     private String nome;

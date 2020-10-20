@@ -1,4 +1,4 @@
-package CalcadadosHamburgueres;
+package CalcadadosHamburgueres.basics;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -61,20 +61,20 @@ public class Funcionario {
 					 switch (num) 
 					 {
 				     case 1:
-				       System.out.println("Você escolheu 1");
+				       System.out.println("Vocï¿½ escolheu 1");
 				      
 				       funcionario.adcSanduiches();
 				       break;
 				     case 2:
-				       System.out.println("Você escolheu 2");
+				       System.out.println("Vocï¿½ escolheu 2");
 				       funcionario.adcAcompanhamentos();
 				       break;
 				     case 3:
-				       System.out.println("Você escolheu 3");
+				       System.out.println("Vocï¿½ escolheu 3");
 				       funcionario.adcBebidas();
 				       break;
 				     default:
-				       System.out.println("Opção inválida");
+				       System.out.println("Opï¿½ï¿½o invï¿½lida");
 				     }
 				 }
 			 }
@@ -82,7 +82,7 @@ public class Funcionario {
 				else 
 				{
 					autorizacao = false;
-					System.out.println("Não foi possível realizar a operação.");
+					System.out.println("Nï¿½o foi possï¿½vel realizar a operaï¿½ï¿½o.");
 					
 				}
 			 }
