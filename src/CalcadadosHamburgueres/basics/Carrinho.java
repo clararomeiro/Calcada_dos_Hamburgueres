@@ -21,11 +21,11 @@ public class Carrinho {
             carrinho.remove(produto);
         }
     }
-   public int getQtd() {
+    public int getQtd() {
 		return qtd;
-	}
+    }
 
-	public void setQtd(int qtd) {
+     public void setQtd(int qtd) {
 		this.qtd = qtd;
-	}
+     }
 }
