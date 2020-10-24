@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Carrinho {
    private ArrayList<Produto> carrinho = new ArrayList<>();
+   private int qtd;
 
 
     public Carrinho(Produto produto){
@@ -20,4 +21,11 @@ public class Carrinho {
             carrinho.remove(produto);
         }
     }
+   public int getQtd() {
+		return qtd;
+	}
+
+	public void setQtd(int qtd) {
+		this.qtd = qtd;
+	}
 }
