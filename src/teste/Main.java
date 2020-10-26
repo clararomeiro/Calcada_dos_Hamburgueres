@@ -8,17 +8,14 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 	
+	@Override
 	 public void start (Stage stage) throws Exception
 	 {
-		 FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/CalcadadosHamburgueres/gui/TelaInicial.fxml"));
-	     Parent root = loader.load();
+		 Parent root = FXMLLoader.load(getClass().getResource("/CalcadadosHamburgueres/gui/TelaInicial.fxml"));
 	     stage.setScene(new Scene(root));
 	     stage.show();
 	 }
 	 
-	 
-     
-
 	public static void main(String[] args) {
 		launch(args);
 
