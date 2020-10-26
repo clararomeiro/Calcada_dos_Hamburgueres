@@ -22,14 +22,16 @@ public class Funcionario {
 		 senha = new ArrayList<Integer>();
 	 }
 	 
-	 public void start (Stage stage) throws Exception
-	 {
-		 FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/CalcadadosHamburgueres/gui/LoginFuncionario.fxml"));
-	     Parent root = loader.load();
-	     stage.setScene(new Scene(root));
-	     stage.show();
+	 
+	 
+	 //public void start (Stage stage) throws Exception
+	 //{
+		// FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/gui/LoginFuncionario.fxml"));
+	  //   Parent root = loader.load();
+	   //  stage.setScene(new Scene(root));
+	    // stage.show();
 	     
-	 }
+	// }
 	 
 	 public ArrayList<Integer> getSenha() {
 		 return senha;
