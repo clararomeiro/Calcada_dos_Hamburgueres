@@ -1,4 +1,4 @@
-package CalcadadosHamburgueres.gui;
+package telas;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
