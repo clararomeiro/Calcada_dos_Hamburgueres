@@ -12,12 +12,13 @@ public class Funcionario implements Serializable{
     private String senha;
 	 
 	 
-	 public Funcionario(String nome, String email, String senha) {
-	            
-			this.nome = nome;
-            this.email = email;
-            this.senha = senha;            
-		}
+	 public Funcionario(String nome, String email, String senha) 
+	 { 
+		this.nome = nome;
+        this.email = email;
+        this.senha = senha;   
+        
+	 }
 	 
 	public String getEmail() {
 	        return email;
