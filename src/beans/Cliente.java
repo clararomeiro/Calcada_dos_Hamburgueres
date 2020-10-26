@@ -31,47 +31,12 @@ public class Cliente {
 		this.cpf = cpf;
 	}
 	
-	//cliente pode ver o cardapio
-	public void verCardapio()
-	{
-		Cardapio cliente = new Cardapio();
+	
+	public String toString() {
+		String s = super.toString()+","+ this.nome+","+this.cpf;
+		return s;
 	}
 	
-	//cliente pode fazer pedido
-	public void fazerPedido()
-	{
-		
-	}
-	
-	public String formaDePagamento()
-	{	
-		String formaDePagamento = null;
-		//formaDePagamento ainda precisa ser definida
-		return formaDePagamento;
-	}
-	
-	public void verCarrinho()
-	{
-		boolean verCarrinho = false;
-		if(verCarrinho = true) {
-			ItemPedido observacaoPedido;
-		}
-		else {
-			//seguir para finalização do pedido
-		}
-	}
-	
-	//cliente pode finalizar pedido
-	public void finalizarPedido()
-	{
-		
-	}
-	
-	//cliente pode saber o andamento do pedido
-	public void monitorarPedido()
-	{
-		
-	}
 	
 
 }
