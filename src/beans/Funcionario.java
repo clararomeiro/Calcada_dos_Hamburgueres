@@ -1,4 +1,4 @@
-package CalcadadosHamburgueres.basics;
+package beans;
 
 import java.util.ArrayList;
 import java.util.Scanner;

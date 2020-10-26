@@ -1,4 +1,4 @@
-package CalcadadosHamburgueres.basics;
+package beans;
 
 public class Produto {
     private String nome;
