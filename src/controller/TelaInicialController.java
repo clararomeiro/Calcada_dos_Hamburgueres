@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 public class TelaInicialController implements Initializable {
 
 	@FXML private Button btnFuncionario;
+	@FXML private Button btnCliente;
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -22,6 +23,12 @@ public class TelaInicialController implements Initializable {
 	            
 	           
 	    });
+		 
+		 btnCliente.setOnMouseClicked((MouseEvent e)->{
+	            
+	           
+		    });
+		 
 		
 	}
 	
