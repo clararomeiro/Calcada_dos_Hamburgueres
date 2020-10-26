@@ -1,4 +1,4 @@
-package CalcadadosHamburgueres.basics;
+package beans;
 
 import CalcadadosHamburgueres.basics.Produto;
 import CalcadadosHamburgueres.basics.Tipo;
@@ -18,7 +18,7 @@ public class Cardapio {
         Produto bf = new Produto("Batata Frita", 5.00, "(Serve 2 pessoas)", Tipo.ACOMPANHAMENTO);
         Produto batatacheddar = new Produto("Batata Cheddar", 7.00, "(Batata Frita com Cheddar, serve 2 pessoas)", Tipo.ACOMPANHAMENTO);
         Produto onionrings = new Produto("Onion Rings", 6.50, "Cebola empanada", Tipo.ACOMPANHAMENTO );
-        Produto agua = new Produto("Água", 2.50, "(500ml)", Tipo.BEBIDA);
+        Produto agua = new Produto("�?gua", 2.50, "(500ml)", Tipo.BEBIDA);
         Produto suco = new Produto("Suco", 4.00, "(Laranja, Limão, Acerola, Maracujá)", Tipo.BEBIDA);
         Produto refri = new Produto("Refrigerante", 3.50, "(350ml)", Tipo.BEBIDA);
         Produto milkshake = new Produto("MilkShake", 8.50, "(Chocolate, Baunilha, Morango)", Tipo.BEBIDA);

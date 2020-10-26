@@ -1,4 +1,4 @@
-package CalcadadosHamburgueres.basics;
+package beans;
 
 public enum Tipo {
     SANDUICHE, BEBIDA, ACOMPANHAMENTO, NONE
