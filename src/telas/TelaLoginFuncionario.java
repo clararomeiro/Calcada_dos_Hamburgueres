@@ -16,7 +16,7 @@ public class TelaLoginFuncionario extends Application{
 	}
 
 	@Override
-	public void start(Stage arg0) throws Exception {
+	public void start(Stage stage) throws Exception {
 		Parent rood = FXMLLoader.load(getClass().getResource("/view/LoginFuncionario.fxml"));
         Scene scene = new Scene(rood);
         stage.setTitle("Login Funcionarios");
