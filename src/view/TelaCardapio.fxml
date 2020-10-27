@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaCardapioController">
    <children>
       <SplitPane dividerPositions="0.2936404931862427" prefHeight="498.0" prefWidth="763.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="178.0">
                <children>
-                  <Text layoutX="47.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hamburgueres" wrappingWidth="127.73670196533203">
+                  <Text fill="#e5892e" layoutX="47.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hamburgueres" textAlignment="CENTER" wrappingWidth="127.73670196533203">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -42,12 +46,12 @@
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <Text layoutX="55.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bebidas">
+                  <Text fill="#e5892e" layoutX="62.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bebidas" textAlignment="CENTER" wrappingWidth="102.296875">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Text>
-                  <Text layoutX="25.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acompanhamentos">
+                  <Text fill="#e5892e" layoutX="25.0" layoutY="268.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Acompanhamentos" textAlignment="CENTER">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -123,7 +127,7 @@
                         <Font size="13.0" />
                      </font>
                   </Text>
-                  <Text layoutX="12.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cebola empanada, serve 2 pessoas." />
+                  <Text layoutX="19.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cebola empanada, serve 2 pessoas." />
                   <Text layoutX="13.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Garrafa de agua (500ml).">
                      <font>
                         <Font size="13.0" />
@@ -144,6 +148,8 @@
                         <Font size="13.0" />
                      </font>
                   </Text>
+                  <Button fx:id="btnRealizarPedido" layoutX="291.0" layoutY="373.0" mnemonicParsing="false" text="Realizar pedido" />
+                  <Button fx:id="btnVoltar" layoutX="316.0" layoutY="410.0" mnemonicParsing="false" text="Voltar" />
                </children>
             </AnchorPane>
         </items>
