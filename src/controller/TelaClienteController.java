@@ -10,6 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import telas.TelaAdministrador;
+import telas.TelaCardapio;
 import telas.TelaCliente;
 import telas.TelaLoginFuncionario;
 
@@ -24,7 +25,7 @@ public class TelaClienteController implements Initializable {
 			if (txtNome.getText().equals("Nicole") && txtCpf.getText().equals("123456"))
 			{
 				fechar();
-				TelaAdministrador g = new TelaAdministrador();
+				TelaCardapio g = new TelaCardapio();
 				try {
 					g.start(new Stage());
 				} catch (Exception e1) {
