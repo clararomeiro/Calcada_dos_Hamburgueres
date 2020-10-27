@@ -7,7 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 //import javafx.stage.Stage;
-import telas.TelaCliente;
+import telas.TelaCardapio;
 
 
 public class TelaCardapioController extends Saida implements Initializable {
@@ -38,6 +38,6 @@ public class TelaCardapioController extends Saida implements Initializable {
     
     
     public void voltar(){
-        TelaCliente.getStage().close();
+        TelaCardapio.getStage().close();
     }
 }
