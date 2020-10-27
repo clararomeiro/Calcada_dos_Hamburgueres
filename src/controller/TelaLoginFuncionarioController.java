@@ -23,12 +23,7 @@ public class TelaLoginFuncionarioController implements Initializable{
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 		btnEntrar.setOnMouseClicked((MouseEvent e)->{
-			TelaAdministrador c = new TelaAdministrador();
-			try {
-				c.start(new Stage());
-			} catch (Exception e1) {
-				Logger.getLogger(TelaLoginFuncionarioController.class.getName()).log(Level.SEVERE, null, e1);
-			}
+		
 			
 	    });
 		
