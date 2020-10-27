@@ -11,7 +11,7 @@ public class TelaCliente {
 	private static Stage stage;
 
 	public static void main(String[] args) {
-
+		launch(args);
 	}
 	
 	 public void start(Stage stage) throws Exception {

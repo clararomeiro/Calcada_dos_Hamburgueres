@@ -11,7 +11,7 @@ public class TelaInicial extends Application {
 	private static Stage stage;
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		launch(args);
 
 	}
 
