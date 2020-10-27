@@ -11,7 +11,7 @@ public class TelaClienteController implements Initializable {
 	  @FXML private TextField txtNome;
 	  @FXML private TextField txtCpf;
 	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
+	public void initialize(URL url, ResourceBundle rb) {
 		// TODO Auto-generated method stub
 		
 	}
