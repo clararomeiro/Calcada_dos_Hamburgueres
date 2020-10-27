@@ -13,15 +13,15 @@
    <children>
       <Pane prefHeight="365.0" prefWidth="482.0">
          <children>
-            <PasswordField layoutX="167.0" layoutY="158.0" promptText="senha" />
-            <TextField layoutX="167.0" layoutY="110.0" promptText="cpf" />
+            <PasswordField fx:id="txtSenha" layoutX="167.0" layoutY="158.0" promptText="senha" />
+            <TextField fx:id="txtCpf" layoutX="167.0" layoutY="110.0" promptText="cpf" />
             <Label layoutX="205.0" layoutY="44.0" prefHeight="25.0" prefWidth="68.0" text="Entrar">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
             <Button layoutX="215.0" layoutY="207.0" mnemonicParsing="false" text="entrar" />
-            <Hyperlink layoutX="185.0" layoutY="258.0" text="esqueceu a senha?" />
+            <Hyperlink layoutX="205.0" layoutY="260.0" text="cadastrar-se" />
          </children>
       </Pane>
    </children>
