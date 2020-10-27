@@ -30,5 +30,4 @@ public class TelaCliente {
 	    public static void setStage(Stage stage) {
 	        TelaCliente.stage = stage;
 	    }
-	}
 }

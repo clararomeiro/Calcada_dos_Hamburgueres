@@ -16,7 +16,7 @@ public class TelaAdministrador extends Application{
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent rood = FXMLLoader.load(getClass().getResource("TelaAdministrador.fxml"));
+        Parent rood = FXMLLoader.load(getClass().getResource("/view/TelaAdministrador.fxml"));
         Scene scene = new Scene(rood);
         stage.setTitle("Admin");
         stage.setScene(scene);

@@ -17,7 +17,7 @@ public class TelaInicial extends Application {
 
 	@Override
 	public void start(Stage stage) throws Exception {
-		Parent rood = FXMLLoader.load(getClass().getResource("/TelaInicial.fxml")); // carrega o fxml
+		Parent rood = FXMLLoader.load(getClass().getResource("/view/TelaInicial.fxml")); // carrega o fxml
         Scene scene = new Scene(rood); // coloca o fxml em uma cena
         stage.setTitle("Calçada dos Hamburgueres");
         stage.setScene(scene); // coloca a cena em uma janela
