@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import telas.TelaAdministrador;
 import telas.TelaInicial;
 import telas.TelaLoginFuncionario;
+import telas.TelaPedidos;
 
 public class TelaLoginFuncionarioController implements Initializable{
 	@FXML private TextField txtCpf;
@@ -23,7 +24,7 @@ public class TelaLoginFuncionarioController implements Initializable{
 		btnEntrar.setOnMouseClicked((MouseEvent e)->{
 		if (txtSenha.getText().equals("funcionario"))
 		{
-			
+			fechar();
 			TelaAdministrador g = new TelaAdministrador();
 			try {
 				g.start(new Stage());
@@ -36,5 +37,9 @@ public class TelaLoginFuncionarioController implements Initializable{
 	    });
 		
 	}
+	
+	public void fechar(){
+        TelaLoginFuncionario.getStage().close();
+    }
 	
 }

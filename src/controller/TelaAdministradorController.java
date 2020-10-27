@@ -19,11 +19,11 @@ public class TelaAdministradorController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         btnSair.setOnMouseClicked((MouseEvent e)->{
-            fecha();
+            fechar();
         });
         
         btnSim.setOnMouseClicked((MouseEvent e)->{
-            
+        	fechar();
 	    	TelaPedidos tp = new TelaPedidos();
 	    	try {
 				tp.start(new Stage());
@@ -37,7 +37,7 @@ public class TelaAdministradorController implements Initializable {
  }
     
     
-    private void fecha(){
+    public void fechar(){
         TelaAdministrador.getStage().close();
     }
 }
