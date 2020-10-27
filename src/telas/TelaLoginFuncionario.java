@@ -1,6 +1,7 @@
 package telas;
 
 import javafx.application.Application;
+import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -16,7 +17,7 @@ public class TelaLoginFuncionario extends Application{
 	}
 
 	@Override
-	public void start(Stage arg0) throws Exception {
+	public void start(Stage stage) throws Exception {
 		Parent rood = FXMLLoader.load(getClass().getResource("/view/LoginFuncionario.fxml"));
         Scene scene = new Scene(rood);
         stage.setTitle("Login Funcionarios");
