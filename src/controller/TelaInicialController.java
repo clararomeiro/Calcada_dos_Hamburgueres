@@ -14,6 +14,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import telas.TelaCliente;
 import telas.TelaInicial;
 import telas.TelaLoginFuncionario;
 
@@ -53,9 +54,32 @@ public class TelaInicialController implements Initializable {
 		 });
 		 
 		 btnCliente.setOnMouseClicked((MouseEvent e)->{
-			 
+			 fechar();
+			 TelaCliente c = new TelaCliente();
+			 try {
+				c.start(new Stage());
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 	           
-		    });
+		  });
+		 
+		 btnCliente.setOnKeyPressed((KeyEvent e) -> {
+			 if(e.getCode() == KeyCode.ENTER)
+			 {
+				 fechar();
+				 TelaCliente d = new TelaCliente();
+				 try {
+					d.start(new Stage());
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			 }
+		 });
+		 
+		 
 	}
 	
 	public void fechar ()
