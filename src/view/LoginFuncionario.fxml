@@ -14,7 +14,7 @@
       <Pane prefHeight="365.0" prefWidth="482.0">
          <children>
             <PasswordField fx:id="txtSenha" layoutX="167.0" layoutY="158.0" promptText="senha" />
-            <TextField fx:id="txtCpf" layoutX="167.0" layoutY="110.0" promptText="cpf" />
+            <TextField fx:id="txtCpf" layoutX="167.0" layoutY="110.0" promptText="usuário" />
             <Label layoutX="205.0" layoutY="44.0" prefHeight="25.0" prefWidth="68.0" text="Entrar">
                <font>
                   <Font size="24.0" />
