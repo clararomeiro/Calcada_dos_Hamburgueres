@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.0" prefWidth="477.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Text layoutX="62.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem Vindo Administrador" textAlignment="CENTER" wrappingWidth="352.13671875">
@@ -19,7 +18,7 @@
             <Font size="24.0" />
          </font>
       </Button>
-      <Text layoutX="82.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deseja ver detalhes do pedido?" textAlignment="CENTER" wrappingWidth="313.623046875">
+      <Text layoutX="82.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deseja ver detalhes dos pedidos?" textAlignment="CENTER" wrappingWidth="313.623046875">
          <font>
             <Font size="24.0" />
          </font>
