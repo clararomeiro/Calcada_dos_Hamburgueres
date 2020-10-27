@@ -1,12 +1,13 @@
 package telas;
 
 import controller.TelaClienteController;
+import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class TelaCliente {
+public class TelaCliente extends Application {
 
 	private static Stage stage;
 
