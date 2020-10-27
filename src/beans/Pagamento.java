@@ -1,6 +1,8 @@
 package beans;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import controller.ControladorPedido;
 
 public class Pagamento {
 	

@@ -1,7 +1,7 @@
 package beans;
 
-import CalcadadosHamburgueres.basics.Produto;
-import CalcadadosHamburgueres.basics.Tipo;
+import beans.Produto;
+import beans.Tipo;
 
 import java.util.ArrayList;
 
