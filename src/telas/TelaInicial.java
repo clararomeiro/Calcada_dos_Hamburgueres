@@ -16,15 +16,13 @@ public class TelaInicial extends Application {
 	}
 
 	@Override
-	public void start(Stage stage) throws Exception {
-		Parent rood = FXMLLoader.load(getClass().getResource("/view/TelaInicial.fxml")); // carrega o fxml
-        Scene scene = new Scene(rood); // coloca o fxml em uma cena
-        stage.setTitle("Calçada dos Hamburgueres");
-        stage.setScene(scene); // coloca a cena em uma janela
-        stage.show(); // abre a janela
-        
+	public void start(Stage stage) throws Exception {	
+        Parent root = FXMLLoader.load(getClass().getResource("/view/TelaInicial.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("Cliente");
+        stage.setScene(scene);
+        stage.show();
         setStage(stage);
-		
 	}
 	
 	public static Stage getStage() {

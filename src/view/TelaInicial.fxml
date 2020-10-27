@@ -10,12 +10,12 @@
    <children>
       <Pane prefHeight="318.0" prefWidth="477.0">
          <children>
-            <Button fx:id="btnCliente" layoutX="85.0" layoutY="159.0" mnemonicParsing="false" onAction="#btnCliente" text="Cliente">
+            <Button fx:id="btnCliente" layoutX="85.0" layoutY="159.0" mnemonicParsing="false" text="Cliente">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="287.0" layoutY="159.0" mnemonicParsing="false" onAction="#btnFuncionario" text="Funcionario">
+            <Button fx:id="btnFuncionario" layoutX="287.0" layoutY="159.0" mnemonicParsing="false" text="Funcionario">
                <font>
                   <Font size="20.0" />
                </font>
