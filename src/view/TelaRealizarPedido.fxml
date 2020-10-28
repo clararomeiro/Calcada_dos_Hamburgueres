@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="tela" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <ListView layoutX="48.0" layoutY="77.0" prefHeight="233.0" prefWidth="504.0" />
+      <Button fx:id="realizarPedido" layoutX="274.0" layoutY="330.0" mnemonicParsing="false" text="Realizar Pedido" />
+      <Button fx:id="Sair" layoutX="500.0" layoutY="38.0" mnemonicParsing="false" text="Sair" />
+      <Label layoutX="270.0" layoutY="13.0" prefHeight="28.0" prefWidth="106.0" text="Menu" textFill="#fff600">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
