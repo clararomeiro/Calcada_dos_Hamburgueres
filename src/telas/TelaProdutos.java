@@ -12,7 +12,6 @@ public class TelaProdutos extends Application {
 
 	public static void main(String[] args) {
 		launch(args);
-
 	}
 
 	@Override
