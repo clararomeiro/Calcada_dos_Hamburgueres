@@ -21,10 +21,11 @@ public class TelaCardapioController extends Saida implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+    	
         btnVoltar.setOnMouseClicked((MouseEvent e)->{
             saida();
         	voltar();
-        });
+         });
         
         btnVoltar.setOnKeyPressed((KeyEvent e) -> {
         	saida();
@@ -40,7 +41,7 @@ public class TelaCardapioController extends Saida implements Initializable {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}  
-    });
+        });
         
         btnRealizarPedido.setOnKeyPressed((KeyEvent e) -> {
         	voltar();
