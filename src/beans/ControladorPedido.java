@@ -60,9 +60,9 @@ public class ControladorPedido {
 		private void calcularPreco() {
 			this.preco =0;
 			for (Carrinho s: carrinho) {
-	                    for (Cardapio cardapio : s.getCardapio()) {
-	                        preco+=Cardapio.getPreco();
-	                    }			
+	                    for (Produto produto : s.getProduto()) {
+	                        preco+=Produto.getPreco();
+	                    }		
 			}
 		}
 	      
