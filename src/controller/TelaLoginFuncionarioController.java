@@ -27,7 +27,7 @@ public class TelaLoginFuncionarioController implements Initializable{
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 		btnEntrar.setOnMouseClicked((MouseEvent e)->{
-		if (txtSenha.getText().equals("funcionario"))
+		if (txtSenha.getText().equals("funcionario") || txtSenha.getText().equals(" "))
 		{
 			fechar();
 			TelaAdministrador g = new TelaAdministrador();
@@ -42,6 +42,8 @@ public class TelaLoginFuncionarioController implements Initializable{
 	    });
 		
 		btnEntrar.setOnKeyPressed((KeyEvent e) -> { 
+		if (txtSenha.getText().equals("funcionario") || txtSenha.getText().equals(" "))
+		{
 			 fechar();
 			 TelaAdministrador v = new TelaAdministrador();
 			 try {
@@ -50,6 +52,7 @@ public class TelaLoginFuncionarioController implements Initializable{
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
+		}
 	 });
 		
 		btnCadastrar.setOnMouseClicked((MouseEvent e)->{

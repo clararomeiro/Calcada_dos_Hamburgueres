@@ -14,6 +14,8 @@ public interface ICalcada {
 	
 	public Cliente selecionarCliente(String cpf);
 	
+	void cadastrar(Funcionario f);
+	
 	void cadastrarPagamento(Pagamento pagamento);
 	
 	List<String> listarFuncionariosString();

@@ -25,6 +25,21 @@ public class RepositorioFuncionarios implements IRepositorioFuncionarios, Serial
 		funcionarios = new ArrayList<Funcionario>();		
 	}
 	
+	@Override
+	public List<String> listar(){
+            funcionarioString = new ArrayList<>();
+            funcionarioString.add("NOME /  CPF/  EMAIL");
+            for (Funcionario funcionario : funcionarios) {
+                funcionarioString.add(funcionario.toString());
+            }
+		return funcionarioString;
+         
+	}
+        
+        public List<Funcionario> listarFuncionarios(){
+            return funcionarios;
+        }
+	
 	private static RepositorioFuncionarios lerArquivo() {
 		RepositorioFuncionarios instanciaLocal =  null;
 		File f = new File ("baseDados"+"arqFuncionarios.dat");
