@@ -2,11 +2,10 @@ package beans;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import beans.ControladorPedido;
 
 public class Pagamento {
 	
-	private ControladorPedido controladorPedido;
+	private Pedido controladorPedido;
 	private String modoPagamento;
 	private LocalDate dataVenda;
 	
@@ -15,20 +14,20 @@ public class Pagamento {
 	private static final String DINHEIRO ="dinheiro";
 
 
-	public Pagamento(ControladorPedido controladorPedido, String modoPag) {
+	public Pagamento(Pedido controladorPedido, String modoPag) {
 		this.controladorPedido = controladorPedido;
 		this.setModoPagamento(modoPag);
      
 	}
 	
-	public Pagamento(ControladorPedido controladorPedido)
+	public Pagamento(Pedido controladorPedido)
 	{
 		this.controladorPedido = controladorPedido;
 	}
-	public ControladorPedido getControladorPedido() {
+	public Pedido getControladorPedido() {
 		return controladorPedido;
 	}
-	public void setPedido(ControladorPedido controladorPedido) {
+	public void setPedido(Pedido controladorPedido) {
 		this.controladorPedido = controladorPedido;
 	}
 	public String getModoPagamento() {
