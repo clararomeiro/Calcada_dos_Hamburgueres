@@ -1,12 +1,17 @@
 package dados;
 
+import java.util.List;
+
 import beans.Funcionario;
+import exceptions.FuncionarioException;
 
 
 public interface IRepositorioFuncionarios {
 
-	void salvarArquivo();
+	List<String> listar();
 	
-	void cadastrar(Funcionario funcionario); 
+	void salvarArquivo() throws FuncionarioException;
+	
+	void cadastrar(Funcionario funcionario) throws FuncionarioException; 
 		
 }

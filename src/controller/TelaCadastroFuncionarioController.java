@@ -11,6 +11,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import negocio.ICalcada;
 import telas.TelaCadastroFuncionario;
 import telas.TelaCliente;
 import telas.TelaLoginFuncionario;
@@ -22,6 +23,7 @@ public class TelaCadastroFuncionarioController extends Saida implements Initiali
 	 @FXML private TextField txtCpf;
 	 @FXML private Button btnCadastro;
 	 @FXML private Button btnVoltar;
+	 ICalcada fachada;
 	
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
