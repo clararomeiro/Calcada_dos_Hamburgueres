@@ -1,31 +1,83 @@
 package beans;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.io.Serializable;
+import java.util.List;
 
-public class Pedido {
-	Cliente cliente;
-	ItemPedido itempedido;
+public class Pedido implements Serializable {
 	
-	public Pedido(Cliente cliente, ItemPedido itempedido) {
+	private static final long serialVersionUID = 3491137690432125567L;
+	
+	private List<Produto> hamburgueres;
+	private String status;
+	private Cliente cliente;
+	private double preco;
+	private int id;
+	
+	public Pedido(List<Produto> hamburguer,String status, Cliente cliente) {
+		this.hamburgueres = hamburguer;
+		this.status = status;
 		this.cliente = cliente;
-		this.itempedido = itempedido;
+		this.calcularPreco();
 	}
 	
-	//obtem a hora local
-	public LocalTime obterHorario() {
-		LocalTime horaAgora = LocalTime.now();
-		return horaAgora;
+	public List<Produto> getHamburgueres(){
+		return hamburgueres;
 	}
 	
-	//obtem a data local
-	public LocalDate obterData() {
-		LocalDate dataAgora = LocalDate.now();
-		return dataAgora;
+	public void setHamburgueres(List<Produto> hamburgueres) {
+		this.hamburgueres = hamburgueres;
 	}
 	
-	//retorna a nota fiscal
-	public String toStringNotaFiscal() {
-		return "Numero do pedido: " + this.itempedido.gerarNumeroCliente() + "\n" + "CPF: " + this.cliente.getCpf() + "\n" + "Metodo de pagamento: " + this.cliente.formaDePagamento() + "\n" + "Itens da compra:\n" + this.itempedido.getItemPedido() + "\n" + "Data da compra: " + obterData() + "\n" + "Horario da compra: " + obterHorario();
+	public String getStatus() {
+		return status;
 	}
+	
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	
+	public Cliente getCliente() {
+		return cliente;
+	}
+	
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+	
+	public int getId() {
+		return this.id;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public double getPreco() {
+		return preco;
+	}
+	
+	private void calcularPreco() {
+		this.preco = 0;
+		/*for(Produto p: hamburgueres) {
+			this.preco += p }*/
+	}
+	
+	public void mudarStatus() {
+		
+	}
+	
+	public String toString() {
+		
+		return this.cliente.getCpf() + "\t" + this.status;
+	}
+	
+	
+
+
+	
+	
+	
+	
+	
+	
 }
