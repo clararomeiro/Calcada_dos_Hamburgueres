@@ -5,7 +5,7 @@ import java.time.LocalTime;
 
 public class NotaFiscal {
 	Cliente cliente;
-	ItemPedido itempedido;
+	/*ItemPedido itempedido;
 	
 	public Pedido(Cliente cliente, ItemPedido itempedido) {
 		this.cliente = cliente;
@@ -27,5 +27,5 @@ public class NotaFiscal {
 	//retorna a nota fiscal
 	public String toStringNotaFiscal() {
 		return "Numero do pedido: " + this.itempedido.gerarNumeroCliente() + "\n" + "CPF: " + this.cliente.getCpf() + "\n" + "Metodo de pagamento: " + this.cliente.formaDePagamento() + "\n" + "Itens da compra:\n" + this.itempedido.getItemPedido() + "\n" + "Data da compra: " + obterData() + "\n" + "Horario da compra: " + obterHorario();
-	}
+	}*/
 }
