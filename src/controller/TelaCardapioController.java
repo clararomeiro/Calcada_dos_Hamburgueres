@@ -6,8 +6,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
-//import javafx.stage.Stage;
+import javafx.stage.Stage;
 import telas.TelaCardapio;
+import telas.TelaProdutos;
 
 
 public class TelaCardapioController extends Saida implements Initializable {
@@ -22,17 +23,17 @@ public class TelaCardapioController extends Saida implements Initializable {
         	voltar();
         });
         
-        /*btnRealizarPedido.setOnMouseClicked((MouseEvent e)->{
+        btnRealizarPedido.setOnMouseClicked((MouseEvent e)->{
         	voltar();
-	    	Teladasmeninas a = new Teladasmeninas();
+	    	TelaProdutos a = new TelaProdutos();
 	    	try {
-				tp.start(new Stage());
+				a.start(new Stage());
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
             
-    });*/
+    });
     
  }
     
