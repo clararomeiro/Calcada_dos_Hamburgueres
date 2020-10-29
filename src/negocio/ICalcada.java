@@ -2,7 +2,7 @@ package negocio;
 
 import beans.Cliente;
 import beans.Funcionario;
-//importar a classe nova de pedidos
+import beans.Pedido;
 import beans.Pagamento;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +18,12 @@ public interface ICalcada {
 	
 	void cadastrarPagamento(Pagamento pagamento);
 	
+	void cadastrar(Pedido pedido);
+	public void removerPedido(Pedido pedido);
+	
 	List<String> listarFuncionariosString();
 	List<Funcionario> listarFuncionarios();
+	List<Pedido> listarPedidos();
 	
 	Funcionario logarF(String usuario, String senha);
 	
