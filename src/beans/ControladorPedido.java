@@ -70,9 +70,5 @@ public class ControladorPedido {
 	    public void mudarStatus(){
 	            
 	    }
-	    public String toString() {
-			
-			return this.cliente.getCpf()+"\t"+this.carrinho.get(0).getCardapio()+"    "+ this.carrinho.get(0).getQtd()+"\t"+this.status+"\t";
-			
-		}
+	    
 }
