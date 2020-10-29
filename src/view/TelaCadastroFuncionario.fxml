@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="291.0" prefWidth="626.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroController">
+<AnchorPane id="AnchorPane" prefHeight="291.0" prefWidth="626.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaCadastroFuncionarioController">
    <children>
       <Label layoutX="252.0" layoutY="6.0" text="CADASTRO" textFill="#ffb700">
          <font>

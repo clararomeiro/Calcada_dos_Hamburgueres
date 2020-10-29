@@ -11,17 +11,17 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaLoginFuncionarioController">
    <children>
-      <Pane prefHeight="365.0" prefWidth="482.0">
+      <Pane prefHeight="365.0" prefWidth="482.0" style="-fx-background-color: #000000;">
          <children>
             <PasswordField fx:id="txtSenha" layoutX="167.0" layoutY="158.0" promptText="senha" />
             <TextField fx:id="txtCpf" layoutX="167.0" layoutY="110.0" promptText="usuário" />
-            <Label layoutX="205.0" layoutY="44.0" prefHeight="25.0" prefWidth="68.0" text="Entrar">
+            <Label layoutX="205.0" layoutY="44.0" prefHeight="25.0" prefWidth="68.0" text="Entrar" textFill="#ffb700">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
             <Button fx:id="btnEntrar" layoutX="215.0" layoutY="207.0" mnemonicParsing="false" text="entrar" />
-            <Hyperlink layoutX="205.0" layoutY="260.0" text="cadastrar-se" />
+            <Hyperlink fx:id="btnCadastrar" layoutX="205.0" layoutY="260.0" text="cadastrar-se" textFill="#ffb700" />
          </children>
       </Pane>
    </children>
