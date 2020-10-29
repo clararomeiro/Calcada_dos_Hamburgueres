@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaCardapioController">
+   <children>
+      <SplitPane dividerPositions="0.2936404931862427" prefHeight="498.0" prefWidth="763.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="178.0">
+               <children>
+                  <Text fill="#e5892e" layoutX="47.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hamburgueres" textAlignment="CENTER" wrappingWidth="127.73670196533203">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="51.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zendaya R$11,50" wrappingWidth="141.27978515625">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="56.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Twice R$ 9,00">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="60.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BBH R$ 6,14">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="59.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NCT R$ 5,00">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="52.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Priscila Senna R$ 7,50">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#e5892e" layoutX="62.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bebidas" textAlignment="CENTER" wrappingWidth="102.296875">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#e5892e" layoutX="25.0" layoutY="268.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Acompanhamentos" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="70.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agua R$ 2,50">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="55.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Milkshake R$ 8,50">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="51.0" layoutY="488.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Refrigerante R$ 3,00">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="71.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suco R$ 4,00">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="58.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Batata frita R$ 5,00">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="52.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Batata cheddar R$ 7,00">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="52.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Onion rings R$ 6,50">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="492.0" prefWidth="433.0">
+               <children>
+                  <Text layoutX="194.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descricao" />
+                  <Text layoutX="11.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pão com gergelim, 2 veggie burguers feitos de grao de bico, queijo, alface, cebola cortada em pedaços e molho especial vegano." wrappingWidth="376.8389892578125">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frango empanado, cheddar, alface e cebola roxa.">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pão verde, carne vegetal, tomate, alface, cebola empanada e molho especial." wrappingWidth="404.926513671875">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="12.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pão italiano, duas carnes bovinas, cheddar, cebola shoyu." />
+                  <Text layoutX="14.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pão brioche, carne bovina, queijo muzzarela, alface, tomate, molho especial." wrappingWidth="404.926513671875">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Porcao de batata frita, serve 2 pessoas.">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="13.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Porcao de batata frita com cheddar, serve 2 pessoas.">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="19.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cebola empanada, serve 2 pessoas." />
+                  <Text layoutX="13.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Garrafa de agua (500ml).">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="15.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laranja, acerola, limao e maracuja.">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chocolate, baunilha e morango (350ml).">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="15.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coca-cola e guarana antartica (350ml).">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="btnRealizarPedido" layoutX="291.0" layoutY="373.0" mnemonicParsing="false" text="Realizar pedido" />
+                  <Button fx:id="btnVoltar" layoutX="316.0" layoutY="410.0" mnemonicParsing="false" text="Voltar" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
