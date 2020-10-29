@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.TelaPedidosController">
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaPedidosController">
    <children>
-      <Pane layoutX="-36.0" layoutY="1.0" prefHeight="318.0" prefWidth="477.0">
+      <Pane prefHeight="319.0" prefWidth="499.0" style="-fx-background-color: #000000;">
          <children>
-            <Text layoutX="94.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acompanhamento dos Pedidos" textAlignment="CENTER" wrappingWidth="326.919921875">
+            <Text fill="#ffb700" layoutX="94.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ACOMPANHAMENTO DOS PEDIDOS" textAlignment="CENTER" wrappingWidth="326.919921875">
                <font>
-                  <Font size="23.0" />
+                  <Font name="Arial Bold" size="23.0" />
                </font>
             </Text>
             <ListView layoutX="63.0" layoutY="81.0" prefHeight="130.0" prefWidth="388.0" />
-            <Button fx:id="btnCancelar" layoutX="101.0" layoutY="238.0" mnemonicParsing="false" text="Cancelar">
+            <Button fx:id="btnCancelar" layoutX="101.0" layoutY="238.0" mnemonicParsing="false" style="-fx-background-color: #ffb700;" text="Cancelar" textFill="#683939">
                <font>
-                  <Font size="15.0" />
+                  <Font name="Arial Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="btnAtualizar" layoutX="225.0" layoutY="238.0" mnemonicParsing="false" text="Atualizar">
+            <Button fx:id="btnAtualizar" layoutX="225.0" layoutY="238.0" mnemonicParsing="false" style="-fx-background-color: #ffb700;" text="Atualizar" textFill="#683939">
                <font>
-                  <Font size="15.0" />
+                  <Font name="Arial Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="btnSair" layoutX="345.0" layoutY="238.0" mnemonicParsing="false" text="Sair">
+            <Button fx:id="btnSair" layoutX="345.0" layoutY="238.0" mnemonicParsing="false" style="-fx-background-color: #ffb700;" text="Sair" textFill="#683939">
                <font>
-                  <Font size="15.0" />
+                  <Font name="Arial Bold" size="15.0" />
                </font>
             </Button>
          </children>
