@@ -6,7 +6,11 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+import telas.TelaLoginFuncionario;
 import telas.TelaPedidos;
 
 public class TelaPedidosController extends Saida implements Initializable {
@@ -23,6 +27,12 @@ public class TelaPedidosController extends Saida implements Initializable {
 		 	   saida();
 		 	   fechar();
 		    });
+		
+		 btnSair.setOnKeyPressed((KeyEvent e) -> {
+			 saida();
+		 	 fechar();
+		 });
+		
 	}
 	
 	private void fechar(){
