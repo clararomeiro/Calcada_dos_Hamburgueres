@@ -112,7 +112,7 @@ public class RepositorioPedidos implements IRepositorioPedidos, Serializable {
     }
 
     @Override
-    public void cadastrarPedido(Pedido pedido) throws PedidosException {
+    public void cadastrarPedido(Pedido pedido) {
         pedidos.add(pedido);
 
     }
@@ -127,7 +127,7 @@ public class RepositorioPedidos implements IRepositorioPedidos, Serializable {
     }
 
     @Override
-    public void removerPedido(Pedido pedido) throws PedidosException {
+    public void removerPedido(Pedido pedido) {
 
         boolean temId = false;
         for(Pedido p: pedidos){
@@ -139,5 +139,15 @@ public class RepositorioPedidos implements IRepositorioPedidos, Serializable {
             pedidos.remove(pedido);
         }
     }
+    
+    /*public void mudarStatus(String cpf){
+        for (Pedido p : pedidos) {
+            if (p.getCliente().getCpf().equals(cpf)) {
+                p.setStatus("Pedido pronto");
+            }
+        }
+    }*/
+    
+    
 
 }

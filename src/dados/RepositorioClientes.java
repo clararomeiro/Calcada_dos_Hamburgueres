@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import beans.Cliente;
-import beans.Consumidor;
 import beans.Funcionario;
 
 public class RepositorioClientes implements IRepositorioClientes, Serializable {
@@ -105,7 +104,6 @@ public class RepositorioClientes implements IRepositorioClientes, Serializable {
 
 	}
 		
-	}
 
 	@Override
 	public void cadastrar(Cliente cliente) throws ClienteException {
@@ -140,4 +138,4 @@ public class RepositorioClientes implements IRepositorioClientes, Serializable {
 
 	
 
-}
+	}

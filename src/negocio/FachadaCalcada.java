@@ -8,7 +8,10 @@ import java.util.logging.Logger;
 import beans.Cliente;
 import beans.Funcionario;
 import beans.Pagamento;
+import beans.Pedido;
+import exceptions.ClienteException;
 import exceptions.FuncionarioException;
+import exceptions.PagamentoException;
 import javafx.scene.control.Alert;
 
 public class FachadaCalcada implements ICalcada{
@@ -86,6 +89,24 @@ public class FachadaCalcada implements ICalcada{
 	public void cadastrar(Funcionario f) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void cadastrar(Pedido pedido) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removerPedido(Pedido pedido) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Pedido> listarPedidos() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	
