@@ -1,11 +1,15 @@
 package beans;
 
-public class Cliente {
+import java.io.Serializable;
+
+public class Cliente implements Serializable{
+	
+	private static final long serialVersionUID = 5860472332476238715L;
 	
 	private String nome;
-	private long cpf;
+	private String cpf;
 	
-	public Cliente(String nome, long cpf)
+	public Cliente(String nome, String cpf)
 	{
 		this.nome = nome;
 		this.cpf = cpf;
@@ -21,12 +25,12 @@ public class Cliente {
 		this.nome = nome;
 	}
 
-	public long getCpf() 
+	public String getCpf() 
 	{
 		return cpf;
 	}
 
-	public void setCpf(long cpf) 
+	public void setCpf(String cpf) 
 	{
 		this.cpf = cpf;
 	}
@@ -35,6 +39,17 @@ public class Cliente {
 	public String toString() {
 		String s = super.toString()+","+ this.nome+","+this.cpf;
 		return s;
+	}
+	
+	public boolean equals(Cliente c) {
+		boolean igual = false;
+		if(c !=null) {
+			if(this.getCpf().equals(c.getCpf()) && this.getNome().equalsIgnoreCase(c.getNome())) {
+				igual =true;
+			}
+			
+		}
+		return igual;
 	}
 	
 	

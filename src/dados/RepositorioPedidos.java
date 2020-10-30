@@ -140,13 +140,13 @@ public class RepositorioPedidos implements IRepositorioPedidos, Serializable {
         }
     }
     
-    /*public void mudarStatus(String cpf){
+    public void mudarStatus(String cpf){
         for (Pedido p : pedidos) {
             if (p.getCliente().getCpf().equals(cpf)) {
                 p.setStatus("Pedido pronto");
             }
         }
-    }*/
+    }
     
     
 

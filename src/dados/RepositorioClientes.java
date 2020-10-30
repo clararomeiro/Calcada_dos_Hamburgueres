@@ -11,7 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import beans.Cliente;
+import beans.Consumidor;
 import beans.Funcionario;
+import exceptions.ConsumidorException;
 
 public class RepositorioClientes implements IRepositorioClientes, Serializable {
 
@@ -124,6 +126,28 @@ public class RepositorioClientes implements IRepositorioClientes, Serializable {
         }
 		
 	}
+	
+	public Cliente selecionar(String cpf) throws ConsumidorException {
+		Cliente resultado = null;
+		
+		if(cpf != null)
+		{
+			for (Cliente c : clientes)
+			{
+				if(c.getCpf().equals(cpf))
+				{
+					resultado = c;
+				}
+			}if(resultado == null){
+
+				ClienteException selecionarconsumidor = new ClienteException("Consumidor nao encotrado!");
+				throw selecionarconsumidor;
+			}
+		}
+		
+		return resultado;
+	}
+	
 	
 	private int retornarIndice(String cpf) {
 		int indice =-1;

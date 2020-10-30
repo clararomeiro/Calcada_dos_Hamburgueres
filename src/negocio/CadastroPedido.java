@@ -27,8 +27,8 @@ public class CadastroPedido {
 		this.rPedido.salvarArquivo();
 	}
 	
-	/*public void mudarStatus(String cpf) {
+	public void mudarStatus(String cpf) {
 		this.rPedido.mudarStatus(cpf);
 		this.rPedido.salvarArquivo();
-	}*/
+	}
 }
