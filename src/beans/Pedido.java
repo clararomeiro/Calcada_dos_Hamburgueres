@@ -68,7 +68,7 @@ public class Pedido implements Serializable {
 	
 	public String toString() {
 		
-		return this.cliente.getCpf() + "\t" + this.status;
+		return this.cliente.getCpf() + " " + this.status;
 	}
 	
 	
