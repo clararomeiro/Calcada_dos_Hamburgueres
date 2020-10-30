@@ -31,7 +31,7 @@ public class RepositorioClientes implements IRepositorioClientes, Serializable {
 	
 	private static RepositorioClientes lerArquivo() {
 		RepositorioClientes instanciaLocal =  null;
-		File f = new File("baseDados\"+\"arqClientes.dat");
+		File f = new File("bancoDados\"+\"arqClientes.dat");
 	    FileInputStream fis = null;
 	    ObjectInputStream ois = null;
   
@@ -73,12 +73,12 @@ public class RepositorioClientes implements IRepositorioClientes, Serializable {
 	}
 
 	@Override
-	public void salvarArquivo() throws ClienteException {
+	public void salvarArquivo() {
 		if(instance == null){
 			return;
 		}
 		     
-		File f = new File("baseDados\"+\"arqFuncionarios.dat");
+		File f = new File("bancoDados\"+\"arqClientes.dat");
 	    FileOutputStream fos = null;
 	    ObjectOutputStream oos = null;
 	    try{
@@ -120,8 +120,8 @@ public class RepositorioClientes implements IRepositorioClientes, Serializable {
         		
         	}
         	
-        	ClienteException cadastrarconsumidor = new ClienteException("Consumidor nao encontrado!");
-        	
+        	ClienteException cadastrarcliente = new ClienteException("Cliente nao encontrado!");
+        	throw cadastrarcliente;
         }
 		
 	}
@@ -139,8 +139,8 @@ public class RepositorioClientes implements IRepositorioClientes, Serializable {
 				}
 			}if(resultado == null){
 
-				ClienteException selecionarconsumidor = new ClienteException("Cliente nao encotrado!");
-				throw selecionarconsumidor;
+				ClienteException selecionarcliente = new ClienteException("Cliente nao encotrado!");
+				throw selecionarcliente;
 			}
 		}
 		
