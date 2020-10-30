@@ -62,6 +62,15 @@ public class FachadaCalcada implements ICalcada{
 
 	@Override
 	public Funcionario logarF(String usuario, String senha) {
+		 Funcionario funcionarios = null;
+	        if (this.login.loginFunci(usuario, senha) != null) {
+	            funcionarios = this.login.loginFunci(usuario, senha);
+	        }
+	        return funcionarios;
+    }
+	
+	@Override
+	public void cadastrar(Funcionario f) {
 		try {
             this.funcionario.cadastrar(f);
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -76,7 +85,8 @@ public class FachadaCalcada implements ICalcada{
             alert.show();
             Logger.getLogger(FachadaCalcada.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
+		
+	}
 
 
 	@Override
@@ -85,11 +95,7 @@ public class FachadaCalcada implements ICalcada{
 		
 	}
 
-	@Override
-	public void cadastrar(Funcionario f) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 	@Override
 	public void cadastrar(Pedido pedido) {
