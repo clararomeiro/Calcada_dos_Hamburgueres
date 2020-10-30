@@ -11,9 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import beans.Cliente;
-import beans.Consumidor;
 import beans.Funcionario;
-import exceptions.ConsumidorException;
+import exceptions.ClienteException;
 
 public class RepositorioClientes implements IRepositorioClientes, Serializable {
 
@@ -127,7 +126,7 @@ public class RepositorioClientes implements IRepositorioClientes, Serializable {
 		
 	}
 	
-	public Cliente selecionar(String cpf) throws ConsumidorException {
+	public Cliente selecionar(String cpf) throws ClienteException {
 		Cliente resultado = null;
 		
 		if(cpf != null)
@@ -140,7 +139,7 @@ public class RepositorioClientes implements IRepositorioClientes, Serializable {
 				}
 			}if(resultado == null){
 
-				ClienteException selecionarconsumidor = new ClienteException("Consumidor nao encotrado!");
+				ClienteException selecionarconsumidor = new ClienteException("Cliente nao encotrado!");
 				throw selecionarconsumidor;
 			}
 		}

@@ -1,5 +1,5 @@
 package exceptions;
 
-public class ClienteException {
+public class ClienteException extends Exception{
 
 }

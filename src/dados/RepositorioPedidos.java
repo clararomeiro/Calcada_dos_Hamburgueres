@@ -9,8 +9,6 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-
-import beans.Funcionario;
 import beans.Pedido;
 
 public class RepositorioPedidos implements IRepositorioPedidos, Serializable {
