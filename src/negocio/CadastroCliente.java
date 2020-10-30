@@ -14,7 +14,7 @@ public class CadastroCliente {
 		this.rCliente = RepositorioClientes.getInstance();
 	}
 	
-	public void cadastrar(Cliente cliente) throws ClienteExcpetion, IOException{
+	public void cadastrar(Cliente cliente) throws ClienteException, IOException{
 		if(this.eNumero(cliente.getCpf())) {
 			this.rCliente.cadastrar(cliente);
 			this.rCliente.salvarArquivo();
