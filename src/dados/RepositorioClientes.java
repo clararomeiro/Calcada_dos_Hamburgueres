@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import beans.Cliente;
-import beans.Funcionario;
 import exceptions.ClienteException;
 
 public class RepositorioClientes implements IRepositorioClientes, Serializable {
@@ -114,7 +113,7 @@ public class RepositorioClientes implements IRepositorioClientes, Serializable {
         	clientes.add(cliente);
         }else{
         	for(Cliente c: clientes) {
-        		if(c.getNome().equals(cliente.getNome()) || c.getCpf().equals(clientes.getCpf())) {
+        		if(c.getNome().equals(cliente.getNome()) || c.getCpf().equals(cliente.getCpf())) {
         			temEmail = true;
         		}
         		
