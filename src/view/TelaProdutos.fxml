@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="tela" prefHeight="760.0" prefWidth="614.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="tela" prefHeight="760.0" prefWidth="614.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaProdutosController">
    <children>
       <Button fx:id="btnRealizarPedido" layoutX="469.0" layoutY="646.0" mnemonicParsing="false" style="-fx-background-color: #ffb700;" text="Realizar Pedido" textFill="#683939" />
       <Button fx:id="Sair" layoutX="564.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #ffb700;" text="Sair" textFill="#683939" />
