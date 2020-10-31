@@ -175,6 +175,12 @@ public class TelaProdutosController {
         CbNCT.setItems(qtd);
     }
     
+    private void qtdTwice(){
+        ObservableList<Integer> qtd = FXCollections.observableArrayList(1,2,3,4);
+        cbTwice.setValue(0);
+        cbTwice.setItems(qtd);
+    }
+    
     private void qtdBatata(){
         ObservableList<Integer> qtd = FXCollections.observableArrayList(1,2,3,4);
         cbBatataFrita.setValue(0);
