@@ -58,8 +58,11 @@ public class Pedido implements Serializable {
 	
 	private void calcularPreco() {
 		this.preco = 0;
-		/*for(Produto p: hamburgueres) {
-			this.preco += p }*/
+		for(Produto p: hamburgueres) {
+			this.preco+= p.getAcompanhamentos().getValor()+ p.getBebidas().getValor()+
+					p.getHamburgueres().getValor();
+		}
+	
 	}
 	
 	public void mudarStatus() {
@@ -68,7 +71,10 @@ public class Pedido implements Serializable {
 	
 	public String toString() {
 		
-		return this.cliente.getCpf() + " " + this.status;
+		return this.cliente.getCpf() + "\t"+ this.hamburgueres.get(0).getHamburgueres() +"\t"+
+				this.hamburgueres.get(0).getAcompanhamentos()+"\t" + 
+				this.hamburgueres.get(0).getBebidas() + "\t"+ this.status;
+		//quantidades tbm
 	}
 	
 	
