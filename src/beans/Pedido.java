@@ -7,25 +7,25 @@ public class Pedido implements Serializable {
 	
 	private static final long serialVersionUID = 3491137690432125567L;
 	
-	private List<Produto> hamburgueres;
+	private List<Produto> produto;
 	private String status;
 	private Cliente cliente;
 	private double preco;
 	private int id;
 	
-	public Pedido(List<Produto> hamburguer,String status, Cliente cliente) {
-		this.hamburgueres = hamburguer;
+	public Pedido(List<Produto> produto,String status, Cliente cliente) {
+		this.produto = produto;
 		this.status = status;
 		this.cliente = cliente;
 		this.calcularPreco();
 	}
 	
-	public List<Produto> getHamburgueres(){
-		return hamburgueres;
+	public List<Produto> getProduto(){
+		return produto;
 	}
 	
-	public void setHamburgueres(List<Produto> hamburgueres) {
-		this.hamburgueres = hamburgueres;
+	public void setProduto(List<Produto> produto) {
+		this.produto = produto;
 	}
 	
 	public String getStatus() {
@@ -58,7 +58,7 @@ public class Pedido implements Serializable {
 	
 	private void calcularPreco() {
 		this.preco = 0;
-		for(Produto p: hamburgueres) {
+		for(Produto p: produto) {
 			this.preco+= p.getAcompanhamentos().getValor()+ p.getBebidas().getValor()+
 					p.getHamburgueres().getValor();
 		}
@@ -71,9 +71,9 @@ public class Pedido implements Serializable {
 	
 	public String toString() {
 		
-		return this.cliente.getCpf() + "\t"+ this.hamburgueres.get(0).getHamburgueres() +"\t"+
-				this.hamburgueres.get(0).getAcompanhamentos()+"\t" + 
-				this.hamburgueres.get(0).getBebidas() + "\t"+ this.status;
+		return this.cliente.getCpf() + "\t"+ this.produto.get(0).getHamburgueres() +"\t"+
+				this.produto.get(0).getAcompanhamentos()+"\t" + 
+				this.produto.get(0).getBebidas() + "\t"+ this.status;
 		//quantidades tbm
 	}
 	
