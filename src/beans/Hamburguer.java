@@ -3,7 +3,7 @@ package beans;
 
 public enum Hamburguer{
 	BBH(6.14),
-	NCT(5.00),
+	NCT(10.00),
 	ZENDAYA(11.50),
 	TWICE(14.50),
 	PRISCILA_SENNA(7),
