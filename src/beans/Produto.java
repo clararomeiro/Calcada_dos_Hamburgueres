@@ -1,53 +1,66 @@
 package beans;
 
-public class Produto {
-    private String nome;
-    private double preco;
-    private String descricao;
-    private Tipo tipo;
+import java.io.Serializable;
 
+public class Produto implements Serializable {
+  
+	private static final long serialVersionUID = 3924775242700710075L;
+	
+	private Hamburguer hamburgueres;
+	private Bebida bebidas;
+	private Acompanhamento acompanhamentos;
+	
+	//private int quantidade;
+	
+	public Produto(Hamburguer hamburgueres, Bebida bebidas, 
+			 Acompanhamento acompanhamentos/*,int quantidade*/) 
+	{
+		if(hamburgueres == null) {
+			this.hamburgueres = Hamburguer.SEM_HAMBURGUER;
+		}
+		else {
+			this.hamburgueres = hamburgueres;
+		}
+		if(bebidas == null) {
+			this.bebidas = Bebida.SEM_BEBIDA;
+		}
+		else {
+			this.bebidas = bebidas;
+		}
+		if(acompanhamentos == null) {
+			this.acompanhamentos = Acompanhamento.SEM_ACOMPANHAMENTO;
+		}
+		else {
+			this.acompanhamentos = acompanhamentos;
+		}
+	}
+	
+	public Hamburguer getHamburgueres() {
+		return hamburgueres;
+	}
 
-    public Produto(){
-        nome = "none";
-        preco = 0.0;
-        descricao = " ";
-        tipo = Tipo.NONE;
+	public void setHamburgueres(Hamburguer hamburgueres) {
+		this.hamburgueres = hamburgueres;
+	}
 
+	public Bebida getBebidas() {
+		return bebidas;
+	}
 
-    }
-    public Produto(String nome, double preco, String descricao, Tipo tipo){
-        this.nome = nome;
-        this.preco = preco;
-        this.descricao = descricao;
-        this.tipo = tipo;
-    }
+	public void setBebidas(Bebida bebidas) {
+		this.bebidas = bebidas;
+	}
 
-    public void setNome(String nome){
-        this.nome = nome;
-    }
+	public Acompanhamento getAcompanhamentos() {
+		return acompanhamentos;
+	}
 
-    public void setPreco(double preco){
-        this.preco = preco;
-    }
-    public void setDescricao(String descricao){
-        this.descricao = descricao;
-    }
-    public void setTipo(Tipo tipo){
-        this.tipo = tipo;
-    }
-    public double getPreco(){
-        return this.preco;
-    }
-    public String getNome(){
-        return this.nome;
-    }
-    public String getDescricao(){
-        return this.descricao;
-    }
-    public Tipo getTipo(){
-        return this.tipo;
-    }
+	public void setAcompanhamentos(Acompanhamento acompanhamentos) {
+		this.acompanhamentos = acompanhamentos;
+	} 
+		
+	}
 
-}
+  
 
 

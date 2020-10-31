@@ -12,7 +12,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaCardapioController">
    <children>
-      <Pane prefHeight="835.0" prefWidth="884.0" style="-fx-background-color: #000000;">
+      <Pane layoutY="-30.0" prefHeight="835.0" prefWidth="884.0" style="-fx-background-color: #000000;">
          <children>
             <Text fill="#fce200" layoutX="19.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sanduíches" textAlignment="CENTER" wrappingWidth="195.5966796875">
                <font>
@@ -121,21 +121,6 @@
             </Text>
             <Text fill="#fbff00" layoutX="46.0" layoutY="723.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cebola empanada, serve 2 pessoas." />
             <Text fill="#fbff00" layoutX="559.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Garrafa de agua (500ml).">
-               <font>
-                  <Font name="Arial" size="15.0" />
-               </font>
-            </Text>
-            <Text fill="#fbff00" layoutX="560.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Laranja, acerola, limao e maracuja.">
-               <font>
-                  <Font name="Arial" size="15.0" />
-               </font>
-            </Text>
-            <Text fill="#fbff00" layoutX="557.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chocolate, baunilha e morango (350ml).">
-               <font>
-                  <Font name="Arial" size="15.0" />
-               </font>
-            </Text>
-            <Text fill="#fbff00" layoutX="560.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coca-cola e guarana antartica (350ml).">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>

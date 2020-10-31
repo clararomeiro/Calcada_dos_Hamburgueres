@@ -87,7 +87,7 @@
             <Font name="Arial Black" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="90.0" layoutY="566.0" prefHeight="23.0" prefWidth="189.0" text="MILKSHAK - R$8,50" textFill="#fce200">
+      <Label layoutX="90.0" layoutY="566.0" prefHeight="23.0" prefWidth="189.0" text="MILKSHAKE - R$8,50" textFill="#fce200">
          <font>
             <Font name="Arial Black" size="15.0" />
          </font>
