@@ -73,8 +73,12 @@ public class Pedido implements Serializable {
 		
 		return this.cliente.getCpf() + "\t"+ this.produto.get(0).getHamburgueres() +"\t"+
 				this.produto.get(0).getAcompanhamentos()+"\t" + 
-				this.produto.get(0).getBebidas() + "\t"+ this.status;
-		//quantidades tbm
+				this.produto.get(0).getBebidas() + "\t"+ this.status +
+				this.produto.get(0).getQtdZendaya() + this.produto.get(0).getQtdBBH() + this.produto.get(0).getQtdPS() +
+				this.produto.get(0).getQtdTwice() + this.produto.get(0).getQtdNCT() + this.produto.get(0).getQtdBatata() +
+				this.produto.get(0).getQtdAgua() + this.produto.get(0).getQtdBatataCdd() + this.produto.get(0).getQtdSuco() +
+				this.produto.get(0).getQtdSuco() + this.produto.get(0).getQtdRefri() + this.produto.get(0).getQtdOnion() +
+				this.produto.get(0).getQtdMilkshak();
 	}
 	
 	
