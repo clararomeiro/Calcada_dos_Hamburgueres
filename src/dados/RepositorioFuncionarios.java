@@ -42,7 +42,7 @@ public class RepositorioFuncionarios implements IRepositorioFuncionarios, Serial
 	
 	private static RepositorioFuncionarios lerArquivo() {
 		RepositorioFuncionarios instanciaLocal =  null;
-		File f = new File ("baseDados"+"arqFuncionarios.dat");
+		File f = new File ("bancoDados" + File.separatorChar + "arqFuncionarios.dat");
 	    FileInputStream fis = null;
 	    ObjectInputStream ois = null;
    
@@ -88,7 +88,7 @@ public class RepositorioFuncionarios implements IRepositorioFuncionarios, Serial
 			return;
 		}
 		     
-		File f =  new File("baseDados"+"arqFuncionarios.dat");
+		File f =  new File("bancoDados" + File.separatorChar + "arqFuncionarios.dat");
 	    FileOutputStream fos = null;
 	    ObjectOutputStream oos = null;
 	    try{

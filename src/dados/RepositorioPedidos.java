@@ -39,7 +39,7 @@ public class RepositorioPedidos implements IRepositorioPedidos, Serializable {
 
     private static RepositorioPedidos lerArquivo() {
         RepositorioPedidos instanciaLocal =  null;
-        File f = new File ("baseDados"+"arqFuncionarios.dat");
+        File f = new File ("bancoDados" + File.separatorChar + "arqPedidos.dat");
         FileInputStream fis = null;
         ObjectInputStream ois = null;
 
@@ -85,7 +85,7 @@ public class RepositorioPedidos implements IRepositorioPedidos, Serializable {
             return;
         }
 
-        File f =  new File("baseDados"+"arqFuncionarios.dat");
+        File f =  new File("bancoDados" + File.separatorChar + "arqPedidos.dat");
         FileOutputStream fos = null;
         ObjectOutputStream oos = null;
         try{
