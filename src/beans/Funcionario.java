@@ -50,7 +50,8 @@ public class Funcionario implements Serializable{
 	}
 
 	public String getSenha() {
-		 return senha;
+		this.senha = "funcionario";
+		return senha;
 	}
 	    
 

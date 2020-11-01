@@ -80,18 +80,15 @@ public class TelaLoginFuncionarioController implements Initializable{
             fachada = FachadaCalcada.getInstance();
                 
                 if (entrou == false) {
-                    Funcionario funci = fachada.logarF(txtCpf.getText(), txtSenha.getText());
-                    if(txtSenha.getText().equals("funcionario")) 
-                    {
-                    	TelaAdministrador tp = new TelaAdministrador();
-                    	try {
-                    		tp.start(new Stage());
-                    	} catch (Exception ex) {
-                    		ex.printStackTrace();
-                    	}
-                    	entrou = true;
-                        fechar();
-                     }
+                	fachada.logarF(txtCpf.getText(), txtSenha.getText());
+                    TelaAdministrador tp = new TelaAdministrador();
+                    try {
+                    	tp.start(new Stage());
+                    } catch (Exception ex) {
+                    	ex.printStackTrace();
+                    }
+                    entrou = true;
+                    fechar();
                 	}
                 else{
                 	TelaAdministrador h = new TelaAdministrador();
