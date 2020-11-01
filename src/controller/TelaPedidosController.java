@@ -16,6 +16,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import telas.TelaPedidos;
@@ -41,8 +42,11 @@ public class TelaPedidosController extends Saida implements Initializable {
 		    });
 		
 		 btnSair.setOnKeyPressed((KeyEvent e) -> {
-			 saida();
-		 	 fechar();
+			 if(e.getCode() == KeyCode.ENTER)
+			 {
+				 saida();
+				 fechar();
+			 }
 		 });
 		 
 		 btnCancelar.setOnMouseClicked((MouseEvent e)->{

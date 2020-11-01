@@ -28,8 +28,11 @@ public class TelaCardapioController extends Saida implements Initializable {
          });
         
         btnVoltar.setOnKeyPressed((KeyEvent e) -> {
-        	saida();
-        	voltar();
+        	if(e.getCode() == KeyCode.ENTER)
+			 {
+        		saida();
+            	voltar();
+			 }
 		 });
         
         btnRealizarPedido.setOnMouseClicked((MouseEvent e)->{
@@ -44,14 +47,17 @@ public class TelaCardapioController extends Saida implements Initializable {
         });
         
         btnRealizarPedido.setOnKeyPressed((KeyEvent e) -> {
-        	voltar();
-	    	TelaProdutos a = new TelaProdutos();
-	    	try {
-				a.start(new Stage());
-			} catch (Exception e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}  
+        	if(e.getCode() == KeyCode.ENTER)
+			 {
+        		voltar();
+        		TelaProdutos a = new TelaProdutos();
+    	    	try {
+    				a.start(new Stage());
+    			} catch (Exception e1) {
+    				// TODO Auto-generated catch block
+    				e1.printStackTrace();
+    			}  
+			 }	
 		 });
     
  }

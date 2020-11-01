@@ -44,7 +44,10 @@ public class TelaLoginFuncionarioController implements Initializable{
 	    });
 		
 		btnEntrar.setOnKeyPressed((KeyEvent e) -> { 
+			if(e.getCode() == KeyCode.ENTER)
+			{
 				logar();
+			}		
 	 });
 		
 		btnCadastrar.setOnMouseClicked((MouseEvent e)->{

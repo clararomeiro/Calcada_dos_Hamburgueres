@@ -21,7 +21,7 @@ import telas.TelaPedidos;
 import negocio.FachadaCalcada;
 import negocio.ICalcada;
 
-public class TelaNotaFiscalController implements Initializable{
+public class TelaNotaFiscalController extends Saida implements Initializable{
 	@FXML private Button btnSair;
 	@FXML private ListView<String> lvNotaFiscal;
 	

@@ -26,7 +26,10 @@ public class TelaAdministradorController implements Initializable {
         });
         
         btnSair.setOnKeyPressed((KeyEvent e) -> {
-        	fechar();
+        	 if(e.getCode() == KeyCode.ENTER)
+			 {
+        		 fechar(); 
+			 }
 		 });
         
         btnSim.setOnMouseClicked((MouseEvent e)->{
@@ -41,14 +44,17 @@ public class TelaAdministradorController implements Initializable {
         });
         
         btnSim.setOnKeyPressed((KeyEvent e) -> {
-        	fechar();
-	    	TelaPedidos tp = new TelaPedidos();
-	    	try {
-				tp.start(new Stage());
-			} catch (Exception e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}     
+        	 if(e.getCode() == KeyCode.ENTER)
+			 {
+        		 fechar();
+        		 TelaPedidos tp = new TelaPedidos();
+     	    	try {
+     				tp.start(new Stage());
+     			} catch (Exception e1) {
+     				// TODO Auto-generated catch block
+     				e1.printStackTrace();
+     			}     
+			 }
 		 });
     
  }
