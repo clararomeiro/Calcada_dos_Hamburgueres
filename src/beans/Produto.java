@@ -21,10 +21,12 @@ public class Produto implements Serializable {
     private int qtdSuco;
     private int qtdRefri;
     private int qtdOnion;
-    private int qtdMilkshak;
+    private int qtdMilkshake;
 	
 	public Produto(Hamburguer hamburgueres, Bebida bebidas, 
-			 Acompanhamento acompanhamentos, int qtdZendaya) 
+			 Acompanhamento acompanhamentos, int qtdZendaya, int qtdBBH, int qtdPS, int qtdTwice,
+			 int qtdNCT, int qtdBatata, int qtdAgua, int qtdBatataCdd, int qtdSuco, int qtdRefri, 
+			 int qtdOnion, int qtdMilkshake) 
 	{
 		if(hamburgueres == null) {
 			this.hamburgueres = Hamburguer.SEM_HAMBURGUER;
@@ -45,6 +47,17 @@ public class Produto implements Serializable {
 			this.acompanhamentos = acompanhamentos;
 		}
 		this.qtdZendaya = qtdZendaya;
+		this.qtdBBH = qtdBBH;
+		this.qtdPS = qtdPS;
+		this.qtdTwice = qtdTwice;
+		this.qtdNCT = qtdNCT;
+		this.qtdBatata = qtdBatata;
+		this.qtdAgua = qtdAgua;
+		this.qtdBatataCdd = qtdBatataCdd;
+		this.qtdSuco = qtdSuco;
+		this.qtdRefri = qtdRefri;
+		this.qtdOnion = qtdOnion;
+		this.qtdMilkshake = qtdMilkshake;
 	}
 	
 	public Hamburguer getHamburgueres() {
@@ -160,11 +173,11 @@ public class Produto implements Serializable {
 	}
 
 	public int getQtdMilkshak() {
-		return qtdMilkshak;
+		return qtdMilkshake;
 	}
 
 	public void setQtdMilkshak(int qtdMilkshak) {
-		this.qtdMilkshak = qtdMilkshak;
+		this.qtdMilkshake = qtdMilkshak;
 	} 
 		
 	}
