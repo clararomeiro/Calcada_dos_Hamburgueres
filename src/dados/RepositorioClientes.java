@@ -30,7 +30,7 @@ public class RepositorioClientes implements IRepositorioClientes, Serializable {
 	
 	private static RepositorioClientes lerArquivo() {
 		RepositorioClientes instanciaLocal =  null;
-		File f = new File("bancoDados\"+\"arqClientes.dat");
+		File f = new File("bancoDados" + File.separatorChar + "arqClientes.dat");
 	    FileInputStream fis = null;
 	    ObjectInputStream ois = null;
   
@@ -77,7 +77,7 @@ public class RepositorioClientes implements IRepositorioClientes, Serializable {
 			return;
 		}
 		     
-		File f = new File("bancoDados\"+\"arqClientes.dat");
+		File f = new File("bancoDados" + File.separatorChar + "arqClientes.dat");
 	    FileOutputStream fos = null;
 	    ObjectOutputStream oos = null;
 	    try{

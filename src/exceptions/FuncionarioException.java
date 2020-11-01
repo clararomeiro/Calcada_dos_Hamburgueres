@@ -2,7 +2,8 @@ package exceptions;
 
 public class FuncionarioException extends Exception{
 
-    private String nome;
+	private static final long serialVersionUID = -6986243348268531882L;
+	private String nome;
 
     public FuncionarioException(String msg) {
         super(msg);
