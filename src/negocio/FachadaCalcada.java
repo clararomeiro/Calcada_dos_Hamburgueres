@@ -11,7 +11,7 @@ import beans.Pagamento;
 import beans.Pedido;
 import exceptions.ClienteException;
 import exceptions.FuncionarioException;
-import exceptions.PagamentoException;
+//import exceptions.PagamentoException;
 import javafx.scene.control.Alert;
 
 public class FachadaCalcada implements ICalcada{
@@ -35,19 +35,7 @@ public class FachadaCalcada implements ICalcada{
 		      instance = new FachadaCalcada();
 		    }
 		    return instance;
-		  }
-
-	@Override
-	public Cliente logar(String nome, String cpf) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Cliente selecionarCliente(String cpf) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+		  }		
 
 	@Override
 	public void cadastrarPagamento(Pagamento pagamento) {
@@ -88,28 +76,24 @@ public class FachadaCalcada implements ICalcada{
 
 	@Override
 	public void mudarStatus(String cpf) {
-		// TODO Auto-generated method stub
+		pedido.mudarStatus(cpf);
 		
 	}
 
-	
-
 	@Override
 	public void cadastrar(Pedido pedido) {
-		// TODO Auto-generated method stub
+		this.pedido.cadastrar(pedido);
 		
 	}
 
 	@Override
 	public void removerPedido(Pedido pedido) {
-		// TODO Auto-generated method stub
-		
+		this.pedido.removerPedido(pedido);
 	}
 
 	@Override
 	public List<Pedido> listarPedidos() {
-		// TODO Auto-generated method stub
-		return null;
+		return pedido.listarPedidos();
 	}
 
 	@Override
@@ -131,6 +115,16 @@ public class FachadaCalcada implements ICalcada{
 	            Logger.getLogger(FachadaCalcada.class.getName()).log(Level.SEVERE, null, ex);
 	        }
 	    }
+	
+	public Cliente selecionarCliente(String cpf) {
+		Cliente clientes = null;
+		try {
+			clientes = cliente.selecionar(cpf);
+		}catch (ClienteException ex) {
+            Logger.getLogger(FachadaCalcada.class.getName()).log(Level.SEVERE, null, ex);
+        }
+		return clientes;
+	}
 
 	@Override
 	public Funcionario logarF(String usuario, String senha) {

@@ -11,8 +11,6 @@ public interface ICalcada {
 	
 	void cadastrarCliente(Cliente c);
 	
-	Cliente logar(String nome, String cpf);
-	
 	public Cliente selecionarCliente(String cpf);
 	
 	void cadastrar(Funcionario f);
