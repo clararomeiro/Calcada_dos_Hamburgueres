@@ -34,7 +34,7 @@
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Text>
-            <Text fill="#fbff00" layoutX="42.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NCT ------------------ R$ 5,00">
+            <Text fill="#fbff00" layoutX="42.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NCT ------------------ R$ 10,00">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
