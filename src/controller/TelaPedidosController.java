@@ -50,12 +50,16 @@ public class TelaPedidosController extends Saida implements Initializable {
 	           int index = lvPedidos.getSelectionModel().getSelectedIndex();
 	            if (index == -1) {
 	                Alert alert = new Alert(Alert.AlertType.ERROR);
-	                alert.setHeaderText("Pedido cancelado");
-	                alert.setContentText("Pedido cancelado");
+	                alert.setHeaderText("Selecionar pedido");
+	                alert.setContentText("Selecionar pedido");
 	                alert.show();
 	            }
 	           fachada.mudarStatus(mudarStatus.get(index-1).getCliente().getCpf());
 	           fachada.removerPedido(fachada.listarPedidos().get(index-1));
+	           /*Alert alert = new Alert(Alert.AlertType.ERROR);
+	           alert.setHeaderText("Pedido cancelado");
+               alert.setContentText("Pedido cancelado");
+               alert.show();*/
 	           
 	           listar();
 	        });
