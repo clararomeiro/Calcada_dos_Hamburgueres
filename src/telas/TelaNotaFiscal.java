@@ -29,6 +29,6 @@ public class TelaNotaFiscal extends Application {
     }
 
     public static void setStage(Stage stage) {
-        TelaPedidos.stage = stage;
+        TelaNotaFiscal.stage = stage;
     }
 }
