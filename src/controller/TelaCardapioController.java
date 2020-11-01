@@ -10,7 +10,6 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import telas.TelaCardapio;
-import telas.TelaLoginFuncionario;
 import telas.TelaProdutos;
 
 

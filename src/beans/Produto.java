@@ -24,7 +24,7 @@ public class Produto implements Serializable {
     private int qtdMilkshak;
 	
 	public Produto(Hamburguer hamburgueres, Bebida bebidas, 
-			 Acompanhamento acompanhamentos/*,int quantidade*/) 
+			 Acompanhamento acompanhamentos, int qtdZendaya) 
 	{
 		if(hamburgueres == null) {
 			this.hamburgueres = Hamburguer.SEM_HAMBURGUER;
@@ -44,6 +44,7 @@ public class Produto implements Serializable {
 		else {
 			this.acompanhamentos = acompanhamentos;
 		}
+		this.qtdZendaya = qtdZendaya;
 	}
 	
 	public Hamburguer getHamburgueres() {

@@ -30,7 +30,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
-public class TelaProdutosController implements Initializable{
+public class TelaProdutosController extends Saida implements Initializable{
 	@FXML
     private AnchorPane tela;
 
@@ -85,6 +85,8 @@ public class TelaProdutosController implements Initializable{
     @FXML
     private Label PrecoTotal;
     
+    ICalcada fachada;
+    
     private Cliente cliente;
     private Hamburguer hamburguer;
     private Bebida bebida;
@@ -130,9 +132,9 @@ public class TelaProdutosController implements Initializable{
                 fachada.cadastrar(pedido);
                 fachada.cadastrarPagamento(pagamento);
             } catch (ClassNotFoundException ex) {
-                Logger.getLogger(TelaProdutoController.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IOException ex) {
-                Logger.getLogger(TelaProdutoController.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
             }
             
         });
