@@ -30,7 +30,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
-public class TelaProdutosController {
+public class TelaProdutosController implements Initializable{
 	@FXML
     private AnchorPane tela;
 
