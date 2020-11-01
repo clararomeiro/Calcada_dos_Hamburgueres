@@ -27,6 +27,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.Labeled;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
@@ -68,7 +69,7 @@ public class TelaProdutosController extends Saida implements Initializable{
     private ComboBox<Integer> cbTwice;
 
     @FXML
-    private ComboBox<Integer> cbRefrigante;
+    private ComboBox<Integer> cbRefrigerante;
 
     @FXML
     private ComboBox<String> FormaPagamento;
@@ -80,10 +81,14 @@ public class TelaProdutosController extends Saida implements Initializable{
     private ComboBox<Integer> CbNCT;
 
     @FXML
-    private ComboBox<Integer> cbMilkshak;
+    private ComboBox<Integer> cbMilkshake;
 
     @FXML
     private Label PrecoTotal;
+    
+    @FXML 
+    private Label precoPedido;
+    
     
     ICalcada fachada;
     
@@ -110,13 +115,9 @@ public class TelaProdutosController extends Saida implements Initializable{
     	qtdOnion();
     	qtdMilkshake();
     	formaPagamento();
-    	
-    	tela.setOnMouseMoved((MouseEvent e)->{
-            label();
-        });
-        
+      
         Sair.setOnMouseClicked((MouseEvent e)->{
-            sair();
+            saida();
             
         });
         
@@ -140,23 +141,23 @@ public class TelaProdutosController extends Saida implements Initializable{
         });
         
         btncalcularPedido.setOnMouseClicked((MouseEvent e)->{
-            ckBoxes();
             produto = new ArrayList<>();
-            Produto produto = new Produto(qtdZendaya.getSelectionModel().getSelectedItem(), qtdBBH.getSelectionModel().getSelectedItem(), 
-            		qtdPS.getSelectionModel().getSelectedItem(), qtdTwice.getSelectionModel().getSelectedItem(), 
-            		qtdNCT.getSelectionModel().getSelectedItem(), qtdBatata.getSelectionModel().getSelectedItem(), 
-            		qtdAgua.getSelectionModel().getSelectedItem(), qtdBatataCdd.getSelectionModel().getSelectedItem(),
-            		qtdSuco.getSelectionModel().getSelectedItem(), qtdRefri.getSelectionModel().getSelectedItem(),
-            		qtdOnion.getSelectionModel().getSelectedItem(), qtdMilkshak.getSelectionModel().getSelectedItem());
+            Produto produto = new Produto(hamburguer, acompanhamento, bebida, hambZendaya.getSelectionModel().getSelectedItem(), 
+            		cbBBH.getSelectionModel().getSelectedItem(), cbPS.getSelectionModel().getSelectedItem(), cbTwice.getSelectionModel().getSelectedItem(), 
+            		CbNCT.getSelectionModel().getSelectedItem(), cbBatataFrita.getSelectionModel().getSelectedItem(), 
+            		cbAgua.getSelectionModel().getSelectedItem(), cbBatataCdd.getSelectionModel().getSelectedItem(),
+            		cbSuco.getSelectionModel().getSelectedItem(), cbRefrigerante.getSelectionModel().getSelectedItem(),
+            		cbOnion.getSelectionModel().getSelectedItem(), cbMilkshake.getSelectionModel().getSelectedItem());
+            
             produto.add(produto);
             pedido = new Pedido(produto, "Pedido em espera", cliente);
-            pagamento = new Pagamento(pedido, formaPagamento.getSelectionModel().getSelectedItem());
+            pagamento = new Pagamento(pedido, FormaPagamento.getSelectionModel().getSelectedItem());
             preco();
         });
     }
     
     private void preco(){
-        precoProduto.setText("R$" + produto.getPreco());
+       precoPedido.setText("R$" + pedido.getPreco());
     }
     
     private void qtdZendaya(){
@@ -209,14 +210,14 @@ public class TelaProdutosController extends Saida implements Initializable{
     
     private void qtdSuco(){
         ObservableList<Integer> qtd = FXCollections.observableArrayList(1,2,3,4);
-        qtdSuco.setValue(0);
-        qtdSuco.setItems(qtd);
+        cbSuco.setValue(0);
+        cbSuco.setItems(qtd);
     }
     
     private void qtdRefri(){
         ObservableList<Integer> qtd = FXCollections.observableArrayList(1,2,3,4);
-        cbSuco.setValue(0);
-        cbSuco.setItems(qtd);
+        cbRefrigerante.setValue(0);
+        cbRefrigerante.setItems(qtd);
     }
     
     private void qtdOnion(){
@@ -227,8 +228,8 @@ public class TelaProdutosController extends Saida implements Initializable{
     
     private void qtdMilkshake(){
         ObservableList<Integer> qtd = FXCollections.observableArrayList(1,2,3,4);
-        cbMilkshak.setValue(0);
-        cbMilkshak.setItems(qtd);
+        cbMilkshake.setValue(0);
+        cbMilkshake.setItems(qtd);
     }
     
     private void formaPagamento(){
