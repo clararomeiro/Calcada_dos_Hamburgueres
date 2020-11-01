@@ -1,9 +1,13 @@
 package beans;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.io.Serializable;
 
-public class Pagamento {
+
+public class Pagamento implements Serializable{
 	
+	private static final long serialVersionUID = -8634188873103876178L;
 	private Pedido controladorPedido;
 	private String modoPagamento;
 	private LocalDate dataVenda;
