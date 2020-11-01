@@ -96,7 +96,7 @@ public class TelaProdutosController extends Saida implements Initializable{
     private Hamburguer hamburguer;
     private Bebida bebida;
     private Acompanhamento acompanhamento;
-    private List<Produto> produto;
+    private List<Produto> produtos;
     private Pedido pedido;
     private Pagamento pagamento;
     
@@ -141,16 +141,16 @@ public class TelaProdutosController extends Saida implements Initializable{
         });
         
         btncalcularPedido.setOnMouseClicked((MouseEvent e)->{
-            produto = new ArrayList<>();
-            Produto produto = new Produto(hamburguer, acompanhamento, bebida, hambZendaya.getSelectionModel().getSelectedItem(), 
+            produtos = new ArrayList<>();
+            Produto produto = new Produto(hamburguer, bebida, acompanhamento, hambZendaya.getSelectionModel().getSelectedItem(), 
             		cbBBH.getSelectionModel().getSelectedItem(), cbPS.getSelectionModel().getSelectedItem(), cbTwice.getSelectionModel().getSelectedItem(), 
             		CbNCT.getSelectionModel().getSelectedItem(), cbBatataFrita.getSelectionModel().getSelectedItem(), 
             		cbAgua.getSelectionModel().getSelectedItem(), cbBatataCdd.getSelectionModel().getSelectedItem(),
             		cbSuco.getSelectionModel().getSelectedItem(), cbRefrigerante.getSelectionModel().getSelectedItem(),
             		cbOnion.getSelectionModel().getSelectedItem(), cbMilkshake.getSelectionModel().getSelectedItem());
             
-            produto.add(produto);
-            pedido = new Pedido(produto, "Pedido em espera", cliente);
+            produtos.add(produto);
+            pedido = new Pedido(produtos, "Pedido em espera", cliente);
             pagamento = new Pagamento(pedido, FormaPagamento.getSelectionModel().getSelectedItem());
             preco();
         });
