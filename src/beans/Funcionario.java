@@ -11,15 +11,14 @@ public class Funcionario implements Serializable{
     private String email;
     private String cpf;
     private String usuario;
+    private String senha;
 	 
 	 
-	 public Funcionario(String nome, String email, String cpf, String usuario) 
+	 public Funcionario(String nome, String email, String cpf) 
 	 { 
 		this.nome = nome;
         this.email = email;
-        this.cpf = cpf;
-        this.usuario = usuario;
-        
+        this.cpf = cpf;   
 	 }
 	 
 	public String getEmail() {
@@ -33,10 +32,6 @@ public class Funcionario implements Serializable{
     public String getCpf() {
         return cpf;
     }
-    
-    public String getUsuario() {
-        return usuario;
-    }
  
     public void setEmail(String email) {
         this.email = email;
@@ -48,13 +43,14 @@ public class Funcionario implements Serializable{
         this.cpf = cpf;
     }
     
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
 	
     public String toString() {
 		String s = this.nome+"\t"+this.cpf+"\t"+this.email+"\t"+this.usuario.toString();
 		return s;
+	}
+
+	public String getSenha() {
+		 return senha;
 	}
 	    
 

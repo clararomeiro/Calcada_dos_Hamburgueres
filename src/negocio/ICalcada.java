@@ -8,7 +8,9 @@ import java.util.List;
 
 
 public interface ICalcada {
-		
+	
+	void cadastrarCliente(Cliente c);
+	
 	Cliente logar(String nome, String cpf);
 	
 	public Cliente selecionarCliente(String cpf);

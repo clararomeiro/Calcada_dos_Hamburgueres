@@ -7,14 +7,14 @@ public class Login {
 	
 	RepositorioFuncionarios repFuncionario;
 
-	public Login(RepositorioFuncionarios repFuncionario) {
-		this.repFuncionario = repFuncionario;
+	public Login() {
+		this.repFuncionario = RepositorioFuncionarios.getInstance();
 	}
 	
 	 public Funcionario loginFunci(String usuario, String senha){
 	        Funcionario funcionario = null;
 	        for (Funcionario f : repFuncionario.listarFuncionarios()) {
-	            if (f.getNome().equals(usuario) && f.getCpf().equals("funcionario")) {
+	            if (f.getCpf().equals(usuario) && f.getSenha().equals(senha)) {
 	                funcionario = f;
 	            }  
 	        }
