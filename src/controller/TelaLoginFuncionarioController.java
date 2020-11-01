@@ -6,7 +6,6 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import beans.Cliente;
 import beans.Funcionario;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -24,10 +23,7 @@ import negocio.FachadaCalcada;
 import negocio.ICalcada;
 import telas.TelaAdministrador;
 import telas.TelaCadastroFuncionario;
-import telas.TelaCliente;
-import telas.TelaInicial;
 import telas.TelaLoginFuncionario;
-import telas.TelaPedidos;
 
 public class TelaLoginFuncionarioController implements Initializable{
 	@FXML private TextField txtCpf;

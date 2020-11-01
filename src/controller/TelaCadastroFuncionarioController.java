@@ -1,12 +1,7 @@
 package controller;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import beans.Cliente;
 import beans.Funcionario;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -18,9 +13,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import negocio.FachadaCalcada;
 import negocio.ICalcada;
-import telas.TelaAdministrador;
 import telas.TelaCadastroFuncionario;
-import telas.TelaCliente;
 import telas.TelaLoginFuncionario;
 
 public class TelaCadastroFuncionarioController extends Saida implements Initializable{

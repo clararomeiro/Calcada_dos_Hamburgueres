@@ -12,7 +12,9 @@ import java.util.List;
 import beans.Pedido;
 
 public class RepositorioPedidos implements IRepositorioPedidos, Serializable {
-    private List<Pedido> pedidos;
+   
+	private static final long serialVersionUID = -5143865582744552115L;
+	private List<Pedido> pedidos;
     private static RepositorioPedidos instance;
     private List<String> pedidoString;
 
