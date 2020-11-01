@@ -60,14 +60,13 @@ public class TelaPedidosController extends Saida implements Initializable {
 	            }
 	           fachada.mudarStatus(mudarStatus.get(index-1).getCliente().getCpf());
 	           fachada.removerPedido(fachada.listarPedidos().get(index-1));
-	           /*Alert alert = new Alert(Alert.AlertType.ERROR);
+	           Alert alert = new Alert(Alert.AlertType.ERROR);
 	           alert.setHeaderText("Pedido cancelado");
                alert.setContentText("Pedido cancelado");
-               alert.show();*/
+               alert.show();
 	           
 	           listar();
 	        });
-		 
 	
 	}	 	 
 	

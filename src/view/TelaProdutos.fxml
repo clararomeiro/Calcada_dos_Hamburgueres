@@ -101,8 +101,8 @@
       <ComboBox fx:id="cbOnion" layoutX="25.0" layoutY="398.0" prefHeight="25.0" prefWidth="36.0" style="-fx-background-color: #ffb700;" />
       <ComboBox fx:id="cbAgua" layoutX="25.0" layoutY="458.0" prefHeight="25.0" prefWidth="36.0" style="-fx-background-color: #ffb700;" />
       <ComboBox fx:id="cbSuco" layoutX="25.0" layoutY="493.0" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: #ffb700;" />
-      <ComboBox fx:id="cbRefrigante" layoutX="25.0" layoutY="527.0" prefHeight="25.0" prefWidth="36.0" style="-fx-background-color: #ffb700;" />
-      <ComboBox fx:id="cbMilkshak" layoutX="25.0" layoutY="565.0" prefHeight="25.0" prefWidth="21.0" style="-fx-background-color: #ffb700;" />
+      <ComboBox fx:id="cbRefrigerante" layoutX="25.0" layoutY="527.0" prefHeight="25.0" prefWidth="36.0" style="-fx-background-color: #ffb700;" />
+      <ComboBox fx:id="cbMilkshake" layoutX="25.0" layoutY="565.0" prefHeight="25.0" prefWidth="21.0" style="-fx-background-color: #ffb700;" />
       <ComboBox fx:id="FormaPagamento" layoutX="230.0" layoutY="633.0" prefWidth="150.0" style="-fx-background-color: #ffb700;" />
       <Label layoutX="187.0" layoutY="606.0" text="FORMA DE PAGAMENTO" textFill="#fce200">
          <font>

@@ -24,10 +24,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.Labeled;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
@@ -118,8 +118,17 @@ public class TelaProdutosController extends Saida implements Initializable{
       
         Sair.setOnMouseClicked((MouseEvent e)->{
             saida();
+        	fechar();
             
         });
+        
+        Sair.setOnKeyPressed((KeyEvent e) -> {
+       	 if(e.getCode() == KeyCode.ENTER)
+			 {
+       		 saida();
+       		 fechar(); 
+			 }
+		 });
         
         btnRealizarPedido.setOnMouseClicked((MouseEvent e)->{
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -236,6 +245,10 @@ public class TelaProdutosController extends Saida implements Initializable{
         ObservableList<String> pagamento = FXCollections.observableArrayList("DINHEIRO","DEBITO","CREDITO");
         FormaPagamento.setValue("Forma de pagamento");
         FormaPagamento.setItems(pagamento);
+    }
+    
+    public void fechar(){
+        TelaProdutos.getStage().close();
     }
     
     
