@@ -23,6 +23,8 @@ public class FachadaCalcada implements ICalcada{
 	private static ICalcada instance;
 	
 	private FachadaCalcada() throws ClassNotFoundException, IOException {
+		
+		this.cliente = new CadastroCliente();
 		this.funcionario = new CadastroFuncionario();
 		this.login = new Login();
 		this.pedido = new CadastroPedido();
