@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 import beans.Cliente;
-import beans.Produto;
 import beans.Pagamento;
 import dados.RepositorioPagamento;
 import exceptions.PagamentoException;

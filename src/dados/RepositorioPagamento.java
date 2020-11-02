@@ -32,6 +32,12 @@ public class RepositorioPagamento implements IRepositorioPagamento ,Serializable
 		return instance;
 	}
 
+	@Override
+	public void cadastrar(Pagamento p) {
+		p.setDataVenda(LocalDate.now());
+		pagamentos.add(p);
+		
+	}
 	
 	@Override
 	public boolean remover(Pagamento p) {
@@ -55,13 +61,16 @@ public class RepositorioPagamento implements IRepositorioPagamento ,Serializable
 		return lista;
 	}
 
-	
+	@Override
+	public List<Pagamento> listarPagamento() {
+		return this.pagamentos;
+	}	
 	
 	@Override
 	public List<Pagamento> listarPorCliente (Cliente c) {
 		List<Pagamento> lista = new ArrayList<Pagamento>();
 		for(Pagamento p: pagamentos) {
-			if(p.getControladorPedido().getCliente().equals(c)) {
+			if(p.getPedido().getCliente().equals(c)) {
 				lista.add(p);
 			}
 		}
@@ -71,8 +80,8 @@ public class RepositorioPagamento implements IRepositorioPagamento ,Serializable
 	@Override
 	public void cancelarVenda(Pagamento p) {
 		for(Pagamento pa: pagamentos) {
-			if(pa.getControladorPedido().getId() == p.getControladorPedido().getId()) {
-				pa.getControladorPedido().setStatus("CANCELADO!");
+			if(pa.getPedido().getId() == p.getPedido().getId()) {
+				pa.getPedido().setStatus("CANCELADO!");
 			}
 		}
 		
@@ -145,27 +154,6 @@ public class RepositorioPagamento implements IRepositorioPagamento ,Serializable
 	        }
 	    }
 	}
-
-	@Override
-	public List<Pagamento> listarPagamento() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void cadastrar(Pagamento p) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	
-
-	
-	
-	
-	
-	
 
 	
 	
