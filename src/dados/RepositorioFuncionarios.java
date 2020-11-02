@@ -10,9 +10,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import beans.Cliente;
 import beans.Funcionario;
-import exceptions.ClienteException;
+import dados.IRepositorioFuncionarios;
 import exceptions.FuncionarioException;
 
 
@@ -22,6 +21,8 @@ public class RepositorioFuncionarios implements IRepositorioFuncionarios, Serial
 	private static final long serialVersionUID = 1025911660485970999L;
 	private List<Funcionario> funcionarios;
 	private static RepositorioFuncionarios instance;
+    private List<String> funcionarioString;
+
 	
 	private RepositorioFuncionarios() {
 		funcionarios = new ArrayList<Funcionario>();		
@@ -29,9 +30,23 @@ public class RepositorioFuncionarios implements IRepositorioFuncionarios, Serial
 	
 	@Override
 	public List<Funcionario> listar(){
+		 funcionarioString = new ArrayList<>();
+         funcionarioString.add("NOME /  CPF/  EMAIL");
+         for (Funcionario funcionario : funcionarios) {
+             funcionarioString.add(funcionario.toString());
+         }
            
 		return this.funcionarios;  
 	}
+	public List<Funcionario> listarFuncionarios(){
+        return funcionarios;
+    }
+	public static RepositorioFuncionarios getInstance() {
+		if (instance == null) {
+			instance = RepositorioFuncionarios.lerArquivo();
+		}
+			return instance;
+		}
         
 	
 	private static RepositorioFuncionarios lerArquivo() {
@@ -69,12 +84,7 @@ public class RepositorioFuncionarios implements IRepositorioFuncionarios, Serial
 	    return instanciaLocal;
 	}
 	
-	public static RepositorioFuncionarios getInstance() {
-		if (instance == null) {
-			      instance = RepositorioFuncionarios.lerArquivo();
-		 }
-		 return instance;
-	}
+	
 	
 	@Override
 	public void salvarArquivo() {
@@ -127,6 +137,77 @@ public class RepositorioFuncionarios implements IRepositorioFuncionarios, Serial
 	        	throw cadastrarfuncionario;
 	        }
 			
+	}
+	@Override
+	public void remover(Funcionario funcionario) throws FuncionarioException {
+		int i = this.retornarIndice(funcionario.getCpf());
+		if(i != -1) {
+			funcionarios.remove(funcionario);
+		}else{
+			FuncionarioException removerfuncionario =  new FuncionarioException("Funcionario não encontrado");
+			throw removerfuncionario;
+		}
+
+
+
+	}
+
+	@Override
+	public void atualizar(Funcionario funcionario) throws FuncionarioException {
+		boolean atualizado = false;
+		if(funcionario != null)
+		{
+			for (int i =0; i< funcionarios.size(); i++) {
+				int u = this.retornarIndice(funcionario.getCpf());
+				if(u!= -1)
+				{
+					
+					funcionarios.set(u, funcionario);
+					atualizado = true;
+				
+				}
+			}if(atualizado == false){
+				
+				FuncionarioException atualizarfuncionario = new FuncionarioException("Funcionario não encontrado!");
+				throw atualizarfuncionario;
+			}
+		}
+		
+		
+	}
+	
+	@Override
+	public Funcionario buscar(String cpf) throws FuncionarioException {
+		
+		Funcionario resul = null;
+		
+		if(cpf != null)
+		{
+			for (Funcionario f : funcionarios)
+			{
+				if(f.getCpf().equals(cpf))
+				{
+					resul = f;
+				}
+			}if(resul == null){
+
+				FuncionarioException buscarfuncionario = new FuncionarioException("Funcionario não encotrado!");
+				throw buscarfuncionario;
+			}
+		}
+		
+		return resul;
+	}
+	
+	private int retornarIndice(String cpf) {
+		int indice =-1;
+		for(int i =0; i< funcionarios.size(); i++) {
+			if(funcionarios.get(i).getCpf().equals(cpf)) {
+				indice = i;
+			}
+		}
+		return indice;
+		
 	}
 
 	
