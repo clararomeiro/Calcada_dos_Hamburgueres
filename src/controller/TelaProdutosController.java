@@ -137,15 +137,20 @@ public class TelaProdutosController extends Saida implements Initializable{
 	    alert.setContentText("Pedido realizado com sucesso");
 	    alert.show();
             
-            try {
-                fachada = FachadaCalcada.getInstance();
-                fachada.cadastrar(pedido);
-                fachada.cadastrarPagamento(pagamento);
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
-                Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        if(FormaPagamento == null) {
+        	alert.setContentText("Insira uma forma de pagamento!");
+    	    alert.show();
+        } else {
+        	 try {
+                 fachada = FachadaCalcada.getInstance();
+                 fachada.cadastrar(pedido);
+                 fachada.cadastrarPagamento(pagamento);
+             } catch (ClassNotFoundException ex) {
+                 Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
+             } catch (IOException ex) {
+                 Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
+             }
+        }
             
         });
         
