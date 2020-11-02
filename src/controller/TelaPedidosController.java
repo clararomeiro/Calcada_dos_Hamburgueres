@@ -82,11 +82,6 @@ public class TelaPedidosController extends Saida implements Initializable {
 	
 	}	 	 
 	
-	private void fechar(){
-        TelaPedidos.getStage().close();
-    }
-	
-		 
 	 private void listar() {
 	        ArrayList<String> listaPedidos = new ArrayList<>();
 	        try {
@@ -104,6 +99,9 @@ public class TelaPedidosController extends Saida implements Initializable {
 	        
 	        ObservableList<String> obsFuncionario = FXCollections.observableArrayList(listaPedidos);
 	        lvPedidos.setItems(obsFuncionario);
+	}
+	private void fechar(){
+		TelaPedidos.getStage().close();
 	}
 
 }
