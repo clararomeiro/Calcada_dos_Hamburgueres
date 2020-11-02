@@ -5,8 +5,8 @@ public enum Hamburguer{
 	BBH(6.14),
 	NCT(10.00),
 	ZENDAYA(11.50),
-	TWICE(14.50),
-	PRISCILA_SENNA(7),
+	TWICE(9),
+	PRISCILA_SENNA(7.50),
 	SEM_HAMBURGUER(0);
 
 

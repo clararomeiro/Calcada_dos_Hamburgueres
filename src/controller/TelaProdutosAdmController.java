@@ -151,9 +151,15 @@ public class TelaProdutosAdmController extends Saida implements Initializable {
 
         btncalcularPedido.setOnMouseClicked((MouseEvent e) -> {
 
-            for(Produto p : produtos){
-                preco = p.getPrecoFinal()/produtos.size();
-            }
+            preco = cbAgua.getValue()*Bebida.AGUA.getValor() + cbSuco.getValue()*Bebida.SUCO.getValor()
+                    + cbRefrigerante.getValue()*Bebida.REFRIGERANTE.getValor()
+                    + cbBatataFrita.getValue()*Acompanhamento.BATATA_FRITA.getValor()
+                    + cbBatataCdd.getValue()*Acompanhamento.BATATA_CHEDDAR.getValor()
+                    + cbOnion.getValue()*Acompanhamento.ONION_RINGS.getValor()
+                    + cbMilkshake.getValue()*Acompanhamento.MILK_SHAKE.getValor()
+                    + hambZendaya.getValue()*Hamburguer.ZENDAYA.getValor() + cbBBH.getValue()*Hamburguer.BBH.getValor()
+                    + cbTwice.getValue()*Hamburguer.TWICE.getValor() + cbPS.getValue()*Hamburguer.PRISCILA_SENNA.getValor()
+                    + CbNCT.getValue()*Hamburguer.NCT.getValor();
             PrecoTotal.setText("R$" + preco);
 
         });

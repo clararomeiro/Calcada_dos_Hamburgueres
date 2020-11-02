@@ -1,9 +1,9 @@
 package beans;
 
 public enum Bebida{
-	REFRIGERANTE(4.50),
-	AGUA(2),
-	SUCO(5),
+	REFRIGERANTE(3.50),
+	AGUA(2.50),
+	SUCO(4.00),
 	SEM_BEBIDA(0);
 
 	public double valorBebida;
