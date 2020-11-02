@@ -136,37 +136,44 @@ public class TelaProdutosController extends Saida implements Initializable{
         
         btnRealizarPedido.setOnMouseClicked((MouseEvent e)->{
         
-    	if(hamburguer == null || bebida == null || acompanhamento == null || FormaPagamento == null) {
-        	Alert alert1 = new Alert(AlertType.ERROR);
+    	if(hamburguer != null || bebida != null || acompanhamento != null) {
+    		if(FormaPagamento != null){
+            	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        	    alert.setHeaderText("Sucesso");
+                    alert.setTitle("Pedido realizado");
+        	    alert.setContentText("Pedido realizado com sucesso");
+        	    alert.show(); 
+            	try {
+                     fachada = FachadaCalcada.getInstance();
+                     fachada.cadastrar(pedido);
+                     fachada.cadastrarPagamento(pagamento);
+                     fechar();
+                     TelaNotaFiscal kk = new TelaNotaFiscal();
+                     try {
+    					kk.start(new Stage());
+    				} catch (Exception e1) {
+    					// TODO Auto-generated catch block
+    					e1.printStackTrace();
+    				}
+                 } catch (ClassNotFoundException ex) {
+                     Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
+                 } catch (IOException ex) {
+                     Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
+                 }
+              }	else {
+            	  Alert alert1 = new Alert(AlertType.ERROR);
+                  alert1.setHeaderText("ERRO");
+                  alert1.setTitle("Erro ao comprar");
+                  alert1.setContentText("Selecione forma de pagamento!");
+                  alert1.show();
+              }
+    	} else {
+    		Alert alert1 = new Alert(AlertType.ERROR);
             alert1.setHeaderText("ERRO");
             alert1.setTitle("Erro ao comprar");
-            alert1.setContentText("Selecao em falta!");
+            alert1.setContentText("Selecione um produto!");
             alert1.show();
-        }
-    	else if(FormaPagamento != null){
-        	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-    	    alert.setHeaderText("Sucesso");
-                alert.setTitle("Pedido realizado");
-    	    alert.setContentText("Pedido realizado com sucesso");
-    	    alert.show(); 
-        	try {
-                 fachada = FachadaCalcada.getInstance();
-                 fachada.cadastrar(pedido);
-                 fachada.cadastrarPagamento(pagamento);
-                 fechar();
-                 TelaNotaFiscal kk = new TelaNotaFiscal();
-                 try {
-					kk.start(new Stage());
-				} catch (Exception e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-             } catch (ClassNotFoundException ex) {
-                 Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
-             } catch (IOException ex) {
-                 Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
-             }
-        }	
+    	}
             
         });
         
