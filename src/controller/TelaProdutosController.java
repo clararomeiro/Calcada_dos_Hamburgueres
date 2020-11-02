@@ -24,6 +24,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -140,11 +141,11 @@ public class TelaProdutosController extends Saida implements Initializable{
 	    alert.show();
             
         if(FormaPagamento == null) {
-        	Alert alert = new Alert(AlertType.ERROR);
-            alert.setHeaderText("ERRO");
-            alert.setTitle("Erro ao comprar");
-            alert.setContentText("Insira uma forma de pagamento!");
-            alert.show();
+        	Alert alert1 = new Alert(AlertType.ERROR);
+            alert1.setHeaderText("ERRO");
+            alert1.setTitle("Erro ao comprar");
+            alert1.setContentText("Insira uma forma de pagamento!");
+            alert1.show();
         } else {
         	 try {
                  fachada = FachadaCalcada.getInstance();
