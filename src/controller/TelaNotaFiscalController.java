@@ -20,10 +20,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 
 public class TelaNotaFiscalController extends Saida implements Initializable{
 	@FXML private Button btnSair;
 	@FXML private ListView<String> lvNotaFiscal;
+	@FXML private AnchorPane tela;
 	
 	ICalcada fachada;
 	
