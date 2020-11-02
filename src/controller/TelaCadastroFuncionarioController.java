@@ -1,7 +1,10 @@
 package controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import beans.Funcionario;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -29,48 +32,45 @@ public class TelaCadastroFuncionarioController extends Saida implements Initiali
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 		 btnVoltar.setOnMouseClicked((MouseEvent e)->{
-	            saida();
+	            voltar();
 	        	fechar();
 	        });
 		 
 		 btnVoltar.setOnKeyPressed((KeyEvent e) -> {
 			 if(e.getCode() == KeyCode.ENTER)
 			 {
-				 saida();
+				 voltar();
 				 fechar();
 			 } 
 		 });
 		 
 		 btnCadastro.setOnMouseClicked((MouseEvent e) -> {
-			 fechar();
-			 TelaLoginFuncionario p = new TelaLoginFuncionario();
 			 try {
-					p.start(new Stage());
-					fachada = FachadaCalcada.getInstance();
-					Funcionario f = new Funcionario (txtNome.getText(), txtEmail.getText(), txtCpf.getText());
-					fachada.cadastrar(f);
-				} catch (Exception e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
+	               fachada = FachadaCalcada.getInstance();
+	               Funcionario f = new Funcionario(txtNome.getText(), txtEmail.getText(),  txtCpf.getText()); 
+	               fachada.cadastrar(f);
+	           } catch (ClassNotFoundException ex) {
+	               Logger.getLogger(TelaCadastroFuncionarioController.class.getName()).log(Level.SEVERE, null, ex);
+	           } catch (IOException ex) {
+	               Logger.getLogger(TelaCadastroFuncionarioController.class.getName()).log(Level.SEVERE, null, ex);
+	           }
 
 		 });
 		
 		 btnCadastro.setOnKeyPressed((KeyEvent e) -> {
-			 if(e.getCode() == KeyCode.ENTER)
+			 if(e.getCode() == KeyCode.ENTER) 
 			 {
-				 fechar();
-				 TelaLoginFuncionario q = new TelaLoginFuncionario();
 				 try {
-						q.start(new Stage());
-						fachada = FachadaCalcada.getInstance();
-						Funcionario f = new Funcionario (txtNome.getText(), txtEmail.getText(), txtCpf.getText());
-						fachada.cadastrar(f);
-					} catch (Exception e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
+		               fachada = FachadaCalcada.getInstance();
+		               Funcionario f = new Funcionario(txtNome.getText(), txtEmail.getText(),  txtCpf.getText()); 
+		               fachada.cadastrar(f);
+		           } catch (ClassNotFoundException ex) {
+		               Logger.getLogger(TelaCadastroFuncionarioController.class.getName()).log(Level.SEVERE, null, ex);
+		           } catch (IOException ex) {
+		               Logger.getLogger(TelaCadastroFuncionarioController.class.getName()).log(Level.SEVERE, null, ex);
+		           } 
 			 }
+ 
 		 });
 	}
 	
@@ -78,5 +78,16 @@ public class TelaCadastroFuncionarioController extends Saida implements Initiali
 	{
 		TelaCadastroFuncionario.getStage().close();
 	}
+	
+	public void voltar(){
+        TelaLoginFuncionario l = new TelaLoginFuncionario();
+            
+        try {
+			l.start(new Stage());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
 
 }

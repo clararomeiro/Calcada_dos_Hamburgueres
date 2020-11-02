@@ -101,6 +101,11 @@ public class FachadaCalcada implements ICalcada{
 	public List<Cliente> listar() {
 		return cliente.listar();
 	}
+	
+	@Override
+	public List<Funcionario> listarFuncionario() {
+		return funcionario.listar();
+	}
 
 	@Override
 	public void cadastrarCliente(Cliente c) {

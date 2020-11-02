@@ -10,7 +10,10 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import beans.Cliente;
 import beans.Funcionario;
+import exceptions.ClienteException;
+import exceptions.FuncionarioException;
 
 
 
@@ -107,20 +110,23 @@ public class RepositorioFuncionarios implements IRepositorioFuncionarios, Serial
 	}
 
 	@Override
-	public void cadastrar(Funcionario funcionario) {
-		boolean temEmail = false;
-		 if(funcionarios.isEmpty()){
+	public void cadastrar(Funcionario funcionario) throws FuncionarioException {
+		 boolean temEmail = false;
+			
+	        if(funcionarios.isEmpty()){
 	        	funcionarios.add(funcionario);
 	        }else{
 	        	for(Funcionario f: funcionarios) {
-                    System.out.println(funcionario.getEmail());
-                    System.out.println(f.getEmail());
-        		if(f.getEmail().equals(funcionario.getEmail()) || f.getCpf().equals(funcionario.getCpf())) {
-        			temEmail = true;
-        		}
+	        		if(f.getCpf().equals(funcionario.getCpf()) || f.getSenha().equals(funcionario.getSenha())) {
+	        			temEmail = true;
+	        		}
+	        		
+	        	}
+	        	
+	        	FuncionarioException cadastrarfuncionario = new FuncionarioException("Funcionario nao encontrado!");
+	        	throw cadastrarfuncionario;
 	        }
-	      } 	
-		
+			
 	}
 
 	

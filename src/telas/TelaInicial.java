@@ -19,7 +19,7 @@ public class TelaInicial extends Application {
 	public void start(Stage stage) throws Exception {	
         Parent root = FXMLLoader.load(getClass().getResource("/view/TelaInicial.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("Cliente");
+        stage.setTitle("Inicial");
         stage.setScene(scene);
         stage.show();
         setStage(stage);

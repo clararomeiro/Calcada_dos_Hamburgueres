@@ -18,7 +18,7 @@ public class TelaProdutosAdm extends Application {
     public void start(Stage stage) throws Exception {
         Parent rood = FXMLLoader.load(getClass().getResource("/view/TelaProdutosAdm.fxml"));
         Scene scene = new Scene(rood);
-        stage.setTitle("Produtos");
+        stage.setTitle("Produtos Adm");
         stage.setScene(scene);
         stage.show();
         setStage(stage);

@@ -19,7 +19,7 @@ public class TelaCadastroFuncionario extends Application {
 	public void start(Stage stage) throws Exception {
 		 Parent rood = FXMLLoader.load(getClass().getResource("/view/TelaCadastroFuncionario.fxml"));
 	        Scene scene = new Scene(rood);
-	        stage.setTitle("Cliente");
+	        stage.setTitle("Cadastro Funcionario");
 	        stage.setScene(scene);
 	        stage.show();
 	        setStage(stage);
