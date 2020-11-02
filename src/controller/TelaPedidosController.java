@@ -78,6 +78,7 @@ public class TelaPedidosController extends Saida implements Initializable {
 				 alert.setContentText("Selecionar pedido");
 				 alert.show();
 			 }
+			 fachada.removerPedido(fachada.listarPedidos().get(index-1));
 			 fechar();
 			 TelaProdutosAdm tp = new TelaProdutosAdm();
 		 });
