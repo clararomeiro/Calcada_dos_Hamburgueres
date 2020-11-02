@@ -28,7 +28,7 @@ public class TelaPedidosController extends Saida implements Initializable {
 	@FXML private Button btnSair;
     @FXML private Button btnCancelar;
     @FXML private ListView<String> lvPedidos;
-    @FXML private Button btnAtualizar;
+    @FXML private Button btnEditar;
     
     ICalcada fachada;
 
@@ -67,6 +67,12 @@ public class TelaPedidosController extends Saida implements Initializable {
 	           
 	           listar();
 	        });
+
+		 btnEditar.setOnMouseClicked((MouseEvent e)->{
+		 	ArrayList<Pedido> editarPedido = new ArrayList<>(fachada.listarPedidos());
+		 	int index = lvPedidos.getSelectionModel().getSelectedIndex();
+		 	
+		 });
 	
 	}	 	 
 	
