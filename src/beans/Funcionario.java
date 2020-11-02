@@ -10,7 +10,6 @@ public class Funcionario implements Serializable{
     private String nome;
     private String email;
     private String cpf;
-    private String usuario;
     private String senha = "funcionario";
 	 
 	 
@@ -45,7 +44,7 @@ public class Funcionario implements Serializable{
     
 	
     public String toString() {
-		String s = this.nome+"\t"+this.cpf+"\t"+this.email+"\t"+this.usuario.toString();
+		String s = this.nome+"\t"+this.cpf+"\t"+this.email+"\t";
 		return s;
 	}
 
