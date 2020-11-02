@@ -19,6 +19,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import telas.TelaPedidos;
 import negocio.FachadaCalcada;
 import negocio.ICalcada;
@@ -30,6 +31,7 @@ public class TelaPedidosController extends Saida implements Initializable {
     @FXML private Button btnCancelar;
     @FXML private ListView<String> lvPedidos;
     @FXML private Button btnEditar;
+    @FXML private AnchorPane tela;
     
     ICalcada fachada;
 
