@@ -160,7 +160,7 @@ public class TelaProdutosAdmController extends Saida implements Initializable {
                     + hambZendaya.getValue()*Hamburguer.ZENDAYA.getValor() + cbBBH.getValue()*Hamburguer.BBH.getValor()
                     + cbTwice.getValue()*Hamburguer.TWICE.getValor() + cbPS.getValue()*Hamburguer.PRISCILA_SENNA.getValor()
                     + CbNCT.getValue()*Hamburguer.NCT.getValor();
-            PrecoTotal.setText("R$" + preco);
+            PrecoTotal.setText("R$ " + preco);
 
         });
     }
