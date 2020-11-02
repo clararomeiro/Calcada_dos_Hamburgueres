@@ -18,8 +18,8 @@ public class RepositorioPedidos implements IRepositorioPedidos, Serializable {
    
 	private static final long serialVersionUID = -5143865582744552115L;
 	private List<Pedido> pedidos;
-    private static RepositorioPedidos instance;
-    private List<String> listaPedido;
+    public static RepositorioPedidos instance;
+    List<String> listaPedido;
     
 
     private RepositorioPedidos() {
