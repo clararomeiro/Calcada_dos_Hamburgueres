@@ -181,6 +181,8 @@ public class TelaProdutosController extends Saida implements Initializable{
             pedido = new Pedido(produtos, "Pedido em espera", cliente);
             pagamento = new Pagamento(pedido, FormaPagamento.getSelectionModel().getSelectedItem());
         });
+
+        //pagamento = new Pagamento(pedido, FormaPagamento.getSelectionModel().getSelectedItem());
     }
 
     
