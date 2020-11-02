@@ -16,10 +16,11 @@ public interface IRepositorioPagamento {
 	
 	List<Pagamento> listarPorData(LocalDate d);
 	
-	List<Pagamento> listarVendas();
+	List<Pagamento> listarPagamento();
 	
 	List<Pagamento> listarPorCliente(Cliente c);
 	
 	void salvar();
+
 	
 }
