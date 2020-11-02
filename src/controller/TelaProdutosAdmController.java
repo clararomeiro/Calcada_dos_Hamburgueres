@@ -132,8 +132,8 @@ public class TelaProdutosAdmController extends Saida implements Initializable {
         btnAtualizarPedido.setOnMouseClicked((MouseEvent e) -> {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setHeaderText("Sucesso");
-            alert.setTitle("Pedido realizado");
-            alert.setContentText("Pedido realizado com sucesso");
+            alert.setTitle("Pedido atualizado");
+            alert.setContentText("Pedido atualizado com sucesso");
             alert.show();
 
             try {
