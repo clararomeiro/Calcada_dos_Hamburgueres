@@ -144,17 +144,6 @@ public class RepositorioClientes implements IRepositorioClientes, Serializable {
 		}
 		
 		return resultado;
-	}
-	
-	
-	private int retornarIndice(String cpf) {
-		int indice =-1;
-		for(int i =0; i< clientes.size(); i++) {
-			if(clientes.get(i).getCpf().equals(cpf)) {
-				indice = i;
-			}
-		}
-		return indice;
 		
 	}
 

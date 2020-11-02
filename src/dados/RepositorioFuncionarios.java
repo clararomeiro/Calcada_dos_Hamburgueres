@@ -129,16 +129,6 @@ public class RepositorioFuncionarios implements IRepositorioFuncionarios, Serial
         		}
 	        }
 	      } 	
-	}
-	
-	private int retornarIndice(String cpf) {
-		int indice =-1;
-		for(int i =0; i< funcionarios.size(); i++) {
-			if(funcionarios.get(i).getCpf().equals(cpf)) {
-				indice = i;
-			}
-		}
-		return indice;
 		
 	}
 

@@ -14,7 +14,6 @@ import java.util.List;
 import beans.Cliente;
 import beans.Pagamento;
 import dados.IRepositorioPagamento;
-import exceptions.PagamentoException;
 
 public class RepositorioPagamento implements IRepositorioPagamento ,Serializable{
 
@@ -115,7 +114,7 @@ public class RepositorioPagamento implements IRepositorioPagamento ,Serializable
 	              ois.close();
 	            }
 	            catch(IOException e){
-	              System.out.println("N�o foi poss�vel fechar o arquivo!");
+	              System.out.println("Nao foi possivel fechar o arquivo");
 	              e.printStackTrace();
 	            }
 	        }
