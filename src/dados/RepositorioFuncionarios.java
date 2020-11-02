@@ -20,8 +20,7 @@ public class RepositorioFuncionarios implements IRepositorioFuncionarios, Serial
 
 	private static final long serialVersionUID = 1025911660485970999L;
 	private List<Funcionario> funcionarios;
-	private static RepositorioFuncionarios instance;
-    private List<String> funcionarioString;
+	public static RepositorioFuncionarios instance;
 
 	
 	private RepositorioFuncionarios() {
@@ -30,18 +29,11 @@ public class RepositorioFuncionarios implements IRepositorioFuncionarios, Serial
 	
 	@Override
 	public List<Funcionario> listar(){
-		 funcionarioString = new ArrayList<>();
-         funcionarioString.add("NOME /  CPF/  EMAIL");
-         for (Funcionario funcionario : funcionarios) {
-             funcionarioString.add(funcionario.toString());
-         }
-		return funcionarios;
-           
+		 
+		return this.funcionarios;
 		
 	}
-	public List<Funcionario> listarFuncionarios(){
-        return funcionarios;
-    }
+
 	public static RepositorioFuncionarios getInstance() {
 		if (instance == null) {
 			instance = RepositorioFuncionarios.lerArquivo();
@@ -123,19 +115,29 @@ public class RepositorioFuncionarios implements IRepositorioFuncionarios, Serial
 	@Override
 	public void cadastrar(Funcionario funcionario) throws FuncionarioException {
 		 boolean temEmail = false;
+		 boolean temCpf = false;
+		 boolean temNome = false;
 			
 	        if(funcionarios.isEmpty()){
 	        	funcionarios.add(funcionario);
 	        }else{
 	        	for(Funcionario f: funcionarios) {
-	        		if(f.getCpf().equals(funcionario.getCpf()) || f.getSenha().equals(funcionario.getSenha())) {
+	        		if(f.getCpf().equals(funcionario.getCpf())) {
 	        			temEmail = true;
+	        			temCpf = true;
+	        			temNome = true;
 	        		}
 	        		
 	        	}
-	        	
-	        	FuncionarioException cadastrarfuncionario = new FuncionarioException("Funcionario nao encontrado!");
-	        	throw cadastrarfuncionario;
+	        	if(!temEmail && !temCpf && !temNome)
+	        	{
+	        		funcionarios.add(funcionario);
+	        	}
+	        	else
+	        	{
+	        		FuncionarioException cadastrarfuncionario = new FuncionarioException("Funcionario nao encontrado!");
+	        		throw cadastrarfuncionario;
+	        	}
 	        }
 			
 	}
