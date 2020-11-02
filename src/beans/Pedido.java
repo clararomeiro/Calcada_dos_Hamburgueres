@@ -65,7 +65,6 @@ public class Pedido implements Serializable {
 	
 	}
 	
-	
 	public String toString() {
 		
 		return this.cliente.getCpf() + "\t"+ this.produto.get(0).getHamburgueres() +"\t"+
