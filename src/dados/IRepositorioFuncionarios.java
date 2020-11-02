@@ -14,9 +14,5 @@ public interface IRepositorioFuncionarios {
 	
 	void cadastrar(Funcionario funcionario) throws FuncionarioException; 
 	
-	void remover(Funcionario funcionario) throws FuncionarioException;
-	
-	void atualizar(Funcionario funcionario) throws FuncionarioException;
-	
-	Funcionario buscar(String cpf) throws FuncionarioException ;	
+		
 }
