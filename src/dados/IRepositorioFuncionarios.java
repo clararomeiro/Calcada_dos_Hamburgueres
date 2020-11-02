@@ -8,7 +8,7 @@ import exceptions.FuncionarioException;
 
 public interface IRepositorioFuncionarios {
 
-	List<String> listar();
+	List<Funcionario> listar();
 	
 	void salvarArquivo();
 	
