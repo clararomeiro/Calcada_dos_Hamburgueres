@@ -145,7 +145,7 @@ public class TelaProdutosController extends Saida implements Initializable{
         		{
         			Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             	    alert.setHeaderText("Sucesso");
-                        alert.setTitle("Pedido realizado");
+                    alert.setTitle("Pedido realizado");
             	    alert.setContentText("Pedido realizado com sucesso");
             	    alert.show(); 
                 	try {

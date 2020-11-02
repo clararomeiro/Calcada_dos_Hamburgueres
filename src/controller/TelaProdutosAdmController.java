@@ -24,10 +24,13 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import telas.TelaNotaFiscal;
 import telas.TelaProdutosAdm;
 
 public class TelaProdutosAdmController extends Saida implements Initializable {
@@ -131,22 +134,47 @@ public class TelaProdutosAdmController extends Saida implements Initializable {
         });
 
         btnAtualizarPedido.setOnMouseClicked((MouseEvent e) -> {
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setHeaderText("Sucesso");
-            alert.setTitle("Pedido atualizado");
-            alert.setContentText("Pedido atualizado com sucesso");
-            alert.show();
+        	
+            if(hambZendaya.getValue() > 0 || cbBatataFrita.getValue() > 0 || cbAgua.getValue() > 0 || cbBatataCdd.getValue() > 0 || 
+        			cbBBH.getValue() > 0 || cbPS.getValue() > 0 || cbSuco.getValue() > 0 || cbTwice.getValue() > 0 || 
+        			cbRefrigerante.getValue() > 0 || cbOnion.getValue() > 0 || CbNCT.getValue() > 0 || cbMilkshake.getValue() > 0)
+        	{
+        		if(!FormaPagamento.getValue().equals("Forma de pagamento"))
+        		{
+        			Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            	    alert.setHeaderText("Sucesso");
+                    alert.setTitle("Pedido atualizado");
+            	    alert.setContentText("Pedido atualizado com sucesso");
+            	    alert.show(); 
+                	try {
+                         fachada = FachadaCalcada.getInstance();
+                         fachada.cadastrar(pedido);
+                         fachada.cadastrarPagamento(pagamento); 
+                     } catch (ClassNotFoundException ex) {
+                         Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
+                     } catch (IOException ex) {
+                         Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
+                     }
+            	}
+        		
+        		else if (FormaPagamento.getValue().equals("Forma de pagamento"))
+            	{
+            		Alert alert1 = new Alert(AlertType.ERROR);
+                    alert1.setHeaderText("ERRO");
+                    alert1.setTitle("Erro ao atualizar");
+                    alert1.setContentText("Selecione a forma de pagamento!");
+                    alert1.show();
+            	}
+        	}
 
-            try {
-                fachada = FachadaCalcada.getInstance();
-                fachada.cadastrar(pedido);
-                fachada.cadastrarPagamento(pagamento);
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(TelaProdutosAdmController.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
-                Logger.getLogger(TelaProdutosAdmController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
+        	else
+        	{
+        		Alert alert1 = new Alert(AlertType.ERROR);
+                alert1.setHeaderText("ERRO");
+                alert1.setTitle("Erro ao atualizar");
+                alert1.setContentText("Selecao em falta!");
+                alert1.show();
+        	}    
         });
 
         btncalcularPedido.setOnMouseClicked((MouseEvent e) -> {
