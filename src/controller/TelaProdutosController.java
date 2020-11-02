@@ -102,6 +102,7 @@ public class TelaProdutosController extends Saida implements Initializable{
     private List<Produto> produtos;
     private Pedido pedido;
     private Pagamento pagamento;
+    private double preco = 0;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -169,17 +170,16 @@ public class TelaProdutosController extends Saida implements Initializable{
         });
         
         btncalcularPedido.setOnMouseClicked((MouseEvent e)->{
-            produtos = new ArrayList<>();
-            Produto produto = new Produto(hamburguer, bebida, acompanhamento, hambZendaya.getSelectionModel().getSelectedItem(), 
-            		cbBBH.getSelectionModel().getSelectedItem(), cbPS.getSelectionModel().getSelectedItem(), cbTwice.getSelectionModel().getSelectedItem(), 
-            		CbNCT.getSelectionModel().getSelectedItem(), cbBatataFrita.getSelectionModel().getSelectedItem(), 
-            		cbAgua.getSelectionModel().getSelectedItem(), cbBatataCdd.getSelectionModel().getSelectedItem(),
-            		cbSuco.getSelectionModel().getSelectedItem(), cbRefrigerante.getSelectionModel().getSelectedItem(),
-            		cbOnion.getSelectionModel().getSelectedItem(), cbMilkshake.getSelectionModel().getSelectedItem());
-            
-            produtos.add(produto);
-            pedido = new Pedido(produtos, "Pedido em espera", cliente);
-            pagamento = new Pagamento(pedido, FormaPagamento.getSelectionModel().getSelectedItem());
+            preco = cbAgua.getValue()*Bebida.AGUA.getValor() + cbSuco.getValue()*Bebida.SUCO.getValor()
+                    + cbRefrigerante.getValue()*Bebida.REFRIGERANTE.getValor()
+                    + cbBatataFrita.getValue()*Acompanhamento.BATATA_FRITA.getValor()
+                    + cbBatataCdd.getValue()*Acompanhamento.BATATA_CHEDDAR.getValor()
+                    + cbOnion.getValue()*Acompanhamento.ONION_RINGS.getValor()
+                    + cbMilkshake.getValue()*Acompanhamento.MILK_SHAKE.getValor()
+                    + hambZendaya.getValue()*Hamburguer.ZENDAYA.getValor() + cbBBH.getValue()*Hamburguer.BBH.getValor()
+                    + cbTwice.getValue()*Hamburguer.TWICE.getValor() + cbPS.getValue()*Hamburguer.PRISCILA_SENNA.getValor()
+                    + CbNCT.getValue()*Hamburguer.NCT.getValor();
+            PrecoTotal.setText("R$ " + preco);
         });
 
         //pagamento = new Pagamento(pedido, FormaPagamento.getSelectionModel().getSelectedItem());
