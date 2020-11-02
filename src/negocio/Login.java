@@ -13,7 +13,7 @@ public class Login {
 	
 	 public Funcionario loginFunci(String usuario, String senha){
 	        Funcionario funcionario = null;
-	        for (Funcionario f : repFuncionario.listarFuncionarios()) {
+	        for (Funcionario f : repFuncionario.listar()) {
 	            if (f.getCpf().equals(usuario) && f.getSenha().equals(senha)) {
 	                funcionario = f;
 	            }  

@@ -20,8 +20,6 @@ public interface ICalcada {
 	void cadastrar(Pedido pedido);
 	public void removerPedido(Pedido pedido);
 	
-	List<String> listarFuncionariosString();
-	List<Funcionario> listarFuncionarios();
 	List<Pedido> listarPedidos();
 	List<Pagamento> listarPagamento();
 	List<Cliente> listar();
