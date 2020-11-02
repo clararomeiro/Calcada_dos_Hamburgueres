@@ -59,7 +59,6 @@ public class TelaPedidosController extends Saida implements Initializable {
 	                alert.setContentText("Selecionar pedido");
 	                alert.show();
 	            }
-	           fachada.mudarStatus(mudarStatus.get(index-1).getCliente().getCpf());
 	           fachada.removerPedido(fachada.listarPedidos().get(index-1));
 	           listar();
 	           
