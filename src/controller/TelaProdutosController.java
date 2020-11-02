@@ -28,6 +28,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.SingleSelectionModel;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -136,45 +137,55 @@ public class TelaProdutosController extends Saida implements Initializable{
         
         btnRealizarPedido.setOnMouseClicked((MouseEvent e)->{
         
-    	if(produtos != null) {
-    		if(FormaPagamento != null){
-            	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        	    alert.setHeaderText("Sucesso");
-                    alert.setTitle("Pedido realizado");
-        	    alert.setContentText("Pedido realizado com sucesso");
-        	    alert.show(); 
-            	try {
-                     fachada = FachadaCalcada.getInstance();
-                     fachada.cadastrar(pedido);
-                     fachada.cadastrarPagamento(pagamento);
-                     fechar();
-                     TelaNotaFiscal kk = new TelaNotaFiscal();
-                     try {
-    					kk.start(new Stage());
-    				} catch (Exception e1) {
-    					// TODO Auto-generated catch block
-    					e1.printStackTrace();
-    				}
-                 } catch (ClassNotFoundException ex) {
-                     Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
-                 } catch (IOException ex) {
-                     Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
-                 }
-              }	else {
-            	  Alert alert1 = new Alert(AlertType.ERROR);
-                  alert1.setHeaderText("ERRO");
-                  alert1.setTitle("Erro ao comprar");
-                  alert1.setContentText("Selecione forma de pagamento!");
-                  alert1.show();
-              }
-    	} else {
-    		Alert alert1 = new Alert(AlertType.ERROR);
-            alert1.setHeaderText("ERRO");
-            alert1.setTitle("Erro ao comprar");
-            alert1.setContentText("Selecione um produto!");
-            alert1.show();
-    	}
-            
+		if(hambZendaya.getValue() > 0 || cbBatataFrita.getValue() > 0 || cbAgua.getValue() > 0 || cbBatataCdd.getValue() > 0 || 
+        			cbBBH.getValue() > 0 || cbPS.getValue() > 0 || cbSuco.getValue() > 0 || cbTwice.getValue() > 0 || 
+        			cbRefrigerante.getValue() > 0 || cbOnion.getValue() > 0 || CbNCT.getValue() > 0 || cbMilkshake.getValue() > 0)
+        	{
+        		if(FormaPagamento.getValue() != null)
+        		{
+        			Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            	    alert.setHeaderText("Sucesso");
+                        alert.setTitle("Pedido realizado");
+            	    alert.setContentText("Pedido realizado com sucesso");
+            	    alert.show(); 
+                	try {
+                         fachada = FachadaCalcada.getInstance();
+                         fachada.cadastrar(pedido);
+                         fachada.cadastrarPagamento(pagamento);
+                         fechar();
+                         TelaNotaFiscal kk = new TelaNotaFiscal();
+                         try {
+        					kk.start(new Stage());
+        				} catch (Exception e1) {
+        					// TODO Auto-generated catch block
+        					e1.printStackTrace();
+        				}
+                     } catch (ClassNotFoundException ex) {
+                         Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
+                     } catch (IOException ex) {
+                         Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
+                     }
+            	}
+        		
+        		else if (FormaPagamento.getValue() == null)
+            	{
+            		Alert alert1 = new Alert(AlertType.ERROR);
+                    alert1.setHeaderText("ERRO");
+                    alert1.setTitle("Erro ao comprar");
+                    alert1.setContentText("Selecione a forma de pagamento!");
+                    alert1.show();
+            	}
+        	}
+        		
+        	
+        	else
+        	{
+        		Alert alert1 = new Alert(AlertType.ERROR);
+                alert1.setHeaderText("ERRO");
+                alert1.setTitle("Erro ao comprar");
+                alert1.setContentText("Selecao em falta!");
+                alert1.show();
+        	}    
         });
         
         btncalcularPedido.setOnMouseClicked((MouseEvent e)->{
