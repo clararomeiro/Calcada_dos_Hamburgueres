@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import beans.Cliente;
 import beans.Pagamento;
 import beans.Pedido;
 import telas.TelaNotaFiscal;
@@ -56,7 +57,11 @@ public class TelaNotaFiscalController extends Saida implements Initializable{
 		for (Pagamento p : fachada.listarPagamento()) {
             
 			listaNotaFiscal.add(p.toString());   
-       }
+		}
+		for (Cliente c : fachada.listar()) {
+            
+			listaNotaFiscal.add(c.toString());
+		}
 	}
 	
 	private void fechar(){

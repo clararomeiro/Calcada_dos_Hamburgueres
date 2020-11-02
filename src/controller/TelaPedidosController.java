@@ -22,8 +22,7 @@ import javafx.scene.input.MouseEvent;
 import telas.TelaPedidos;
 import negocio.FachadaCalcada;
 import negocio.ICalcada;
-import telas.TelaProdutoAdm;
-import telas.TelaProdutos;
+import telas.TelaProdutosAdm;
 
 public class TelaPedidosController extends Saida implements Initializable {
 			
@@ -79,8 +78,9 @@ public class TelaPedidosController extends Saida implements Initializable {
 				 alert.setContentText("Selecionar pedido");
 				 alert.show();
 			 }
+			 fachada.removerPedido(fachada.listarPedidos().get(index-1));
 			 fechar();
-			 TelaProdutoAdm tp = new TelaProdutoAdm();
+			 TelaProdutosAdm tp = new TelaProdutosAdm();
 		 });
 	
 	}	 	 
