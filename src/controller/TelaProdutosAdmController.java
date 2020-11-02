@@ -148,17 +148,7 @@ public class TelaProdutosAdmController extends Saida implements Initializable {
         });
 
         btncalcularPedido.setOnMouseClicked((MouseEvent e) -> {
-            produtos = new ArrayList<>();
-            Produto produto = new Produto(hamburguer, bebida, acompanhamento, hambZendaya.getSelectionModel().getSelectedItem(),
-                    cbBBH.getSelectionModel().getSelectedItem(), cbPS.getSelectionModel().getSelectedItem(), cbTwice.getSelectionModel().getSelectedItem(),
-                    CbNCT.getSelectionModel().getSelectedItem(), cbBatataFrita.getSelectionModel().getSelectedItem(),
-                    cbAgua.getSelectionModel().getSelectedItem(), cbBatataCdd.getSelectionModel().getSelectedItem(),
-                    cbSuco.getSelectionModel().getSelectedItem(), cbRefrigerante.getSelectionModel().getSelectedItem(),
-                    cbOnion.getSelectionModel().getSelectedItem(), cbMilkshake.getSelectionModel().getSelectedItem());
 
-            produtos.add(produto);
-            pedido = new Pedido(produtos, "Pedido em espera", cliente);
-            pagamento = new Pagamento(pedido, FormaPagamento.getSelectionModel().getSelectedItem());
             preco();
         });
     }
