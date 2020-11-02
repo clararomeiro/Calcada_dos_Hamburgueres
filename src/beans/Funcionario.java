@@ -10,7 +10,7 @@ public class Funcionario implements Serializable{
     private String nome;
     private String email;
     private String cpf;
-    private String senha = "funcionario";
+    private String senha;
 	 
 	 
 	 public Funcionario(String nome, String email, String cpf) 
@@ -49,6 +49,7 @@ public class Funcionario implements Serializable{
 	}
 
 	public String getSenha() {
+	     this.senha = "funcionario";
 		return senha;
 	}
 	    
