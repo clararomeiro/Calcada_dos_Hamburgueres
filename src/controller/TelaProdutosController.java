@@ -141,7 +141,7 @@ public class TelaProdutosController extends Saida implements Initializable{
         			cbBBH.getValue() > 0 || cbPS.getValue() > 0 || cbSuco.getValue() > 0 || cbTwice.getValue() > 0 || 
         			cbRefrigerante.getValue() > 0 || cbOnion.getValue() > 0 || CbNCT.getValue() > 0 || cbMilkshake.getValue() > 0)
         	{
-        		if(FormaPagamento.getValue() != null)
+        		if(!FormaPagamento.getValue().equals("Forma de pagamento"))
         		{
         			Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             	    alert.setHeaderText("Sucesso");
@@ -167,7 +167,7 @@ public class TelaProdutosController extends Saida implements Initializable{
                      }
             	}
         		
-        		else if (FormaPagamento.getValue() == null)
+        		else if (FormaPagamento.getValue().equals("Forma de pagamento"))
             	{
             		Alert alert1 = new Alert(AlertType.ERROR);
                     alert1.setHeaderText("ERRO");
@@ -277,7 +277,7 @@ public class TelaProdutosController extends Saida implements Initializable{
     }
     
     private void formaPagamento(){
-        ObservableList<String> pagamento = FXCollections.observableArrayList("DINHEIRO","DEBITO","CREDITO");
+        ObservableList<String> pagamento = FXCollections.observableArrayList("Forma de pagamento","DINHEIRO","DEBITO","CREDITO");
         FormaPagamento.setValue("Forma de pagamento");
         FormaPagamento.setItems(pagamento);
     }
