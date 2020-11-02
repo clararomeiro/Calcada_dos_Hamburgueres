@@ -32,8 +32,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 public class TelaProdutosController extends Saida implements Initializable{
-	@FXML
-    private AnchorPane tela;
+	@FXML 
+	private AnchorPane tela;
 
     @FXML
     private Button Sair;
