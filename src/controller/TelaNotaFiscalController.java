@@ -7,7 +7,6 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import beans.Cliente;
 import beans.Pagamento;
 import beans.Pedido;
 import telas.TelaNotaFiscal;
@@ -63,11 +62,7 @@ public class TelaNotaFiscalController extends Saida implements Initializable{
             
 			listaNotaFiscal.add(p.toString());   
 		}
-		for (Cliente c : fachada.listar()) {
-            
-			listaNotaFiscal.add(c.toString());
-		}
-		
+
 		ObservableList<String> obsPedido = FXCollections.observableArrayList(listaNotaFiscal);
         lvNotaFiscal.setItems(obsPedido);
 	}
