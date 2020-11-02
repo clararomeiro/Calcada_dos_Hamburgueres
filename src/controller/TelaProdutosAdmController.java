@@ -98,6 +98,8 @@ public class TelaProdutosAdmController extends Saida implements Initializable {
     private List<Produto> produtos;
     private Pedido pedido;
     private Pagamento pagamento;
+    private double preco = 0;
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -149,13 +151,17 @@ public class TelaProdutosAdmController extends Saida implements Initializable {
 
         btncalcularPedido.setOnMouseClicked((MouseEvent e) -> {
 
-            preco();
+            for(Produto p : produtos){
+                preco = p.getPrecoFinal()/produtos.size();
+            }
+            PrecoTotal.setText("R$" + preco);
+
         });
     }
 
-    private void preco() {
-        precoPedido.setText("R$" + pedido.getPreco());
-    }
+    /*public void preco() {
+        precoPedido.setText("R$" + preco);
+    }*/
 
     private void qtdZendaya(){
         ObservableList<Integer> qtd = FXCollections.observableArrayList(0,1,2,3,4);

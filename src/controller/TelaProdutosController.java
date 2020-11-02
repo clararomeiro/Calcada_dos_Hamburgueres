@@ -184,7 +184,7 @@ public class TelaProdutosController extends Saida implements Initializable{
     }
     
     private void preco(){
-       precoPedido.setText("R$" + pedido.getPreco());
+       PrecoTotal.setText("R$" + pedido.getPreco());
     }
     
     private void qtdZendaya(){
