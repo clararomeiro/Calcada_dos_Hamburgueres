@@ -19,7 +19,6 @@ import javafx.scene.control.ListView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
 import telas.TelaPedidos;
 import negocio.FachadaCalcada;
 import negocio.ICalcada;
@@ -62,12 +61,13 @@ public class TelaPedidosController extends Saida implements Initializable {
 	            }
 	           fachada.mudarStatus(mudarStatus.get(index-1).getCliente().getCpf());
 	           fachada.removerPedido(fachada.listarPedidos().get(index-1));
+	           listar();
+	           
 	           Alert alert = new Alert(Alert.AlertType.ERROR);
 	           alert.setHeaderText("Pedido cancelado");
                alert.setContentText("Pedido cancelado");
                alert.show();
 	           
-	           listar();
 	        });
 
 		 btnEditar.setOnMouseClicked((MouseEvent e)->{
