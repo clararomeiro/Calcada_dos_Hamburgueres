@@ -56,7 +56,7 @@ public class Pedido implements Serializable {
 		return preco;
 	}
 	
-	private void calcularPreco() {
+	public void calcularPreco() {
 		this.preco = 0;
 		for(Produto p: produto) {
 			this.preco+= p.getAcompanhamentos().getValor()+ p.getBebidas().getValor()+
