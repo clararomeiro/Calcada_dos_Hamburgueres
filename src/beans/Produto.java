@@ -180,13 +180,14 @@ public class Produto implements Serializable {
 		this.qtdMilkshake = qtdMilkshak;
 	}
 
-	public double calcularPrecoFinal(){
-		double preco = 0;
-		preco = preco + qtdAgua*Bebida.AGUA.getValor()+ qtdSuco*Bebida.SUCO.getValor() + qtdRefri*Bebida.REFRIGERANTE.getValor()
+	public double getPrecoFinal(){
+		double preco = qtdAgua*Bebida.AGUA.getValor()+ qtdSuco*Bebida.SUCO.getValor() + qtdRefri*Bebida.REFRIGERANTE.getValor()
 				+ qtdBatata*Acompanhamento.BATATA_FRITA.getValor() + qtdBatataCdd*Acompanhamento.BATATA_CHEDDAR.getValor()
 				+ qtdOnion+Acompanhamento.ONION_RINGS.getValor() + qtdMilkshake*Acompanhamento.MILK_SHAKE.getValor()
-				+ qtdBBH*Hamburguer.BBH.getValor();
-
+				+ qtdBBH*Hamburguer.BBH.getValor() + qtdZendaya*Hamburguer.ZENDAYA.getValor()
+				+ qtdTwice*Hamburguer.TWICE.getValor() + qtdNCT*Hamburguer.NCT.getValor()
+				+ qtdPS*Hamburguer.PRISCILA_SENNA.getValor();
+		return preco;
 	}
 		
 	}
