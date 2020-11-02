@@ -32,14 +32,7 @@ public class RepositorioPagamento implements IRepositorioPagamento ,Serializable
 		return instance;
 	}
 
-	@Override
-	public void cadastrar(Pagamento p) {
-		p.setDataVenda(LocalDate.now());
-		pagamentos.add(p);
-		
-		
-	}
-
+	
 	@Override
 	public boolean remover(Pagamento p) {
 		boolean removido = false;
@@ -62,10 +55,7 @@ public class RepositorioPagamento implements IRepositorioPagamento ,Serializable
 		return lista;
 	}
 
-	@Override
-	public List<Pagamento> listarVendas() {
-		return this.pagamentos;
-	}
+	
 	
 	@Override
 	public List<Pagamento> listarPorCliente (Cliente c) {
@@ -155,6 +145,19 @@ public class RepositorioPagamento implements IRepositorioPagamento ,Serializable
 	        }
 	    }
 	}
+
+	@Override
+	public List<Pagamento> listarPagamento() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void cadastrar(Pagamento p) {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 	
 
