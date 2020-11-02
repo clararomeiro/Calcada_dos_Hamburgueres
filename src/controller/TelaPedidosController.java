@@ -19,6 +19,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import telas.TelaPedidos;
 import negocio.FachadaCalcada;
 import negocio.ICalcada;
@@ -34,8 +35,8 @@ public class TelaPedidosController extends Saida implements Initializable {
     ICalcada fachada;
 
 	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
+	public void initialize(URL url, ResourceBundle rb) {
+		listar();
 		
 		btnSair.setOnMouseClicked((MouseEvent e)->{
 		 	   saida();
