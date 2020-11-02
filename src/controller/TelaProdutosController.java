@@ -135,21 +135,8 @@ public class TelaProdutosController extends Saida implements Initializable{
 		 });
         
         btnRealizarPedido.setOnMouseClicked((MouseEvent e)->{
-        if(produtos == null) {
-        	Alert alert1 = new Alert(AlertType.ERROR);
-            alert1.setHeaderText("ERRO");
-            alert1.setTitle("Erro ao comprar");
-            alert1.setContentText("Selecione um produto primeiro!");
-            alert1.show();
-        }
-        else if(FormaPagamento == null) {
-        	Alert alert1 = new Alert(AlertType.ERROR);
-            alert1.setHeaderText("ERRO");
-            alert1.setTitle("Erro ao comprar");
-            alert1.setContentText("Insira uma forma de pagamento!");
-            alert1.show();
-        }
-        else if(FormaPagamento != null){
+        
+    	if(FormaPagamento != null){
         	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
     	    alert.setHeaderText("Sucesso");
                 alert.setTitle("Pedido realizado");
@@ -172,7 +159,22 @@ public class TelaProdutosController extends Saida implements Initializable{
              } catch (IOException ex) {
                  Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
              }
+        }	
+    	else if(produtos == null) {
+        	Alert alert1 = new Alert(AlertType.ERROR);
+            alert1.setHeaderText("ERRO");
+            alert1.setTitle("Erro ao comprar");
+            alert1.setContentText("Selecione um produto primeiro!");
+            alert1.show();
         }
+        else if(FormaPagamento == null) {
+        	Alert alert1 = new Alert(AlertType.ERROR);
+            alert1.setHeaderText("ERRO");
+            alert1.setTitle("Erro ao comprar");
+            alert1.setContentText("Insira uma forma de pagamento!");
+            alert1.show();
+        }
+        
             
         });
         
