@@ -10,9 +10,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import beans.Cliente;
 import beans.Funcionario;
-import exceptions.ClienteException;
 import exceptions.FuncionarioException;
 
 

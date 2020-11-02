@@ -107,13 +107,14 @@ public class RepositorioClientes implements IRepositorioClientes, Serializable {
 
 	@Override
 	public void cadastrar(Cliente cliente) throws ClienteException {
+		
     boolean temEmail = false;
 		
         if(clientes.isEmpty()){
         	clientes.add(cliente);
         }else{
         	for(Cliente c: clientes) {
-        		if(c.getNome().equals(cliente.getNome()) || c.getCpf().equals(cliente.getCpf())) {
+        		if(c.getCpf().equals(cliente.getCpf())) {
         			temEmail = true;
         		}
         		
