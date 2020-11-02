@@ -23,7 +23,7 @@ public class CadastroFuncionario {
 	    
 	    }
 	 
-	 public List<Funcionario> listar() {
+	 public List<String> listar() {
 			return rFuncionario.listar();
 		}
 	 
