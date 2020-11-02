@@ -29,14 +29,14 @@ public class RepositorioFuncionarios implements IRepositorioFuncionarios, Serial
 	}
 	
 	@Override
-	public List<Funcionario> listar(){
+	public List<String> listar(){
 		 funcionarioString = new ArrayList<>();
          funcionarioString.add("NOME /  CPF/  EMAIL");
          for (Funcionario funcionario : funcionarios) {
              funcionarioString.add(funcionario.toString());
          }
            
-		return this.funcionarios;  
+		return this.funcionarioString;  
 	}
 	public List<Funcionario> listarFuncionarios(){
         return funcionarios;
