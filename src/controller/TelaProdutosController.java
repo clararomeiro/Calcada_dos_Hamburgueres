@@ -136,7 +136,7 @@ public class TelaProdutosController extends Saida implements Initializable{
         
         btnRealizarPedido.setOnMouseClicked((MouseEvent e)->{
         
-    	if(produtos == null || FormaPagamento == null) {
+    	if(hamburguer == null || bebida == null || acompanhamento == null || FormaPagamento == null) {
         	Alert alert1 = new Alert(AlertType.ERROR);
             alert1.setHeaderText("ERRO");
             alert1.setTitle("Erro ao comprar");
