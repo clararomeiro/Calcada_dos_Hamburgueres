@@ -13,7 +13,8 @@ import beans.Pedido;
 import telas.TelaNotaFiscal;
 import negocio.FachadaCalcada;
 import negocio.ICalcada;
-
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -29,6 +30,7 @@ public class TelaNotaFiscalController extends Saida implements Initializable{
 	
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
+		listar();
 		
 		btnSair.setOnMouseClicked((MouseEvent e)->{
 		 	   saida();
@@ -50,6 +52,9 @@ public class TelaNotaFiscalController extends Saida implements Initializable{
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(TelaPedidosController.class.getName()).log(Level.SEVERE, null, ex);
         }
+		
+		listaNotaFiscal.add("CPF do cliente   Hamburguer   Quantidade   Acompanhamento    Bebida    Valor do pedido");
+
 		for (Pedido p : fachada.listarPedidos()) {
             
 			listaNotaFiscal.add(p.toString());   
@@ -62,6 +67,9 @@ public class TelaNotaFiscalController extends Saida implements Initializable{
             
 			listaNotaFiscal.add(c.toString());
 		}
+		
+		ObservableList<String> obsPedido = FXCollections.observableArrayList(listaNotaFiscal);
+        lvNotaFiscal.setItems(obsPedido);
 	}
 	
 	private void fechar(){
