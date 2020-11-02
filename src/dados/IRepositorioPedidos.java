@@ -1,19 +1,18 @@
 package dados;
-import java.util.List;
 
+import java.util.List;
 import beans.Pedido;
-import exceptions.PedidosException;
 
 
 public interface IRepositorioPedidos {
 
-    List<String> listarPedidoString();
+    List<Pedido> listarPedidos();
 
-    void salvarArquivo() throws PedidosException;
+    void cadastrarPedido(Pedido pedido);
 
-    void cadastrarPedido(Pedido pedido) throws PedidosException;
-
-    void removerPedido(Pedido pedido) throws PedidosException;
+    void removerPedido(Pedido pedido);
+    
+    public void salvarArquivo();
 
 
 }

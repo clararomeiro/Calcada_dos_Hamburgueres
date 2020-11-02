@@ -7,7 +7,10 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import beans.Pedido;
 
@@ -16,30 +19,55 @@ public class RepositorioPedidos implements IRepositorioPedidos, Serializable {
 	private static final long serialVersionUID = -5143865582744552115L;
 	private List<Pedido> pedidos;
     private static RepositorioPedidos instance;
-    private List<String> pedidoString;
+    private List<String> listaPedido;
+    
 
     private RepositorioPedidos() {
         pedidos = new ArrayList<Pedido>();
     }
-
-    @Override
-    public List<String> listarPedidoString() {
-        pedidoString = new ArrayList<>();
-        pedidoString.add("CPF / STATUS");
-        for(Pedido pedido: pedidos){
-            pedidoString.add(pedido.toString());
-        }
-        return pedidoString;
-    }
-
+    
     public List<Pedido>listarPedidos(){
-        return pedidos;
+        listaPedido = new ArrayList<>();
+    	return pedidos;
+    }
+    
+    public static RepositorioPedidos getInstance() {
+        if (instance == null) {
+            instance = RepositorioPedidos.lerArquivo();
+        }
+        return instance;
+    }
+    
+    public void mudarStatus(String cpf){
+        for (Pedido p : pedidos) {
+            if (p.getCliente().getCpf().equals(cpf)) {
+                p.setStatus("Pedido pronto: "+ getDateTime());
+            }
+        }
+    }
+    
+    public void cadastrarPedido(Pedido pedido) {
+        pedidos.add(pedido);
+
+    }
+    
+    public void removerPedido(Pedido pedido) {
+
+        boolean temId = false;
+        for(Pedido p: pedidos){
+            if(p.getId() == pedido.getId()){
+                temId = true;
+            }
+        }
+        if(temId){
+            pedidos.remove(pedido);
+        }
     }
 
 
     private static RepositorioPedidos lerArquivo() {
         RepositorioPedidos instanciaLocal =  null;
-        File f = new File ("bancoDados" + File.separatorChar + "arqPedidos.dat");
+        File f = new File("baseDados" + File.separatorChar+"pedido"+  File.separatorChar+"arqPedidos.dat");
         FileInputStream fis = null;
         ObjectInputStream ois = null;
 
@@ -72,20 +100,13 @@ public class RepositorioPedidos implements IRepositorioPedidos, Serializable {
         return instanciaLocal;
     }
 
-    public static RepositorioPedidos getInstance() {
-        if (instance == null) {
-            instance = RepositorioPedidos.lerArquivo();
-        }
-        return instance;
-    }
 
-    @Override
     public void salvarArquivo() {
         if(instance == null){
             return;
         }
 
-        File f =  new File("bancoDados" + File.separatorChar + "arqPedidos.dat");
+        File f = new File("baseDados" + File.separatorChar+"pedido"+  File.separatorChar+"arqPedidos.dat");
         FileOutputStream fos = null;
         ObjectOutputStream oos = null;
         try{
@@ -111,12 +132,14 @@ public class RepositorioPedidos implements IRepositorioPedidos, Serializable {
         }
     }
 
-    @Override
-    public void cadastrarPedido(Pedido pedido) {
-        pedidos.add(pedido);
-
-    }
-
+    
+    private String getDateTime() {
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");    
+        Date date = new Date();
+        return dateFormat.format(date);
+}
+	
+    
     private int proximoId(){
         int id = 0;
         if(!this.pedidos.isEmpty()){
@@ -124,28 +147,6 @@ public class RepositorioPedidos implements IRepositorioPedidos, Serializable {
             id = this.pedidos.get(i).getId()+1;
         }
         return id;
-    }
-
-    @Override
-    public void removerPedido(Pedido pedido) {
-
-        boolean temId = false;
-        for(Pedido p: pedidos){
-            if(p.getId() == pedido.getId()){
-                temId = true;
-            }
-        }
-        if(temId){
-            pedidos.remove(pedido);
-        }
-    }
-    
-    public void mudarStatus(String cpf){
-        for (Pedido p : pedidos) {
-            if (p.getCliente().getCpf().equals(cpf)) {
-                p.setStatus("Pedido pronto");
-            }
-        }
     }
     
     
