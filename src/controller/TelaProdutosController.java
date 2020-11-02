@@ -180,13 +180,9 @@ public class TelaProdutosController extends Saida implements Initializable{
             produtos.add(produto);
             pedido = new Pedido(produtos, "Pedido em espera", cliente);
             pagamento = new Pagamento(pedido, FormaPagamento.getSelectionModel().getSelectedItem());
-            preco();
         });
     }
-    
-    private void preco(){
-       PrecoTotal.setText("R$" + pedido.getPreco());
-    }
+
     
     private void qtdZendaya(){
         ObservableList<Integer> qtd = FXCollections.observableArrayList(0,1,2,3,4);
