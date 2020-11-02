@@ -67,6 +67,12 @@ public class TelaPedidosController extends Saida implements Initializable {
 	           
 	           listar();
 	        });
+
+		 btnEditar.setOnMouseClicked((MouseEvent e)->{
+		 	ArrayList<Pedido> editarPedido = new ArrayList<>(fachada.listarPedidos());
+		 	int index = lvPedidos.getSelectionModel().getSelectedIndex();
+		 	
+		 });
 	
 	}	 	 
 	
