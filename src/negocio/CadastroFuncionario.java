@@ -9,10 +9,10 @@ import exceptions.FuncionarioException;
 
 public class CadastroFuncionario {
 	
-	private RepositorioFuncionarios repFuncionario;
+	private RepositorioFuncionarios rFuncionario;
 	
-	 public CadastroFuncionario() throws IOException{
-	        this.repFuncionario = RepositorioFuncionarios.getInstance();
+	 public CadastroFuncionario() {
+	        this.rFuncionario = RepositorioFuncionarios.getInstance();
 	    }
 	 
 	 private boolean eNumero(String s) {
@@ -26,20 +26,16 @@ public class CadastroFuncionario {
 			
 		}
 	 
-	 public void cadastrar(Funcionario funcionario) throws FuncionarioException{
-	        if (funcionario != null && this.eNumero(funcionario.getCpf())) {
-				this.repFuncionario.cadastrar(funcionario);
-				this.repFuncionario.salvarArquivo();
+	 public void cadastrar(Funcionario funcionario) throws FuncionarioException, IOException{
+		 if(this.eNumero(funcionario.getCpf())) {
+				this.rFuncionario.cadastrar(funcionario);
+				this.rFuncionario.salvarArquivo();
 			}
 	    
 	    }
 
-	public List<String> listar() {
-		return repFuncionario.listar();
+	public List<Funcionario> listar() {
+		return rFuncionario.listar();
 	}
-	
-	public List<Funcionario> listarFuncionario(){
-        return repFuncionario.listarFuncionarios();
-    }
 	
 }

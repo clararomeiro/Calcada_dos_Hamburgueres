@@ -8,9 +8,9 @@ import exceptions.FuncionarioException;
 
 public interface IRepositorioFuncionarios {
 
-	List<String> listar();
+	List<Funcionario> listar();
 	
-	void salvarArquivo() throws FuncionarioException;
+	void salvarArquivo();
 	
 	void cadastrar(Funcionario funcionario) throws FuncionarioException; 
 		

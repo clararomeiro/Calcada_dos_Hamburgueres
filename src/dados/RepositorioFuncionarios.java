@@ -19,26 +19,17 @@ public class RepositorioFuncionarios implements IRepositorioFuncionarios, Serial
 	private static final long serialVersionUID = 1025911660485970999L;
 	private List<Funcionario> funcionarios;
 	private static RepositorioFuncionarios instance;
-	private List<String> funcionarioString;
 	
 	private RepositorioFuncionarios() {
 		funcionarios = new ArrayList<Funcionario>();		
 	}
 	
 	@Override
-	public List<String> listar(){
-            funcionarioString = new ArrayList<>();
-            funcionarioString.add("NOME /  CPF/  EMAIL");
-            for (Funcionario funcionario : funcionarios) {
-                funcionarioString.add(funcionario.toString());
-            }
-		return funcionarioString;
-         
+	public List<Funcionario> listar(){
+           
+		return this.funcionarios;  
 	}
         
-        public List<Funcionario> listarFuncionarios(){
-            return funcionarios;
-        }
 	
 	private static RepositorioFuncionarios lerArquivo() {
 		RepositorioFuncionarios instanciaLocal =  null;

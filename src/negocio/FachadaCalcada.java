@@ -45,31 +45,25 @@ public class FachadaCalcada implements ICalcada{
 		
 	}
 
-	@Override
-	public List<String> listarFuncionariosString() {
-		return funcionario.listar();
-	}
 
-	@Override
-	public List<Funcionario> listarFuncionarios() {
-		 return funcionario.listarFuncionario();
-	}
-
-	
 	@Override
 	public void cadastrar(Funcionario f) {
 		try {
             this.funcionario.cadastrar(f);
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-	    alert.setHeaderText("Sucesso");
+            alert.setHeaderText("Sucesso");
             alert.setTitle("Cadastro realizado");
-	    alert.setContentText("Cadastro realizado com sucesso");
-	    alert.show();
+            alert.setContentText("Cadastro realizado com sucesso");
+            alert.show();
         } catch (FuncionarioException ex) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("Funcionario já cadastrado");
             alert.setContentText(ex.getMessage());
             alert.show();
+            Logger.getLogger(FachadaCalcada.class.getName()).log(Level.SEVERE, null, ex);
+        }
+		catch (IOException ex) 
+		{
             Logger.getLogger(FachadaCalcada.class.getName()).log(Level.SEVERE, null, ex);
         }
 		
@@ -147,10 +141,5 @@ public class FachadaCalcada implements ICalcada{
         return funcionarios;
 	}
 
-	@Override
-	public List<Pagamento> listarPagamento() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	}
 	
