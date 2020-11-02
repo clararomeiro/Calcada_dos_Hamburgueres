@@ -7,7 +7,7 @@ import java.io.Serializable;
 public class Pagamento implements Serializable{
 	
 	private static final long serialVersionUID = -8634188873103876178L;
-	private Pedido controladorPedido;
+	private Pedido pedido;
 	private String modoPagamento;
 	private LocalDate dataVenda;
 	
@@ -16,21 +16,21 @@ public class Pagamento implements Serializable{
 	private static final String DINHEIRO ="dinheiro";
 
 
-	public Pagamento(Pedido controladorPedido, String modoPag) {
-		this.controladorPedido = controladorPedido;
+	public Pagamento(Pedido pedido, String modoPag) {
+		this.pedido = pedido;
 		this.setModoPagamento(modoPag);
      
 	}
 	
-	public Pagamento(Pedido controladorPedido)
+	public Pagamento(Pedido pedido)
 	{
-		this.controladorPedido = controladorPedido;
+		this.pedido = pedido;
 	}
-	public Pedido getControladorPedido() {
-		return controladorPedido;
+	public Pedido getPedido() {
+		return pedido;
 	}
-	public void setPedido(Pedido controladorPedido) {
-		this.controladorPedido = controladorPedido;
+	public void setPedido(Pedido pedido) {
+		this.pedido = pedido;
 	}
 	public String getModoPagamento() {
 		return modoPagamento;
@@ -54,7 +54,7 @@ public class Pagamento implements Serializable{
 	}
 
 	public String toString() {
-		String s = this.controladorPedido.toString()+","+this.modoPagamento+","+ this.dataVenda.toString() ;
+		String s = this.pedido.toString()+","+this.modoPagamento+","+ this.dataVenda.toString() ;
 		return s;
 	}
 }

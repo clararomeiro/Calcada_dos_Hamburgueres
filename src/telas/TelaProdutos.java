@@ -16,7 +16,7 @@ public class TelaProdutos extends Application {
 
 	@Override
 	public void start(Stage stage) throws Exception {
-	      Parent rood = FXMLLoader.load(getClass().getResource("/view/TelaProdutos.fxml"));
+	      	Parent rood = FXMLLoader.load(getClass().getResource("/view/TelaProdutos.fxml"));
 	        Scene scene = new Scene(rood);
 	        stage.setTitle("Produtos");
 	        stage.setScene(scene);
