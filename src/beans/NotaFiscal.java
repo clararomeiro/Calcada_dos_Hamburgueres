@@ -1,9 +1,11 @@
 package beans;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class NotaFiscal {
-	
+public class NotaFiscal implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 	private List<Produto> produto;
 	private Pagamento pagamento;
 	private Cliente cliente;
