@@ -167,74 +167,74 @@ public class TelaProdutosAdmController extends Saida implements Initializable {
         precoPedido.setText("R$" + pedido.getPreco());
     }
 
-    private void qtdZendaya() {
-        ObservableList<Integer> qtd = FXCollections.observableArrayList(1, 2, 3, 4);
+    private void qtdZendaya(){
+        ObservableList<Integer> qtd = FXCollections.observableArrayList(0,1,2,3,4);
         hambZendaya.setValue(0);
         hambZendaya.setItems(qtd);
     }
-
-    private void qtdBBH() {
-        ObservableList<Integer> qtd = FXCollections.observableArrayList(1, 2, 3, 4);
+    
+    private void qtdBBH(){
+        ObservableList<Integer> qtd = FXCollections.observableArrayList(0,1,2,3,4);
         cbBBH.setValue(0);
         cbBBH.setItems(qtd);
     }
-
-    private void qtdNCT() {
-        ObservableList<Integer> qtd = FXCollections.observableArrayList(1, 2, 3, 4);
+    
+    private void qtdNCT(){
+        ObservableList<Integer> qtd = FXCollections.observableArrayList(0,1,2,3,4);
         CbNCT.setValue(0);
         CbNCT.setItems(qtd);
     }
-
-    private void qtdTwice() {
-        ObservableList<Integer> qtd = FXCollections.observableArrayList(1, 2, 3, 4);
+    
+    private void qtdTwice(){
+        ObservableList<Integer> qtd = FXCollections.observableArrayList(0,1,2,3,4);
         cbTwice.setValue(0);
         cbTwice.setItems(qtd);
     }
-
-    private void qtdBatata() {
-        ObservableList<Integer> qtd = FXCollections.observableArrayList(1, 2, 3, 4);
+    
+    private void qtdBatata(){
+        ObservableList<Integer> qtd = FXCollections.observableArrayList(0,1,2,3,4);
         cbBatataFrita.setValue(0);
         cbBatataFrita.setItems(qtd);
     }
-
-    private void qtdAgua() {
-        ObservableList<Integer> qtd = FXCollections.observableArrayList(1, 2, 3, 4);
+    
+    private void qtdAgua(){
+        ObservableList<Integer> qtd = FXCollections.observableArrayList(0,1,2,3,4);
         cbAgua.setValue(0);
         cbAgua.setItems(qtd);
     }
-
-    private void qtdBatataCdd() {
-        ObservableList<Integer> qtd = FXCollections.observableArrayList(1, 2, 3, 4);
+    
+    private void qtdBatataCdd(){
+        ObservableList<Integer> qtd = FXCollections.observableArrayList(0,1,2,3,4);
         cbBatataCdd.setValue(0);
         cbBatataCdd.setItems(qtd);
     }
-
-    private void qtdPS() {
-        ObservableList<Integer> qtd = FXCollections.observableArrayList(1, 2, 3, 4);
+    
+    private void qtdPS(){
+        ObservableList<Integer> qtd = FXCollections.observableArrayList(0,1,2,3,4);
         cbPS.setValue(0);
         cbPS.setItems(qtd);
     }
-
-    private void qtdSuco() {
-        ObservableList<Integer> qtd = FXCollections.observableArrayList(1, 2, 3, 4);
+    
+    private void qtdSuco(){
+        ObservableList<Integer> qtd = FXCollections.observableArrayList(0,1,2,3,4);
         cbSuco.setValue(0);
         cbSuco.setItems(qtd);
     }
-
-    private void qtdRefri() {
-        ObservableList<Integer> qtd = FXCollections.observableArrayList(1, 2, 3, 4);
+    
+    private void qtdRefri(){
+        ObservableList<Integer> qtd = FXCollections.observableArrayList(0,1,2,3,4);
         cbRefrigerante.setValue(0);
         cbRefrigerante.setItems(qtd);
     }
-
-    private void qtdOnion() {
-        ObservableList<Integer> qtd = FXCollections.observableArrayList(1, 2, 3, 4);
+    
+    private void qtdOnion(){
+        ObservableList<Integer> qtd = FXCollections.observableArrayList(0,1,2,3,4);
         cbOnion.setValue(0);
         cbOnion.setItems(qtd);
     }
-
-    private void qtdMilkshake() {
-        ObservableList<Integer> qtd = FXCollections.observableArrayList(1, 2, 3, 4);
+    
+    private void qtdMilkshake(){
+        ObservableList<Integer> qtd = FXCollections.observableArrayList(0,1,2,3,4);
         cbMilkshake.setValue(0);
         cbMilkshake.setItems(qtd);
     }
