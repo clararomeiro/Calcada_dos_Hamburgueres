@@ -142,7 +142,8 @@ public class TelaProdutosController extends Saida implements Initializable{
             alert1.setTitle("Erro ao comprar");
             alert1.setContentText("Seleção em falta!");
             alert1.show();
-        } else {
+        } 
+    	else if(FormaPagamento != null){
         	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
     	    alert.setHeaderText("Sucesso");
                 alert.setTitle("Pedido realizado");
