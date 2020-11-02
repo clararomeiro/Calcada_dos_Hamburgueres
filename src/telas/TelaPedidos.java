@@ -1,6 +1,5 @@
 package telas;
 
-import controller.TelaPedidosController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,7 +14,8 @@ public class TelaPedidos extends Application {
 		launch(args);
 	}
 	
-	 public void start(Stage stage) throws Exception {
+	@Override 
+	public void start(Stage stage) throws Exception {
 	        Parent rood = FXMLLoader.load(getClass().getResource("/view/TelaPedidos.fxml"));
 	        Scene scene = new Scene(rood);
 	        stage.setTitle("Administrar Pedidos");
