@@ -165,10 +165,6 @@ public class TelaProdutosAdmController extends Saida implements Initializable {
         });
     }
 
-    /*public void preco() {
-        precoPedido.setText("R$" + preco);
-    }*/
-
     private void qtdZendaya(){
         ObservableList<Integer> qtd = FXCollections.observableArrayList(0,1,2,3,4);
         hambZendaya.setValue(0);
