@@ -22,6 +22,7 @@ import javafx.scene.input.MouseEvent;
 import telas.TelaPedidos;
 import negocio.FachadaCalcada;
 import negocio.ICalcada;
+import telas.TelaProdutos;
 
 public class TelaPedidosController extends Saida implements Initializable {
 			
@@ -71,7 +72,14 @@ public class TelaPedidosController extends Saida implements Initializable {
 		 btnEditar.setOnMouseClicked((MouseEvent e)->{
 		 	ArrayList<Pedido> editarPedido = new ArrayList<>(fachada.listarPedidos());
 		 	int index = lvPedidos.getSelectionModel().getSelectedIndex();
-		 	
+			 if (index == -1) {
+				 Alert alert = new Alert(Alert.AlertType.ERROR);
+				 alert.setHeaderText("Selecionar pedido");
+				 alert.setContentText("Selecionar pedido");
+				 alert.show();
+			 }
+			 fechar();
+			 TelaProdutos tp = new TelaProdutos();
 		 });
 	
 	}	 	 
