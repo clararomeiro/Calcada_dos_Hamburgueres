@@ -11,7 +11,7 @@ public class Funcionario implements Serializable{
     private String email;
     private String cpf;
     private String usuario;
-    private String senha;
+    private String senha = "funcionario";
 	 
 	 
 	 public Funcionario(String nome, String email, String cpf) 
@@ -50,7 +50,6 @@ public class Funcionario implements Serializable{
 	}
 
 	public String getSenha() {
-		this.senha = "funcionario";
 		return senha;
 	}
 	    
