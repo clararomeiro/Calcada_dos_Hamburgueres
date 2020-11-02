@@ -1,6 +1,5 @@
 package telas;
 
-import controller.TelaNotaFiscalController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
