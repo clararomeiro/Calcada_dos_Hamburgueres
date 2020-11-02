@@ -6,7 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class TelaProdutoAdm extends Application {
+public class TelaProdutosAdm extends Application {
 
     private static Stage stage;
 
@@ -16,7 +16,7 @@ public class TelaProdutoAdm extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent rood = FXMLLoader.load(getClass().getResource("/view/TelaProdutoAdm.fxml"));
+        Parent rood = FXMLLoader.load(getClass().getResource("/view/TelaProdutosAdm.fxml"));
         Scene scene = new Scene(rood);
         stage.setTitle("Produtos");
         stage.setScene(scene);
@@ -29,6 +29,6 @@ public class TelaProdutoAdm extends Application {
     }
 
     public static void setStage(Stage stage) {
-        TelaProdutoAdm.stage = stage;
+        TelaProdutosAdm.stage = stage;
     }
 }

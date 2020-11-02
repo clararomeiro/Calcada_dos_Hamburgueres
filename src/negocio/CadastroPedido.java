@@ -31,4 +31,10 @@ public class CadastroPedido {
 		this.rPedido.mudarStatus(cpf);
 		this.rPedido.salvarArquivo();
 	}
+
+	public void atualizarPedido(Pedido pedido){
+		int id = pedido.getId();
+		this.rPedido.removerPedido(pedido);
+		this.rPedido.cadastrarPedido(pedido);
+	}
 }

@@ -8,9 +8,7 @@ import beans.Produto; //pedido montado pelo cliente
 import beans.Pagamento;
 import negocio.FachadaCalcada;
 import negocio.ICalcada;
-import telas.TelaProdutos;
 import beans.Cliente;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -30,6 +28,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import telas.TelaProdutosAdm;
 
 public class TelaProdutosAdmController extends Saida implements Initializable {
     @FXML
@@ -141,9 +140,9 @@ public class TelaProdutosAdmController extends Saida implements Initializable {
                 fachada.cadastrar(pedido);
                 fachada.cadastrarPagamento(pagamento);
             } catch (ClassNotFoundException ex) {
-                Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(TelaProdutosAdmController.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IOException ex) {
-                Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(TelaProdutosAdmController.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         });
@@ -247,7 +246,7 @@ public class TelaProdutosAdmController extends Saida implements Initializable {
     }
 
     public void fechar() {
-        TelaProdutos.getStage().close();
+        TelaProdutosAdm.getStage().close();
     }
 
 
