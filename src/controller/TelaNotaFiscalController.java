@@ -18,6 +18,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -39,8 +40,12 @@ public class TelaNotaFiscalController extends Saida implements Initializable{
 		    });
 		
 		 btnSair.setOnKeyPressed((KeyEvent e) -> {
-			 saida();
-		 	 fechar();
+			 if(e.getCode() == KeyCode.ENTER)
+			 {
+				 saida();
+			 	 fechar();
+			 }
+			 
 		 });
 	}
 	
