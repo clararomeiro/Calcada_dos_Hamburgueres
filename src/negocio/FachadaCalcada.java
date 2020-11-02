@@ -147,10 +147,5 @@ public class FachadaCalcada implements ICalcada{
         return funcionarios;
 	}
 
-	@Override
-	public List<Pagamento> listarPagamento() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	}
 	
