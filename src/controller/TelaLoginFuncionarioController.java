@@ -25,10 +25,11 @@ import telas.TelaAdministrador;
 import telas.TelaCadastroFuncionario;
 import telas.TelaLoginFuncionario;
 
-public class TelaLoginFuncionarioController implements Initializable{
+public class TelaLoginFuncionarioController extends Saida implements Initializable{
 	@FXML private TextField txtCpf;
     @FXML private PasswordField txtSenha;
     @FXML private Button btnEntrar;
+    @FXML private Button btnVoltar;
     @FXML private Hyperlink btnCadastrar;
     Funcionario funcionario;
     ICalcada fachada;
@@ -43,6 +44,19 @@ public class TelaLoginFuncionarioController implements Initializable{
 			if(e.getCode() == KeyCode.ENTER)
 			{
 				logar();
+			}		
+	 });
+		
+		btnVoltar.setOnMouseClicked((MouseEvent e) -> {
+			fechar();
+			saida();
+		});
+		
+		btnVoltar.setOnKeyPressed((KeyEvent e) -> { 
+			if(e.getCode() == KeyCode.ENTER)
+			{
+				fechar();
+				saida();
 			}		
 	 });
 		

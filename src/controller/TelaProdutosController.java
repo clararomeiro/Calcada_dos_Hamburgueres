@@ -8,6 +8,7 @@ import beans.Produto; //pedido montado pelo cliente
 import beans.Pagamento;
 import negocio.FachadaCalcada;
 import negocio.ICalcada;
+import telas.TelaNotaFiscal;
 import telas.TelaProdutos;
 import beans.Cliente;
 
@@ -30,6 +31,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class TelaProdutosController extends Saida implements Initializable{
 	@FXML 
@@ -145,6 +147,14 @@ public class TelaProdutosController extends Saida implements Initializable{
                  fachada = FachadaCalcada.getInstance();
                  fachada.cadastrar(pedido);
                  fachada.cadastrarPagamento(pagamento);
+                 fechar();
+                 TelaNotaFiscal kk = new TelaNotaFiscal();
+                 try {
+					kk.start(new Stage());
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
              } catch (ClassNotFoundException ex) {
                  Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
              } catch (IOException ex) {
