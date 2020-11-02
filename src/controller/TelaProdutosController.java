@@ -136,7 +136,7 @@ public class TelaProdutosController extends Saida implements Initializable{
         
         btnRealizarPedido.setOnMouseClicked((MouseEvent e)->{
         
-    	if(hamburguer != null || bebida != null || acompanhamento != null) {
+    	if(produtos != null) {
     		if(FormaPagamento != null){
             	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         	    alert.setHeaderText("Sucesso");
