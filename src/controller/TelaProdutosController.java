@@ -135,20 +135,27 @@ public class TelaProdutosController extends Saida implements Initializable{
 		 });
         
         btnRealizarPedido.setOnMouseClicked((MouseEvent e)->{
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-	    alert.setHeaderText("Sucesso");
-            alert.setTitle("Pedido realizado");
-	    alert.setContentText("Pedido realizado com sucesso");
-	    alert.show();
-            
-        if(FormaPagamento == null) {
+        if(produtos == null) {
+        	Alert alert1 = new Alert(AlertType.ERROR);
+            alert1.setHeaderText("ERRO");
+            alert1.setTitle("Erro ao comprar");
+            alert1.setContentText("Selecione um produto primeiro!");
+            alert1.show();
+        }
+	    if(FormaPagamento == null) {
         	Alert alert1 = new Alert(AlertType.ERROR);
             alert1.setHeaderText("ERRO");
             alert1.setTitle("Erro ao comprar");
             alert1.setContentText("Insira uma forma de pagamento!");
             alert1.show();
-        } else {
-        	 try {
+        }
+        if(FormaPagamento != null){
+        	Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+    	    alert.setHeaderText("Sucesso");
+                alert.setTitle("Pedido realizado");
+    	    alert.setContentText("Pedido realizado com sucesso");
+    	    alert.show(); 
+        	try {
                  fachada = FachadaCalcada.getInstance();
                  fachada.cadastrar(pedido);
                  fachada.cadastrarPagamento(pagamento);
