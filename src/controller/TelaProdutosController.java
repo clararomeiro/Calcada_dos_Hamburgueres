@@ -1,4 +1,4 @@
-package controller;
+ package controller;
 
 import beans.Hamburguer;
 import beans.Bebida;
@@ -182,7 +182,6 @@ public class TelaProdutosController extends Saida implements Initializable{
             PrecoTotal.setText("R$ " + preco);
         });
 
-        //pagamento = new Pagamento(pedido, FormaPagamento.getSelectionModel().getSelectedItem());
     }
 
     
