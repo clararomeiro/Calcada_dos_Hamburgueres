@@ -140,8 +140,11 @@ public class TelaProdutosController extends Saida implements Initializable{
 	    alert.show();
             
         if(FormaPagamento == null) {
-        	alert.setContentText("Insira uma forma de pagamento!");
-    	    alert.show();
+        	Alert alert = new Alert(AlertType.ERROR);
+            alert.setHeaderText("ERRO");
+            alert.setTitle("Erro ao comprar");
+            alert.setContentText("Insira uma forma de pagamento!");
+            alert.show();
         } else {
         	 try {
                  fachada = FachadaCalcada.getInstance();
