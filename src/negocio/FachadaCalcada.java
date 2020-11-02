@@ -18,12 +18,14 @@ public class FachadaCalcada implements ICalcada{
 	
 	private final CadastroFuncionario funcionario;
 	private final CadastroCliente cliente;
+	private final CadastroPagamento pagamento;
 	private final CadastroPedido pedido;
 	private final Login login;
 	private static ICalcada instance;
 	
 	private FachadaCalcada() throws ClassNotFoundException, IOException {
 		
+		this.pagamento = new CadastroPagamento();
 		this.cliente = new CadastroCliente();
 		this.funcionario = new CadastroFuncionario();
 		this.login = new Login();
@@ -94,6 +96,16 @@ public class FachadaCalcada implements ICalcada{
 	@Override
 	public List<Pedido> listarPedidos() {
 		return pedido.listarPedidos();
+	}
+	
+	@Override
+	public List<Pagamento> listarPagamento() {
+		return pagamento.listarPagamento();
+	}
+	
+	@Override
+	public List<Cliente> listar() {
+		return cliente.listar();
 	}
 
 	@Override

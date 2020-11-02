@@ -24,6 +24,7 @@ public interface ICalcada {
 	List<Funcionario> listarFuncionarios();
 	List<Pedido> listarPedidos();
 	List<Pagamento> listarPagamento();
+	List<Cliente> listar();
 	
 	Funcionario logarF(String usuario, String senha);
 	
