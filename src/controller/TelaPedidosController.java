@@ -63,11 +63,6 @@ public class TelaPedidosController extends Saida implements Initializable {
 	           fachada.removerPedido(fachada.listarPedidos().get(index-1));
 	           listar();
 	           
-	           Alert alert = new Alert(Alert.AlertType.ERROR);
-	           alert.setHeaderText("Pedido cancelado");
-               alert.setContentText("Pedido cancelado");
-               alert.show();
-	           
 	        });
 
 		 btnEditar.setOnMouseClicked((MouseEvent e)->{
