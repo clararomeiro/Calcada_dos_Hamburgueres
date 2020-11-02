@@ -65,9 +65,6 @@ public class Pedido implements Serializable {
 	
 	}
 	
-	public void mudarStatus() {
-		
-	}
 	
 	public String toString() {
 		
