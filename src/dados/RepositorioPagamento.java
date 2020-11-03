@@ -13,7 +13,6 @@ import java.util.List;
 
 import beans.Cliente;
 import beans.Pagamento;
-import dados.IRepositorioPagamento;
 
 public class RepositorioPagamento implements IRepositorioPagamento ,Serializable{
 
@@ -89,7 +88,7 @@ public class RepositorioPagamento implements IRepositorioPagamento ,Serializable
 	
 	private static RepositorioPagamento lerArquivo() {
 		RepositorioPagamento instanciaLocal =  null;
-		File f = new File("bancoDados" + File.separatorChar+ "arqPagamentos.dat");
+		File f = new File("bancoDados" + File.separatorChar+ "pedido" +File.separatorChar+ "arqPagamentos.dat");
 	    FileInputStream fis = null;
 	    ObjectInputStream ois = null;
 	   
@@ -129,7 +128,7 @@ public class RepositorioPagamento implements IRepositorioPagamento ,Serializable
 			return;
 		}
 		     
-		File f = new File("bancoDados" + File.separatorChar+ "arqPagamentos.dat");
+		File f = new File("bancoDados" + File.separatorChar+ "pedido" +File.separatorChar+ "arqPagamentos.dat");
 	    FileOutputStream fos = null;
 	    ObjectOutputStream oos = null;
 	    try{
