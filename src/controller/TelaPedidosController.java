@@ -92,9 +92,13 @@ public class TelaPedidosController extends Saida implements Initializable {
 	            Logger.getLogger(TelaPedidosController.class.getName()).log(Level.SEVERE, null, ex);
 	        }
 	        listaPedidos.add("CPF do cliente   Hamburguer   Quantidade   Acompanhamento    Bebida    Status do pedido");
+	        
 	        for (Pedido p : fachada.listarPedidos()) {
-	            
-	             listaPedidos.add(p.toString());   
+	        	if(p != null) {
+	        		listaPedidos.add(p.toString()); 
+	    			} else {
+	    				System.out.print("ERRO");
+	    			}   
 	        }
 	        
 	        ObservableList<String> obsFuncionario = FXCollections.observableArrayList(listaPedidos);

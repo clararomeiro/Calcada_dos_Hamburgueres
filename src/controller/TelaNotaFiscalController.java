@@ -62,12 +62,18 @@ public class TelaNotaFiscalController extends Saida implements Initializable{
 		listaNotaFiscal.add("CPF do cliente   Hamburguer   Quantidade   Acompanhamento    Bebida    Valor do pedido");
 
 		for (Pedido p : fachada.listarPedidos()) {
-            
-			listaNotaFiscal.add(p.toString());   
+			if(p != null) {
+			listaNotaFiscal.add(p.toString()); 
+			} else {
+				System.out.print("ERRO");
+			}
 		}
 		for (Pagamento p : fachada.listarPagamento()) {
-            
-			listaNotaFiscal.add(p.toString());   
+			if(p != null) {
+				listaNotaFiscal.add(p.toString()); 
+				} else {
+					System.out.print("ERRO");
+				}  
 		}
 
 		ObservableList<String> obsPedido = FXCollections.observableArrayList(listaNotaFiscal);

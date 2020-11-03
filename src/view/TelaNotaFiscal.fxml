@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
+
 <AnchorPane id="AnchorPane" fx:id="tela" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaNotaFiscalController">
    <children>
       <Label layoutX="255.0" layoutY="14.0" prefHeight="46.0" prefWidth="287.0" text="NOTA FISCAL" textAlignment="CENTER" textFill="#fce200">
