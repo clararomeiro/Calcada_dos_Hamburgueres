@@ -148,7 +148,7 @@ public class TelaProdutosAdmController extends Saida implements Initializable {
             	    alert.show(); 
                 	try {
                          fachada = FachadaCalcada.getInstance();
-                         fachada.cadastrar(pedido);
+                         fachada.atualizarPedido(pedido);
                          fachada.cadastrarPagamento(pagamento); 
                      } catch (ClassNotFoundException ex) {
                          Logger.getLogger(TelaProdutosController.class.getName()).log(Level.SEVERE, null, ex);
