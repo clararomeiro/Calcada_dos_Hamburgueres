@@ -81,6 +81,10 @@ public class FachadaCalcada implements ICalcada{
 		this.pedido.cadastrar(pedido);
 		
 	}
+	@Override
+	public void atualizarPedido(Pedido pedido){
+		this.pedido.atualizarPedido(pedido);
+	}
 
 	@Override
 	public void removerPedido(Pedido pedido) {

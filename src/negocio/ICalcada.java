@@ -18,6 +18,9 @@ public interface ICalcada {
 	void cadastrarPagamento(Pagamento pagamento);
 	
 	void cadastrar(Pedido pedido);
+
+	void atualizarPedido(Pedido pedido);
+
 	public void removerPedido(Pedido pedido);
 	
 	List<Pedido> listarPedidos();
